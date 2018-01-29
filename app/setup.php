@@ -49,6 +49,12 @@ add_action('after_setup_theme', function () {
 	new \App\Theme\Navigation();
 
 	/**
+	 * Admin
+	 */
+	new \App\Admin\Options\Theme();
+
+
+	/**
 	 * Enable post thumbnails
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
