@@ -16,7 +16,7 @@ class Enqueue
 	 */
 	public function styles()
 	{	
-		wp_enqueue_style('halland/main.css', get_template_directory_uri() . 'styles/main.css', false, null);
+		wp_enqueue_style('halland/main.css', \App\asset_path('styles/main.css'), false, null);
 		// Enqueue Region Halland Component Library
 		wp_enqueue_style('rh-components', '//regionhalland.github.io/styleguide/dist/css/main.min.css', false, null);
 	}
@@ -28,6 +28,6 @@ class Enqueue
 	public function scripts()
 	{
 		// Theme JS
-		wp_enqueue_script('halland/main.js', get_template_directory_uri() . 'scripts/main.js', ['jquery'], null, true);
+		wp_enqueue_script('halland/main.js', \App\asset_path('scripts/main.js'), ['jquery'], null, true);
 	}
 }
