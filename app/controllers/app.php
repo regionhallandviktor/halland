@@ -30,6 +30,21 @@ class App extends Controller
 		}
 		return get_the_title();
 	}
+	
+	/**
+	 * Returns cookie notice from Advanced Custom Fields
+	 * @return array
+	 */
+	public function cookieNotice()
+	{
+		$cookieName = 'cookie_notice_accepted';
+
+		if (!isset($_COOKIE[$cookieName])) {
+			$cookie_notice['message'] = get_field('cookie-notice_message', 'options');
+			$cookie_notice['button'] = get_field('cookie-notice_button', 'options');
+			return $cookie_notice;
+		}
+	}
 
 	/**
 	 * Returns notices from Advanced Custom Fields

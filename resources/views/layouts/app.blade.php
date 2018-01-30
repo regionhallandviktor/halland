@@ -2,7 +2,8 @@
 <html @php(language_attributes())>
 	@include('partials.head')
 	<body @php(body_class())>
-		@include('partials.notices')
+		@include('partials.cookie-notice')
+		@include('partials.site-notices')
 		@php(do_action('get_header'))
 		@include('partials.header')
 		<div class="container mx-auto" role="document">
