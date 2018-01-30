@@ -14,7 +14,7 @@ class CookieNotice {
 
 	cache() {
 		this.container = $('#cookie-notice');
-		this.consentBtn = this.container.children('#cookie-consent');
+		this.consentBtn = this.container.find('#cookie-consent');
 	}
 
 	bind() {
