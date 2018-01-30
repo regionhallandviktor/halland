@@ -10,7 +10,6 @@ class CookieNotice {
 
 		this.cache();
 		this.bind();
-
 	}
 
 	cache() {
