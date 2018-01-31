@@ -6,62 +6,20 @@ class Navigation
 {
 	public function __construct()
 	{
-
 		$this->registerMenus();
 
-		add_action('after_setup_theme', array($this, 'registerDropDownLinksMenu'));
-
-		if (in_array('mainmenu', (array)get_field('search_display', 'option'))) {
-			add_filter('wp_nav_menu_items', array($this, 'addSearchMagnifier'), 10, 2);
-			add_filter('Municipio/main_menu/wrapper_end', array($this, 'addSearchMagnifier'), 10, 2);
-		}
-
-		if (!empty(get_field('google_translate_menu', 'option')) && !empty(get_field('show_google_translate', 'option')) && get_field('show_google_translate', 'option') !== 'false') {
-			add_filter('wp_nav_menu_items', array($this, 'addTranslate'), 10, 2);
-		}
-
 		add_action('save_post', array($this, 'purgeTreeMenuTransient'), 10, 2);
-		add_filter('the_posts', array($this, 'pageForPostTypeNavigation'));
-
-		add_action('after_setup_theme', array($this, 'submenuAjaxEndpoint'));
-	}
-
-	public function submenuAjaxEndpoint()
-	{
-		if (!isset($_GET['load-submenu-id']) || !is_numeric($_GET['load-submenu-id'])) {
-			return;
-		}
-
-		$submenu = new \App\Helper\NavigationTree(
-			array(
-				'include_top_level' => false,
-				'depth' => 2,
-				'wrapper' => '%3$s'
-			),
-			$_GET['load-submenu-id']
-		);
-
-		wp_send_json('<ul class="sub-menu">' . $submenu->render(false) . '</ul>');
-		exit;
 	}
 
 	/**
-	 * Fix sidebar nav if "page for post type" is same as the curretn post's post type
-	 * @param  array $posts
-	 * @return array
+	 * Register menus.
+	 * @return void
 	 */
-	public function pageForPostTypeNavigation($posts)
+	public function registerMenus()
 	{
-		if (is_main_query() && is_single() && isset($posts[0])) {
-			$postType = $posts[0]->post_type;
-			$parent = get_option("page_for_{$postType}");
+		$menus['main-menu'] = __('Main menu', 'halland');
 
-			if ($parent) {
-				$posts[0]->post_parent = $parent;
-			}
-		}
-
-		return $posts;
+		register_nav_menus($menus);
 	}
 
 	/**
@@ -113,57 +71,8 @@ class Navigation
 		}
 	}
 
-	public function registerMenus()
-	{
-		$menus = array(
-			'help-menu' => __('Help menu', 'municipio'),
-			'header-tabs-menu' => __('Header tabs menu', 'municipio')
-		);
-
-		// if (get_field('nav_primary_enable', 'option')) {
-			$menus['main-menu'] = __('Main menu', 'halland');
-		// }
-
-		if (get_field('nav_sub_enable', 'option')) {
-			$menus['sidebar-menu'] = __('Sidebar menu', 'municipio');
-		}
-
-		register_nav_menus($menus);
-	}
-
 	/**
-	 * Register dropdown links menu
-	 * @return void
-	 */
-	public function registerDropDownLinksMenu()
-	{
-		if (get_field('header_dropdown_links', 'option') == true) {
-			register_nav_menu('dropdown-links-menu', __('Dropdown Links', 'municipio'));
-		}
-	}
-
-	/**
-	 * Output dropdown links menu markup
-	 * @return string menu markup
-	 */
-	public static function outputDropdownLinksMenu()
-	{
-		// if (!\App\Helper\Navigation::getMenuNameByLocation('dropdown-links-menu')) {
-		// 	return;
-		// }
-
-		$args = array(
-			'menu' => \App\Helper\Navigation::getMenuNameByLocation('dropdown-links-menu'),
-			'container' =>  false,
-			'menu_class' => 'o-dropdown-links',
-			'echo' => false
-		);
-
-		return wp_nav_menu($args);
-	}
-
-	/**
-	 * Outputs the html for the breadcrumb
+	 * Outputs the html for the breadcrumb.
 	 * @return void
 	 */
 	public static function outputBreadcrumbs()
