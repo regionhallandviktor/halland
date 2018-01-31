@@ -7,11 +7,10 @@
 		@php(do_action('get_header'))
 		@include('partials.header')
 		<div class="container mx-auto" role="document">
-			<div class="content">
-				<main class="main">
-					@yield('content')
-				</main>
-			</div>
+			@include('partials.breadcrumbs')
+			<main class="main">
+				@yield('content')
+			</main>
 		</div>
 		@php(do_action('get_footer'))
 		@include('partials.footer')

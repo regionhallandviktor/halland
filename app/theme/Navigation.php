@@ -163,66 +163,6 @@ class Navigation
 	}
 
 	/**
-	 * Appends translate icon to menu
-	 * @param  string $items  Items html
-	 * @param  array  $args   Menu args
-	 * @return string         Items html
-	 */
-	public function addTranslate($items, $args = null)
-	{
-		if ($args->theme_location != get_field('google_translate_menu', 'option')) {
-			return $items;
-		}
-
-		//Not in child (if inherited from main)
-		if ($args && (isset($args->child_menu) && $args->child_menu == true) && $args->theme_location == "main-menu") {
-			return $items;
-		}
-
-		$label = 'Translate';
-		if (get_field('google_translate_show_as', 'option') == 'icon') {
-			$label = '<span data-tooltip="Translate"><i class="pricon pricon-globe"></i></span>';
-		} elseif (get_field('google_translate_show_as', 'option') == 'combined') {
-			$label = '<i class="pricon pricon-globe"></i> Translate';
-		}
-
-		$items .= '<li class="menu-item-translate"><a href="#translate" class="translate-icon-btn" aria-label="translate">' . $label . '</a></li>';
-
-		return $items;
-	}
-
-	/**
-	 * Adds a search icon to the main menu
-	 * @param string $items Menu items html markup
-	 * @param object $args  Menu args
-	 */
-	public function addSearchMagnifier($items, $args = null)
-	{
-		if (!is_object($args)) {
-			$args = (object)$args;
-		}
-
-		if ($args && $args->theme_location != apply_filters('Municipio/main_menu_theme_location', 'main-menu')) {
-			return $items;
-		}
-
-		//Not in child (if inherited from main)
-		if ($args && (isset($args->child_menu) && $args->child_menu == true) && $args->theme_location == "main-menu") {
-			return $items;
-		}
-
-		$search = '<li class="menu-item-search"><a href="#search" class="search-icon-btn toggle-search-top" aria-label="' . __('Search', 'municipio') . '"><span data-tooltip="' . __('Search', 'municipio') . '"><i class="pricon pricon-search"></i></span></a></li>';
-
-		if (isset($args->include_top_level)) {
-			$items = $search . $items;
-		} else {
-			$items .= $search;
-		}
-
-		return $items;
-	}
-
-	/**
 	 * Outputs the html for the breadcrumb
 	 * @return void
 	 */
@@ -300,7 +240,7 @@ class Navigation
 			}
 		}
 
-		$output = apply_filters('Municipio/Breadcrumbs/Items', $output, get_queried_object());
+		// $output = apply_filters('Municipio/Breadcrumbs/Items', $output, get_queried_object());
 
 		echo implode("\n", $output);
 		echo '</ol>';
