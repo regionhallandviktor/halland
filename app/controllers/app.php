@@ -52,7 +52,7 @@ class App extends Controller
 	 */
 	public function notices()
 	{
-		$notices = get_field('notices', 'options');
+		$notices = get_field('site_notices', 'options');
 		
 		if (isset($notices) && !empty($notices)) {
 			$notices = array_filter($notices, function($notice) use ($notices) {
