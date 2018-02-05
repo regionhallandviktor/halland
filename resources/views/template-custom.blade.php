@@ -16,7 +16,7 @@
 
 	<div class="col col-12 md-col-6 px2">
 		@while(have_posts()) @php(the_post())
-			@include('partials.page-header')
+			{{-- @include('partials.page-header') --}}
 			@include('partials.content-page')
 		@endwhile
 	</div>
