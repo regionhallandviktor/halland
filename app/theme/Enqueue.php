@@ -8,6 +8,7 @@ class Enqueue
 	{
 		add_action('wp_enqueue_scripts', array($this, 'styles'));
 		add_action('wp_enqueue_scripts', array($this, 'scripts'));
+		add_action('wp_enqueue_scripts', array($this, 'jquery'));
 	}
 
 	/**
@@ -29,5 +30,21 @@ class Enqueue
 	{
 		// Theme JS
 		wp_enqueue_script('halland/main.js', \App\asset_path('scripts/main.js'), ['jquery'], null, true);
+
+	}
+
+	/**
+	 * Register jQuery and enqueue the footer
+	 * @return void
+	 */
+	public function jquery()
+	{	
+		if (is_admin()) {
+			return;
+		}
+			
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, false, true);
+		wp_enqueue_script('jquery');
 	}
 }
