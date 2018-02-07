@@ -3,12 +3,20 @@
 namespace App;
 
 use Sober\Controller\Controller;
+use App\Theme\Breadcrumbs;
 
 class App extends Controller
 {
 	public function siteName()
 	{
 		return get_bloginfo('name');
+	}
+
+	public function breadcrumbs()
+	{
+		$breadcrumbs = new \App\Theme\Breadcrumbs();
+		$breadcrumbs = $breadcrumbs->getBreadcrumbs();
+		return $breadcrumbs;
 	}
 
 	public static function title()
