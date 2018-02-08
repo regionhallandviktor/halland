@@ -17,6 +17,7 @@ class Navigation
 	 */
 	public function registerMenus()
 	{
+		// Needs review: Should depend on if active is checked in theme options.
 		$menus['main-menu'] = __('Main menu', 'halland');
 
 		register_nav_menus($menus);
@@ -72,86 +73,29 @@ class Navigation
 	}
 
 	/**
-	 * Outputs the html for the breadcrumb.
-	 * @return void
+	 * Get navigation tree sidebar menu
+	 * @return string Menu markup
 	 */
-	public static function outputBreadcrumbs()
+	public function getSidebarMenu()
 	{
+
 		global $post;
 
 		if (!is_a($post, 'WP_Post')) {
 			return;
 		}
 
-		$title = get_the_title();
-		$post_type = get_post_type_object($post->post_type);
-		$output = array();
+		$pages['current_page'] = $post;
 
-		echo '<ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">';
+		$args = array( 
+			'child_of' => $post->ID, 
+			'parent' => $post->ID,
+			'hierarchical' => 0,
+			'sort_column' => 'menu_order', 
+			'sort_order' => 'asc'
+		);
+		$pages['page_children'] = get_pages($args);
 
-		if (!is_front_page()) {
-			$int = 1;
-			$output[] = '<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-							<a itemprop="item" href="' . get_home_url() . '" title="' . __('Home') . '">
-							<span itemprop="name">' . __('Home') . '</span><meta itemprop="position" content="' . $int++ . '"></a>
-						</li>';
-
-			if (is_single() && $post_type->has_archive) {
-				$cpt_archive_link = (is_string($post_type->has_archive)) ? get_permalink(get_page_by_path($post_type->has_archive)) : get_post_type_archive_link($post_type->name);
-
-				$output[] = '<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-								<a itemprop="item" href="' . $cpt_archive_link . '" title="' .  $post_type->label . '">
-								<span itemprop="name">' .  $post_type->label . '</span><meta itemprop="position" content="' . $int++ . '"></a>
-							</li>';
-			}
-
-			if (is_page() || (is_single() && $post_type->hierarchical == true)) {
-				if ($post->post_parent) {
-					$anc = array_reverse(get_post_ancestors($post->ID));
-					$title = get_the_title();
-
-					foreach ($anc as $ancestor) {
-						if (get_post_status($ancestor) != 'private') {
-							$output[] = '<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-											<a itemprop="item" href="' . get_permalink($ancestor) . '" title="' . get_the_title($ancestor) . '">
-												<span itemprop="name">' . get_the_title($ancestor) . '</span>
-												<meta itemprop="position" content="' . $int++ . '" />
-											</a>
-									   </li>';
-						}
-					}
-
-					$output[] = '<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-									<span itemprop="name" class="breadcrumbs-current" title="' . $title . '">' . $title . '</span>
-									<meta itemprop="position" content="' . ($int++) . '" />
-								</li>';
-				} else {
-					$output[] = '<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-									<span itemprop="name" class="breadcrumbs-current">' . get_the_title() . '</span>
-									<meta itemprop="position" content="1" />
-								</li>';
-				}
-			} else {
-				if (is_home()) {
-					$title = single_post_title();
-				} elseif (is_tax()) {
-					$title = single_cat_title(null, false);
-				} elseif (is_category()) {
-					$title = get_the_category();
-				} elseif (is_archive()) {
-					$title = post_type_archive_title(null, false);
-				} else {
-					$title = get_the_title();
-				}
-				$output[] = '<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
-								<span itemprop="name">' . $title . '</span><meta itemprop="position" content="' . $int++ . '" />
-							</li>';
-			}
-		}
-
-		// $output = apply_filters('Municipio/Breadcrumbs/Items', $output, get_queried_object());
-
-		echo implode("\n", $output);
-		echo '</ol>';
+		return $pages;
 	}
 }

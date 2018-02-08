@@ -3,7 +3,6 @@
 namespace App;
 
 use Sober\Controller\Controller;
-use App\Theme\Breadcrumbs;
 
 class App extends Controller
 {
@@ -12,11 +11,26 @@ class App extends Controller
 		return get_bloginfo('name');
 	}
 
+	/**
+	 * Returns array of breadcrumbs
+	 * @return array
+	 */
 	public function breadcrumbs()
 	{
 		$breadcrumbs = new \App\Theme\Breadcrumbs();
 		$breadcrumbs = $breadcrumbs->getBreadcrumbs();
 		return $breadcrumbs;
+	}
+
+	/**
+	 * Returns array with the sidebar menu
+	 * @return array
+	 */
+	public function sidebarMenu()
+	{
+		$menu = new \App\Theme\Navigation();
+		$menu = $menu->getSidebarMenu();
+		return $menu;
 	}
 
 	public static function title()
