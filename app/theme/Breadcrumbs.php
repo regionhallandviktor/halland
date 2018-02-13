@@ -10,7 +10,7 @@ class Breadcrumbs
 	}
 
 	/**
-	 * Returns the tree for breadcrumbs.
+	 * Returns array of breadcrumbs.
 	 * @return array
 	 */
 	public function getBreadcrumbs()
@@ -24,9 +24,7 @@ class Breadcrumbs
 		
 		$title = get_the_title();
 		$post_type = get_post_type_object($post->post_type);
-		$breadcrumbs = array();
-		
-		$breadcrumbs = $this->addItem($breadcrumbs, __('Home'), get_home_url());
+		$breadcrumbs = $this->addItem(array(), __('Home'), get_home_url());
 		
 
 		if (is_single() && $post_type->has_archive) {
