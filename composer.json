@@ -1,6 +1,6 @@
 {
   "name": "regionhalland/halland",
-  "type": "project",
+  "type": "wordpress-theme",
   "license": "MIT",
   "description": "Halland is a Wordpress theme based on Sage by Roots. Halland is the starting point of websites built by Region Halland.",
   "homepage": "https://github.com/regionhalland",
