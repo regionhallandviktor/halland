@@ -6,7 +6,7 @@
 				<ul>
 					@foreach ($sidebar_menu['page_children'] as $page_child)
 						<li>
-							{{ $page_child->post_title }}
+							<a href={{ $page_child->url }}>{{ $page_child->post_title }}</a>
 						</li>
 					@endforeach
 				</ul>

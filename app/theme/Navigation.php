@@ -78,7 +78,6 @@ class Navigation
 	 */
 	public function getSidebarMenu()
 	{
-
 		global $post;
 
 		if (!is_a($post, 'WP_Post')) {
@@ -95,6 +94,10 @@ class Navigation
 			'sort_order' => 'asc'
 		);
 		$pages['page_children'] = get_pages($args);
+
+		foreach ($pages['page_children'] as $page) {
+			$page->url = get_page_link($page->ID);
+		}
 
 		return $pages;
 	}
