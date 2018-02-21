@@ -17,9 +17,10 @@ class Enqueue
 	 */
 	public function styles()
 	{	
-		wp_enqueue_style('halland/main.css', \App\asset_path('styles/main.css'), false, null);
 		// Enqueue Region Halland Component Library
 		wp_enqueue_style('rh-components', '//regionhalland.github.io/styleguide/dist/css/main.min.css', false, null);
+		// Theme CSS
+		wp_enqueue_style('halland/main.css', \App\asset_path('styles/main.css'), false, null);
 	}
 
 	/**
