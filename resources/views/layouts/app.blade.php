@@ -7,7 +7,7 @@
 		@php(do_action('get_header'))
 		@include('partials.header')
 		<div class="container mx-auto" role="document">
-			<div class="clearfix">
+			<div class="clearfix mb4">
 				<div class="col col-12 px2">
 					@include('partials.breadcrumbs')
 				</div>

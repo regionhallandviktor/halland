@@ -8,15 +8,15 @@
 	
 	{{-- Left Sidebar
 	@if (is_active_sidebar('sidebar-left'))
-		<div class="col col-12 md-col-3 px2">
+		<aside class="col col-12 md-col-3 px2">
 			@include('partials.sidebar-left')
-		</div>
+		</aside>
 	@endif 
 	--}}
 	
-	<div class="col col-12 md-col-3 px2">
+	<aside class="col col-12 md-col-3 px2">
 		@include('partials.sidebar-menu')
-	</div>
+	</aside>
 
 	<div class="col col-12 md-col-6 px2">
 		@while(have_posts()) @php(the_post())
@@ -26,9 +26,9 @@
 	</div>
 
 	@if (is_active_sidebar('sidebar-right'))
-		<div class="col col-12 md-col-3 px2">
+		<aside class="col col-12 md-col-3 px2">
 			@include('partials.sidebar-right')
-		</div>
+		</aside>
 	@endif
 
 @endsection
