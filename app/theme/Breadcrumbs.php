@@ -72,7 +72,7 @@ class Breadcrumbs
 	}
 
 	/**
-	 * Returns the tree for breadcrumbs.
+	 * Add item to breadcrumbs list
 	 * @param array $list 
 	 * @param string $name
 	 * @param string|boolean $url
