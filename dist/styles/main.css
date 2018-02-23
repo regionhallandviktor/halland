@@ -63,5 +63,18 @@ div#main-nav-container > a > img {
   border-bottom: 5px solid #65a3d0;
 }
 
+.nav-icons {
+  display: inline-block;
+  float: right;
+}
+
+.nav-icons > div {
+  display: inline-block;
+}
+
+.nav-icons > div > img {
+  max-height: 30px;
+}
+
 
 /*# sourceMappingURL=main.css.map*/

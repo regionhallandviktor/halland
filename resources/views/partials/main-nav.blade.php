@@ -9,5 +9,10 @@
 					{!! wp_nav_menu(['theme_location' => 'main-menu', 'menu_class' => 'nav']) !!}
 				@endif
 			</nav>
+			<div class="nav-icons">
+				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/search.png" alt="Profil"></div>
+				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/language.png" alt="Språk"></div>
+				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/profile.png" alt="Profil"></div>
+			</div>
 		</div>
 	</header>
