@@ -27,3 +27,44 @@
 body {
 	background: #fff;
 }
+
+#main-nav-container {
+	font-size: 115%;
+	text-align: center;
+	background: #fff;
+	border-bottom: 2px solid #d1d1e0;
+	padding-top: 5px;
+}
+
+nav.nav-primary {
+	display: inline-block;
+}
+
+ul.nav > li {
+	display: inline-block;
+}
+
+.brand {
+	color: #46484c;
+}
+
+.nav-separator {
+	padding-left: 2ex;
+	display: inline-block;
+}
+
+.menu-item {
+	margin-right: 1ex;
+}
+
+.menu-item a {
+	color: black;
+}
+
+div#main-nav-container > a > img {
+	padding-right: 2ex;
+}
+
+.current-menu-item {
+	border-bottom: 5px solid rgb(101, 163, 208);
+}
