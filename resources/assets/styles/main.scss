@@ -47,11 +47,12 @@ ul.nav > li {
 }
 
 .brand {
-	color: #46484c;
+	color: rgb(120, 120, 120);
 }
 
 .nav-separator {
 	padding-left: 2ex;
+	padding-right: 2ex;
 	display: inline-block;
 }
 
@@ -64,7 +65,7 @@ ul.nav > li {
 }
 
 div#main-nav-container > a > img {
-	padding-right: 2ex;
+	padding-right: 1ex;
 }
 
 .current-menu-item {
