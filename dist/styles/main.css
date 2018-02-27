@@ -1,0 +1,105 @@
+/** Import everything from autoload */
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+/** Import theme styles */
+
+@media print {
+  aside,
+  header,
+  footer {
+    display: none;
+  }
+}
+
+body {
+  background: #fff;
+}
+
+#main-nav-container {
+  font-size: 115%;
+  text-align: center;
+  background: #fff;
+  border-bottom: 2px solid #d1d1e0;
+  padding-top: 5px;
+}
+
+nav.nav-primary {
+  display: inline-block;
+}
+
+ul.nav > li {
+  display: inline-block;
+}
+
+.brand {
+  color: #787878;
+}
+
+.nav-separator {
+  padding-left: 2ex;
+  padding-right: 2ex;
+  display: inline-block;
+}
+
+.menu-item {
+  margin-right: 1ex;
+}
+
+.menu-item a {
+  color: black;
+}
+
+div#main-nav-container > a > img {
+  padding-right: 1ex;
+}
+
+.current-menu-item {
+  border-bottom: 5px solid #65a3d0;
+}
+
+.nav-icons {
+  display: inline-block;
+  float: right;
+}
+
+.nav-icons > div {
+  display: inline-block;
+}
+
+.nav-icons > div > img {
+  max-height: 20px;
+}
+
+/* Phones */
+
+@media screen and (max-width: 768px) {
+  .nav-separator {
+    display: none;
+  }
+}
+
+.nav-icons-label {
+  margin-right: 1.2ex;
+  margin-left: 0.3ex;
+}
+
+/* Tablets */
+
+/* Desktops */
+
+/* Large desktops */
+
+@media screen and (max-width: 1200px) {
+  .nav-icons-label {
+    display: none;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map*/

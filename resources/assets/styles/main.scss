@@ -82,6 +82,28 @@ div#main-nav-container > a > img {
 }
 
 .nav-icons > div > img {
-	max-height: 30px;
+	max-height: 20px;
 }
 
+/* Phones */
+@media screen and (max-width: 768px) {
+	.nav-separator {
+		display: none;
+	}
+}
+
+.nav-icons-label {
+	margin-right: 1.2ex;
+	margin-left: 0.3ex;
+}
+
+/* Tablets */
+
+/* Desktops */
+
+/* Large desktops */
+@media screen and (max-width: 1200px) {
+	.nav-icons-label {
+		display: none;
+	}
+}

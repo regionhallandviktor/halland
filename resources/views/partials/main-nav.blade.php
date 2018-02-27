@@ -10,9 +10,9 @@
 				@endif
 			</nav>
 			<div class="nav-icons">
-				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/search.png" alt="Profil"></div>
-				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/language.png" alt="Språk"></div>
-				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/profile.png" alt="Profil"></div>
+				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/search.png" alt="Sök"><span class="nav-icons-label">Sök</span></div>
+				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/language.png" alt="Språk"><span class="nav-icons-label">Språk</span></div>
+				<div><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/profile.png" alt="Profil"><span class="nav-icons-label">Logga in</span></div>
 			</div>
 		</div>
 	</header>
