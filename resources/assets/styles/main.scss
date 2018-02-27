@@ -40,6 +40,7 @@ body {
 
 nav.nav-primary {
 	display: inline-block;
+	float: left;
 }
 
 ul.nav > li {
@@ -48,6 +49,7 @@ ul.nav > li {
 
 .brand {
 	color: rgb(120, 120, 120);
+	float: left;
 }
 
 .nav-separator {

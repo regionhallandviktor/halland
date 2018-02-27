@@ -31,6 +31,7 @@ body {
 
 nav.nav-primary {
   display: inline-block;
+  float: left;
 }
 
 ul.nav > li {
@@ -39,6 +40,7 @@ ul.nav > li {
 
 .brand {
   color: #787878;
+  float: left;
 }
 
 .nav-separator {
