@@ -26,6 +26,8 @@
 
 @import "layouts/print";
 
+$nav-active-color: rgb(101, 163, 208);
+
 body {
 	background: #fff;
 }
@@ -36,6 +38,17 @@ body {
 	background: #fff;
 	border-bottom: 2px solid #d1d1e0;
 	padding-top: 5px;
+	display: flex;
+}
+
+.burgermenu {
+	max-height: 20px;
+	display: none;
+	float: left;
+}
+
+.burgermenu-icon {
+	max-height: 20px;
 }
 
 nav.nav-primary {
@@ -71,20 +84,20 @@ div#main-nav-container > a > img {
 }
 
 .current-menu-item {
-	border-bottom: 5px solid rgb(101, 163, 208);
+	border-bottom: 5px solid $nav-active-color;
 }
 
-.nav-icons {
-	display: inline-block;
-	float: right;
-}
-
-.nav-icons > div {
+.nav-tool {
 	display: inline-block;
 }
 
-.nav-icons > div > img {
+.nav-tool-icon {
 	max-height: 20px;
+}
+
+.nav-icons-label {
+	margin-right: 1.2ex;
+	margin-left: 0.3ex;
 }
 
 /* Phones */
@@ -94,9 +107,34 @@ div#main-nav-container > a > img {
 	}
 }
 
-.nav-icons-label {
-	margin-right: 1.2ex;
-	margin-left: 0.3ex;
+/* Phones */
+@media screen and (max-width: 768px) {
+	.burgermenu {
+		display: inline-block;
+	}
+
+	#brand-name {
+		display: none;
+	}
+
+	#main-nav-container {
+		flex-wrap: wrap;
+	}
+
+	.nav-primary {
+		order: 4;
+		width: 100%;
+	}
+
+	#nav-language-tool {
+		order: 5;
+		width: 50%;
+	}
+
+	#nav-login-tool {
+		order: 6;
+		width: 50%;
+	}
 }
 
 /* Tablets */
