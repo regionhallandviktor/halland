@@ -75,14 +75,69 @@
   text-align: center;
 }
 
+/* Tablets and bigger */
+
 @media screen and (min-width: 769px) {
+  .main-nav-container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .burgermenu {
+    display: none;
+  }
+
   .brand-name {
+    display: inline-block;
+  }
+
+  .nav-primary {
+    width: auto;
+    text-align: left;
+  }
+
+  .nav-tool-search {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .nav-language-tool {
+    width: auto;
+    text-align: left;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .nav-login-tool {
+    width: auto;
+    text-align: left;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .nav-icons-label {
+    display: none;
+  }
+}
+
+/* Desktop and bigger */
+
+@media screen and (min-width: 970px) {
+  .nav-separator {
     display: inline-block;
   }
 }
 
-@media screen and (min-width: 970px) {
-  .nav-separator {
+/* HD Desktop */
+
+@media screen and (min-width: 1200px) {
+  .nav-icons-label {
     display: inline-block;
   }
 }

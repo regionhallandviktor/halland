@@ -82,14 +82,57 @@ $nav-active-color: rgb(101, 163, 208);
 	text-align: center;
 }
 
+/* Tablets and bigger */
 @media screen and (min-width: 769px) {
+	.main-nav-container {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
+	.burgermenu {
+		display: none;
+	}
+
 	.brand-name {
+		display: inline-block;
+	}
+
+	.nav-primary {
+		width: auto;
+		text-align: left;
+	}
+
+	.nav-tool-search {
+		order: 1;
+	}
+
+	.nav-language-tool {
+		width: auto;
+		text-align: left;
+		order: 2;
+	}
+
+	.nav-login-tool {
+		width: auto;
+		text-align: left;
+		order: 3;
+	}
+
+	.nav-icons-label {
+		display: none;
+	}
+}
+
+/* Desktop and bigger */
+@media screen and (min-width: 970px) {
+	.nav-separator {
 		display: inline-block;
 	}
 }
 
-@media screen and (min-width: 970px) {
-	.nav-separator {
+/* HD Desktop */
+@media screen and (min-width: 1200px) {
+	.nav-icons-label {
 		display: inline-block;
 	}
 }
