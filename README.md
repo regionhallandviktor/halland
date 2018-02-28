@@ -16,17 +16,27 @@ Halland is a Wordpress theme based on [Sage](https://github.com/roots/sage). Hal
 
 ### Installation
 
-Clone this repository into the themes folder of your Wordpress installation and install dependencies:
+Clone this repository into the themes folder of [your Wordpress installation](https://github.com/RegionHalland/wordpress-boilerplate) and install dependencies:
+** 1. Clone this repos to your local dev environment **
 ```shell
-$ cd ../wp-content/themes/
+$ cd [your site]/web/app/themes/
 $ git clone https://github.com/RegionHalland/halland.git
 $ cd halland
 $ composer install && yarn
 ```
-Update `resources/assets/config.json` settings:
+** Update `resources/assets/config.json` settings: **
 
-* `devUrl` should reflect your local development hostname
-* `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/halland` for non-[Bedrock](https://roots.io/bedrock/) installs)
+- `devUrl` should reflect your local development hostname
+- `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/halland` for non-[Bedrock](https://roots.io/bedrock/) installs)
+
+###Using Halland as a parent theme
+TBD
+
+## Build commands
+
+* `yarn run start` — Compile assets when file changes are made, start Browsersync session
+* `yarn run build` — Compile and optimize the files in your assets directory
+* `yarn run build:production` — Compile assets for production
 
 ### Theme structure
 
@@ -60,9 +70,3 @@ themes/halland/           # → Root
 │       └── partials/     # → Partial templates
 └── vendor/               # → Composer packages (never edit)
 ```
-
-### Build commands
-
-* `yarn run start` — Compile assets when file changes are made, start Browsersync session
-* `yarn run build` — Compile and optimize the files in your assets directory
-* `yarn run build:production` — Compile assets for production
