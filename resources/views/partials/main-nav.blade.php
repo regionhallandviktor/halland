@@ -27,13 +27,13 @@
 					{!! wp_nav_menu(['theme_location' => 'main-menu', 'menu_class' => 'nav']) !!}
 				@endif
 			</nav>
-			<div class="nav-tool nav-language-tool">
+			<div class="nav-tool nav-tool-language">
 				<img class="nav-tool-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/language.png" alt="Språk">
 				<span class="nav-icons-label">
 					Språk
 				</span>
 			</div>
-			<div class="nav-tool nav-login-tool">
+			<div class="nav-tool nav-tool-login">
 				<img class="nav-tool-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/profile.png" alt="Profil">
 				<span class="nav-icons-label">
 					Logga in

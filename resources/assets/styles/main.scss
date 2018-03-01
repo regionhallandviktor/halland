@@ -81,12 +81,12 @@ $nav-active-color: rgb(101, 163, 208);
 	text-align: center;
 }
 
-.nav-language-tool {
+.nav-tool-language {
 	width: 50%;
 	text-align: center;
 }
 
-.nav-login-tool {
+.nav-tool-login {
 	width: 50%;
 	text-align: center;
 }
@@ -135,13 +135,13 @@ $nav-active-color: rgb(101, 163, 208);
 		margin-left: auto;
 	}
 
-	.nav-language-tool {
+	.nav-tool-language {
 		width: auto;
 		text-align: left;
 		order: 2;
 	}
 
-	.nav-login-tool {
+	.nav-tool-login {
 		width: auto;
 		text-align: left;
 		order: 3;
