@@ -27,6 +27,7 @@
 					{!! wp_nav_menu(['theme_location' => 'main-menu', 'menu_class' => 'nav']) !!}
 				@endif
 			</nav>
+			<div class="nav-padder"></div>
 			<div class="nav-tool nav-tool-language">
 				<img class="nav-tool-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/language.png" alt="Språk">
 				<span class="nav-icons-label">

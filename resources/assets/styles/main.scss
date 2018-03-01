@@ -81,6 +81,10 @@ $nav-active-color: rgb(101, 163, 208);
 	text-align: center;
 }
 
+.nav-padder {
+	display: none;
+}
+
 .nav-tool-language {
 	width: 50%;
 	text-align: center;
@@ -137,13 +141,17 @@ $nav-active-color: rgb(101, 163, 208);
 		padding-bottom: 6px;
 	}
 
+	.nav-padder {
+		display: inline-block;
+		margin: auto;
+	}
+
 	.nav-tool {
 		margin-left: 1em;
 	}
 
 	.nav-tool-search {
 		order: 1;
-		margin-left: auto;
 	}
 
 	.nav-tool-language {
