@@ -38,7 +38,7 @@
   max-height: 20px;
 }
 
-.nav-logo {
+.nav-logo-container {
   margin-bottom: 6px;
 }
 
@@ -97,6 +97,17 @@
 
   .burgermenu {
     display: none;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-logo-container {
+    background-image: url("/app/themes/halland/resources/assets/images/logotypes/watermark.png");
+    background-size: auto 30px;
+    background-repeat: no-repeat;
+    width: 30px;
   }
 
   .brand-name {
@@ -159,6 +170,17 @@
 
 @media screen and (min-width: 970px) {
   .nav-separator {
+    display: inline-block;
+  }
+
+  .nav-logo-container {
+    background-image: none;
+    background-size: 0 0;
+    background-repeat: no-repeat;
+    width: auto;
+  }
+
+  .nav-logo {
     display: inline-block;
   }
 }
