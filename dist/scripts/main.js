@@ -455,15 +455,19 @@ Router.prototype.loadEvents = function loadEvents () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
+/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__["a"] = ({
   init: function init() {
     // JavaScript to be fired on all pages
   },
   finalize: function finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
+    $( ".burgermenu" ).click(function() {
+        $(".nav-primary, .nav-tool-language, .nav-tool-login").toggle("fast");
+	});
   },
 });
 
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 9 */
