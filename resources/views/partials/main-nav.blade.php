@@ -1,11 +1,13 @@
 
 	<header class="container mx-auto">
 		<div class="col col-12 px2 mb4 main-nav-container" id="main-nav-container">
-			<div class="burgermenu">
-				<a class="" href="#">
-					<img class="burgermenu-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/black/menu.png" alt="Meny">
-					Meny
-				</a>
+			<div class="burgermenu-container">
+				<div class="burgermenu burgermenu-change">
+					<div class="burgermenu-bar1"></div>
+					<div class="burgermenu-bar2"></div>
+					<div class="burgermenu-bar3"></div>
+				</div>
+				<span class="burgermenu-label">Meny</span>
 			</div>
 			<a class="brand strong nav-logo-container" href="{{ home_url('/') }}">
 				<img class="nav-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/RH-logo.jpg" alt="Logotyp">
