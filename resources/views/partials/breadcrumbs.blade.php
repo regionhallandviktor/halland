@@ -1,4 +1,4 @@
-@if($breadcrumbs)
+@if(isset($breadcrumbs))
 	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
 		@foreach ($breadcrumbs as $breadcrumb)
 			<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
