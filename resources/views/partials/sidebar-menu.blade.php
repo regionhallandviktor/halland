@@ -1,4 +1,4 @@
-@if($sidebar_menu)
+@if(isset($sidebar_menu))
 	<ul>
 		<li>
 			{{ $sidebar_menu['current_page']->post_title }}
