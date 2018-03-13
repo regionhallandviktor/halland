@@ -105,12 +105,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_3__util_Router__["a" /* default */]({
-  // All pages
-  common: __WEBPACK_IMPORTED_MODULE_4__routes_common__["a" /* default */],
-  // Home page
-  home: __WEBPACK_IMPORTED_MODULE_5__routes_home__["a" /* default */],
-  // About Us page, note the change from about-us to aboutUs.
-  aboutUs: __WEBPACK_IMPORTED_MODULE_6__routes_about__["a" /* default */],
+	// All pages
+	common: __WEBPACK_IMPORTED_MODULE_4__routes_common__["a" /* default */],
+	// Home page
+	home: __WEBPACK_IMPORTED_MODULE_5__routes_home__["a" /* default */],
+	// About Us page, note the change from about-us to aboutUs.
+	aboutUs: __WEBPACK_IMPORTED_MODULE_6__routes_about__["a" /* default */],
 });
 
 // Load Events
@@ -455,27 +455,15 @@ Router.prototype.loadEvents = function loadEvents () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony default export */ __webpack_exports__["a"] = ({
-  init: function init() {
-    // JavaScript to be fired on all pages
-  },
-  finalize: function finalize() {
-    // JavaScript to be fired on all pages, after page specific JS is fired
-    $( ".burgermenu" ).click(function() {
-        $(".nav-primary, .nav-tool-language, .nav-tool-login").toggle("fast");
-        $(".burgermenu").toggleClass("burgermenu-change");
-
-	});
-	$( window ).resize(function(){
-		if ( $( window ).width() > 768) {
-			console.log("Bigger than phone - clear inline CSS from main menu");
-			$(".nav-primary, .nav-tool-language, .nav-tool-login").show();
-		}
-	});
-  },
+/* harmony default export */ __webpack_exports__["a"] = ({
+	init: function init() {
+		// JavaScript to be fired on all pages
+	},
+	finalize: function finalize() {
+		// JavaScript to be fired on all pages, after page specific JS is fired
+	},
 });
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 9 */

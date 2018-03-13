@@ -29,5 +29,11 @@ class Sidebars
 			'name'          => __('Right', 'sage'),
 			'id'            => 'sidebar-right'
 		] + $config);
+
+		// Bottom sidebar
+		register_sidebar([
+			'name'          => __('Bottom', 'halland'),
+			'id'            => 'sidebar-bottom'
+		] + $config);
 	}
 }
