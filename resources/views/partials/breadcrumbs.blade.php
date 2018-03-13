@@ -1,7 +1,7 @@
 @if(isset($breadcrumbs))
-	<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+	<ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 		@foreach ($breadcrumbs as $breadcrumb)
-			<li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+			<li class="breadcrumbs__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
 				@if ($breadcrumb['url'])
 					<a href="{{ $breadcrumb['url'] }}">{{ $breadcrumb['name'] }}</a>
 				@else
