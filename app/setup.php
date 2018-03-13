@@ -27,7 +27,7 @@ add_action('init', function() {
 	if (class_exists('AcfExportManager\AcfExportManager')) {
 		$acfExportManager = new \AcfExportManager\AcfExportManager();
 		$acfExportManager->setTextdomain('halland');
-		$acfExportManager->setExportFolder(get_template_directory() . '/../app/acf');
+		$acfExportManager->setExportFolder(__DIR__ . '/acf/');
 		$acfExportManager->autoExport(array(
 		    'options-theme-cookie-notice' => 'group_5aa63e3f4d0c8'
 		));
