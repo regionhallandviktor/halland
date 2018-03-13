@@ -7,7 +7,6 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
-
 /**
  * Theme
  */
@@ -21,6 +20,20 @@ new \App\Theme\Sidebars();
  */
 new \App\Admin\Options\Theme();
 
+/**
+ * ACF auto import and export
+ */
+add_action('init', function() {
+	if (class_exists('AcfExportManager\AcfExportManager')) {
+		$acfExportManager = new \AcfExportManager\AcfExportManager();
+		$acfExportManager->setTextdomain('halland');
+		$acfExportManager->setExportFolder(get_template_directory() . '/../app/acf');
+		$acfExportManager->autoExport(array(
+		    'options-theme-cookie-notice' => 'group_5aa63e3f4d0c8'
+		));
+		$acfExportManager->import();
+	}
+});
 
 /**
  * Updates the `$post` variable on each iteration of the loop.
