@@ -37,7 +37,6 @@ class TemplateSection extends Controller
 			$page->url = get_page_link($page->ID);
 		}
 
-		var_dump($pages);
 		return $pages;
 	}
 

@@ -261,6 +261,10 @@ $palettes: (
 	&.is-open {
 		display: flex;
 	}
+
+	@media screen and (min-width: $breakpoint-md) {
+		display: none;
+	}
 }
 
 .dropdown__container {
@@ -378,6 +382,7 @@ $palettes: (
 	display: flex;
 	width: 100%;
 	overflow-x: scroll;
+	overflow-y: hidden;
 }
 
 .section-nav__item {

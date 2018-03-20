@@ -7,7 +7,7 @@
 
 @section('content')
 
-	<div class="section-header px2">
+	<div class="section-header px2 mb4">
 		<div class="clearfix">
 			<div class="container mx-auto">
 				<div class="col col-12 px2">
@@ -41,7 +41,7 @@
 
 		<div class="col col-12 md-col-6 px2">
 			@while(have_posts()) @php(the_post())
-				@include('partials.content')
+				@include('partials.article')
 			@endwhile
 
 			@if (is_active_sidebar('sidebar-bottom'))

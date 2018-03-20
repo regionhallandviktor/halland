@@ -10,7 +10,7 @@
 
 	<div class="col col-12 md-col-6 px2">
 		@while(have_posts()) @php(the_post())
-			@include('partials.content-page')
+			@include('partials.article')
 		@endwhile
 
 		@if (is_active_sidebar('sidebar-bottom'))
