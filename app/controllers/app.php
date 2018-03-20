@@ -93,4 +93,15 @@ class App extends Controller
 
 		return $notices;
 	}
+
+	/**
+	 * Return the main nav
+	 * @return array
+	 */
+	public function mainNav()
+	{
+		$menu = new \App\Theme\Navigation();
+		$menu = $menu->getNavMenuItems('main-menu');
+		return $menu;
+	}
 }
