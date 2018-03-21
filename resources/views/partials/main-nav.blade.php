@@ -31,7 +31,7 @@
 </nav>	
 @endif
 
-<nav class="dropdown">
+{{-- <nav class="dropdown">
 	<div class="dropdown__container">
 		
 		<div class="dropdown__col">
@@ -115,4 +115,4 @@
 			</ul>
 		</div>
 	</div>
-</nav>
+</nav> --}}

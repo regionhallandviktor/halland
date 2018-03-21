@@ -104,4 +104,12 @@ class App extends Controller
 		$menu = $menu->getNavMenuItems('main-menu');
 		return $menu;
 	}
+
+	public function dropdown()
+	{
+		$menu = new \App\Theme\NavigationTree();
+		
+		var_dump($menu);
+		//return $menu;
+	}
 }

@@ -13,7 +13,7 @@ class Nav {
 	bind() {
 		this.$toggleSublistButtons.each((i, el) => {
 			el = $(el);
-			let sublist = $(el.siblings('.dropdown__sub-list'));
+			let sublist = $(el.siblings('.dropdown__sublist'));
 			
 			el.on('click', () => {
 				this.toggleSublist(sublist[0]);
