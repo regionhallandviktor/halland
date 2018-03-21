@@ -4,6 +4,10 @@
 		@include('partials/entry-meta')
 	</header>
 	<div class="entry-content">
+
+
+		EAT MY SHORTS!°°°
+
 		@php(the_content())
 	</div>
 	<footer>
