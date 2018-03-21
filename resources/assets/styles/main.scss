@@ -1,0 +1,7 @@
+.alternation {
+	background: #fff;
+
+	&:nth-child(even) {
+		background-color: #cee2f2;
+	}
+}
