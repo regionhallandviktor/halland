@@ -1,7 +1,29 @@
 .alternation {
-	background: #fff;
-
 	&:nth-child(even) {
-		background-color: #cee2f2;
+		background-color: #fafafa;
+	}
+}
+
+p.light {
+	font-family: 'Lato';
+	color: #3e3e3e;
+	font-size: 0.9em;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+.comments {
+	.comment-list > li {
+		margin-bottom: 2em;
+		border-bottom: 1px solid #333;
+		padding-bottom: 1em;
 	}
 }

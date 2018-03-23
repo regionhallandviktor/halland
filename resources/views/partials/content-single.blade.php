@@ -1,28 +1,34 @@
-<article @php(post_class('article'))>
+<div class="alternation py4">
 
-	<div class="container mx-auto alternation">
-		<div class="col col-12 sm-col-10">
-					
-			<header>
-				<h1 class="entry-title">{{ get_the_title() }}</h1>
+<div class="container mx-auto alternation clearfix">
+	
+
+		<div class="col-12 sm-col-8 mx-auto">
+			<article @php(post_class('article'))>	
+				<header>
+					<h1 class="entry-title">{{ get_the_title() }}</h1>
+				</header>
+
+				@php(the_content())
+				<hr>
 				@include('partials/entry-meta')
-			</header>
-
-			@php(the_content())			
+			</article>	
 		</div>
 
-		<div class="col col-12 sm-col-2">
-			<h2>Hitta på sidan</h2>
-		</div>
-	</div>
-	<div class="container mx-auto alternation">
+	
+	
+	
+</div>
+</div>
+<div class="alternation">
+<div class="container mx-auto alternation clearfix py4">
 		
-		<div class="col col-12 sm-col-10">
-			@php(comments_template('/partials/comments.blade.php'))
-		</div>
+	<div class="col-12 sm-col-8 mx-auto">
+		@php(comments_template('/partials/comments.blade.php'))
 	</div>
+
 	<footer>
 		{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
 	</footer>
-	
-</article>
+</div>
+</div>
