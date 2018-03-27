@@ -11,6 +11,9 @@
 			@php(the_content())
 			<hr>
 			@include('partials/entry-meta')
+			<footer>
+		{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+	</footer>
 		</article>	
 	</div>
 	<div class="col col-12 sm-col-2 px2">
@@ -30,15 +33,7 @@
 <div class="container mx-auto alternation clearfix py4">
 		
 	<div class="col-12 sm-col-8 mx-auto px2">
-		
 		@php(comments_template('/partials/comments.blade.php'))
-
-	
-
 	</div>
-
-	<footer>
-		{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-	</footer>
 </div>
 </div>
