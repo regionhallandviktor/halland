@@ -6,7 +6,7 @@
 		@include('partials.site-notices')
 		@php(do_action('get_header'))
 		@include('partials.header')
-		<div class="container mx-auto" role="document">
+		<div role="document">
 			<div class="clearfix mb4">
 				<div class="col col-12 px2">
 					@include('partials.breadcrumbs')

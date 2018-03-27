@@ -52,6 +52,17 @@ class App extends Controller
 	}
 
 	/**
+	 * Returns array of comments for a post
+	 * @return array
+	 */
+	public function comments()
+	{
+		$comments = new \App\Theme\Comments();
+		$comments = $comments->getComments();
+		return $comments;
+	}
+
+	/**
 	 * Returns array with the sidebar menu
 	 * @return array
 	 */

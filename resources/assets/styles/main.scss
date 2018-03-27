@@ -1,27 +1,40 @@
-// @import "common/variables";
+.alternation {
+	&:nth-child(even) {
+		background-color: #fafafa;
+	}
+}
 
-/** Import everything from autoload */
-// @import "./autoload/**/*";
+p.light {
+	font-family: 'Lato';
+	color: #3e3e3e;
+	font-size: 0.9em;
+}
 
-/**
- * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
- */
-// @import "~some-node-module";
+.alignright {
+	float: right;
+	margin: 0 0 1em 1em;
+}
 
-/** Import theme styles */
-// @import "common/global";
-// @import "components/buttons";
-// @import "components/comments";
-// @import "components/forms";
-// @import "components/wp-classes";
-// @import "layouts/header";
-// @import "layouts/sidebar";
-// @import "layouts/footer";
-// @import "layouts/pages";
-// @import "layouts/posts";
-// @import "layouts/tinymce";
+.alignleft {
+	float: left;
+	margin: 0 1em 1em 0;
+}
 
-@import "layouts/print";
+.comments {
+	li {
+		background: #fff;
+		border: 1px solid #e9e9e9;
+		margin-bottom: 2rem;
+
+		.comment-body {
+			padding: 1rem;
+		}
+
+		.children li {
+			border: none;
+			border-top: 1px solid #e9e9e9;
+			background: #f8fbfc;
+			margin-bottom: 0;
+		}
+	}
+}
