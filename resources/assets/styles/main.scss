@@ -301,7 +301,7 @@
 }
 
 // Article
->>>>>>> master
+
 .alternation {
 	&:nth-child(even) {
 		background-color: #fafafa;
@@ -344,24 +344,38 @@ p.light {
 }
 
 .content-nav {
-	position: fixed;
-	overflow-y: auto;
-
 	&__heading {
-		font-size: $h4;
+		font-size: 0.75rem;
+		color: palette(grey, x-dark);
 		font-family: $sans-font-family;
+		text-transform: uppercase;
 		display: block;
 		line-height: $space-4;
 		margin-bottom: $space-2;
 	}
 
-	&__item {
-		padding: $space-1 0 $space-1 $space-2;
-		margin-bottom: $space-2;
-		border-left: 3px solid transparent;
+	&__container {
+		display: flex;
+		flex-wrap: row wrap;
 	}
 
-	&__item--active {
-		border-left: 3px solid palette(dark-blue);
+	&__slider {
+		width: 4px;
+		background: palette(dark-blue);
+		flex: none;
+	}
+
+	&__menu {
+		margin-left: 0.5rem;
+		flex: 1 auto;
+	}
+
+	&__item {
+		margin: 0;
+
+		a {
+			padding: $space-1 0;
+			display: inline-block;
+		}
 	}
 }
