@@ -6,8 +6,6 @@ class ContentNav {
 		this.tags = $(tags);
 		this.name = 'content_nav';
 		this.bind();
-
-		console.log(this.tags, this.container)
 	}
 
 	bind() {
@@ -18,8 +16,6 @@ class ContentNav {
 		})
 		*/
 	}
-
-
 }
 
 export default ContentNav;
