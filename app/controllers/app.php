@@ -108,8 +108,6 @@ class App extends Controller
 	public function dropdown()
 	{
 		$menu = new \App\Theme\NavigationTree();
-		
-		var_dump($menu);
 		//return $menu;
 	}
 }

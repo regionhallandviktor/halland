@@ -19,8 +19,6 @@ class NavigationTree
         }
         
         $tree = $this->createTree($new, $new[0]); // changed
-
-        var_dump($tree);
     }
 
     public function createTree(&$pages, $parents) {
