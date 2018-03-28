@@ -1,4 +1,5 @@
 /******/ (function(modules) { // webpackBootstrap
+<<<<<<< HEAD
 /******/ 	function hotDisposeChunk(chunkId) {
 /******/ 		delete installedChunks[chunkId];
 /******/ 	}
@@ -655,6 +656,8 @@
 /******/ 		});
 /******/ 	}
 /******/
+=======
+>>>>>>> master
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -669,6 +672,7 @@
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
+<<<<<<< HEAD
 /******/ 			exports: {},
 /******/ 			hot: hotCreateModule(moduleId),
 /******/ 			parents: (hotCurrentParentsTemp = hotCurrentParents, hotCurrentParents = [], hotCurrentParentsTemp),
@@ -677,6 +681,13 @@
 /******/
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, hotCreateRequire(moduleId));
+=======
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+>>>>>>> master
 /******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
@@ -716,6 +727,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
+<<<<<<< HEAD
 /******/ 	__webpack_require__.p = "http://localhost:3000/app/themes/halland/dist/";
 /******/
 /******/ 	// __webpack_hash__
@@ -723,10 +735,17 @@
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return hotCreateRequire(17)(__webpack_require__.s = 17);
+=======
+/******/ 	__webpack_require__.p = "/app/themes/halland/dist/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+>>>>>>> master
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+<<<<<<< HEAD
 /*!*************************!*\
   !*** external "jQuery" ***!
   \*************************/
@@ -2306,46 +2325,55 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, ".alternation:nth-child(even) {\n  background-color: #fafafa;\n}\n\np.light {\n  font-family: 'Lato';\n  color: #3e3e3e;\n  font-size: 0.9em;\n}\n\n.alignright {\n  float: right;\n  margin: 0 0 1em 1em;\n}\n\n.alignleft {\n  float: left;\n  margin: 0 1em 1em 0;\n}\n\n.comments li {\n  background: #fff;\n  border: 1px solid #e9e9e9;\n  margin-bottom: 2rem;\n}\n\n.comments li .comment-body {\n  padding: 1rem;\n}\n\n.comments li .children li {\n  border: none;\n  border-top: 1px solid #e9e9e9;\n  background: #f8fbfc;\n  margin-bottom: 0;\n}\n\n", "", {"version":3,"sources":["/Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/resources/assets/styles/resources/assets/styles/main.scss","/Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/main.scss"],"names":[],"mappings":"AAAA;EAEE,0BAAA;CCAD;;ADID;EACC,oBAAA;EACA,eAAA;EACA,iBAAA;CCDA;;ADID;EACC,aAAA;EACA,oBAAA;CCDA;;ADID;EACC,YAAA;EACA,oBAAA;CCDA;;ADID;EAEE,iBAAA;EACA,0BAAA;EACA,oBAAA;CCFD;;ADFD;EAOG,cAAA;CCDF;;ADND;EAWG,aAAA;EACA,8BAAA;EACA,oBAAA;EACA,iBAAA;CCDF","file":"main.scss","sourcesContent":[".alternation {\n\t&:nth-child(even) {\n\t\tbackground-color: #fafafa;\n\t}\n}\n\np.light {\n\tfont-family: 'Lato';\n\tcolor: #3e3e3e;\n\tfont-size: 0.9em;\n}\n\n.alignright {\n\tfloat: right;\n\tmargin: 0 0 1em 1em;\n}\n\n.alignleft {\n\tfloat: left;\n\tmargin: 0 1em 1em 0;\n}\n\n.comments {\n\tli {\n\t\tbackground: #fff;\n\t\tborder: 1px solid #e9e9e9;\n\t\tmargin-bottom: 2rem;\n\n\t\t.comment-body {\n\t\t\tpadding: 1rem;\n\t\t}\n\n\t\t.children li {\n\t\t\tborder: none;\n\t\t\tborder-top: 1px solid #e9e9e9;\n\t\t\tbackground: #f8fbfc;\n\t\t\tmargin-bottom: 0;\n\t\t}\n\t}\n}\n",".alternation:nth-child(even) {\n  background-color: #fafafa;\n}\n\np.light {\n  font-family: 'Lato';\n  color: #3e3e3e;\n  font-size: 0.9em;\n}\n\n.alignright {\n  float: right;\n  margin: 0 0 1em 1em;\n}\n\n.alignleft {\n  float: left;\n  margin: 0 1em 1em 0;\n}\n\n.comments li {\n  background: #fff;\n  border: 1px solid #e9e9e9;\n  margin-bottom: 2rem;\n}\n\n.comments li .comment-body {\n  padding: 1rem;\n}\n\n.comments li .children li {\n  border: none;\n  border-top: 1px solid #e9e9e9;\n  background: #f8fbfc;\n  margin-bottom: 0;\n}\n\n"],"sourceRoot":""}]);
 
 // exports
+=======
+/***/ (function(module, exports) {
+>>>>>>> master
 
+module.exports = jQuery;
 
 /***/ }),
-/* 17 */
-/*!****************************************************************************************!*\
-  !*** multi ./build/util/../helpers/hmr-client.js ./scripts/main.js ./styles/main.scss ***!
-  \****************************************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/resources/assets/build/util/../helpers/hmr-client.js */2);
 __webpack_require__(/*! ./scripts/main.js */18);
 module.exports = __webpack_require__(/*! ./styles/main.scss */28);
+=======
+__webpack_require__(2);
+module.exports = __webpack_require__(13);
+>>>>>>> master
 
 
 /***/ }),
-/* 18 */
-/*!*************************!*\
-  !*** ./scripts/main.js ***!
-  \*************************/
-/*! no exports provided */
-/*! all exports used */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 0);
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_cookie_notice_js__ = __webpack_require__(/*! ./autoload/cookie-notice.js */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__autoload_icons_js__ = __webpack_require__(/*! ./autoload/icons.js */ 21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_Router__ = __webpack_require__(/*! ./util/Router */ 22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_common__ = __webpack_require__(/*! ./routes/common */ 24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_home__ = __webpack_require__(/*! ./routes/home */ 25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_single__ = __webpack_require__(/*! ./routes/single */ 26);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_cookie_notice_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__autoload_icons_js__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__autoload_nav_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_Router__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_common__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_home__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__routes_single__ = __webpack_require__(11);
+>>>>>>> master
 // import external dependencies
 
 
 // Import everything from autoload
- 
+  
 
 // import local dependencies
 
@@ -2354,30 +2382,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /** Populate Router instance with DOM routes */
-var routes = new __WEBPACK_IMPORTED_MODULE_3__util_Router__["a" /* default */]({
+var routes = new __WEBPACK_IMPORTED_MODULE_4__util_Router__["a" /* default */]({
 	// All pages
-	common: __WEBPACK_IMPORTED_MODULE_4__routes_common__["a" /* default */],
+	common: __WEBPACK_IMPORTED_MODULE_5__routes_common__["a" /* default */],
 	// Home page
+<<<<<<< HEAD
 	home: __WEBPACK_IMPORTED_MODULE_5__routes_home__["a" /* default */],
 	// Single blogposts etc.
 	single: __WEBPACK_IMPORTED_MODULE_6__routes_single__["a" /* default */],
+=======
+	home: __WEBPACK_IMPORTED_MODULE_6__routes_home__["a" /* default */],
+	// Single blogposts etc.
+	single: __WEBPACK_IMPORTED_MODULE_7__routes_single__["a" /* default */],
+>>>>>>> master
 });
 
 // Load Events
 jQuery(document).ready(function () { return routes.loadEvents(); });
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
-/*!*******************************************!*\
-  !*** ./scripts/autoload/cookie-notice.js ***!
-  \*******************************************/
-/*! exports provided: default */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_js_cookie__ = __webpack_require__(/*! js-cookie */ 20);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_js_cookie__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_js_cookie___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_js_cookie__);
 
 
@@ -2420,15 +2450,10 @@ CookieNotice.prototype.setCookie = function setCookie (name) {
 
 /* unused harmony default export */ var _unused_webpack_default_export = (new CookieNotice());
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 20 */
-/*!****************************************************************************************************************************************************!*\
-  !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/js-cookie/src/js.cookie.js ***!
-  \****************************************************************************************************************************************************/
-/*! dynamic exports provided */
-/*! exports used: default */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2603,11 +2628,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 21 */
-/*!***********************************!*\
-  !*** ./scripts/autoload/icons.js ***!
-  \***********************************/
-/*! exports provided: default */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2627,19 +2648,58 @@ Icons.prototype.getIcons = function getIcons (url) {
 
 /* unused harmony default export */ var _unused_webpack_default_export = (new Icons());
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 22 */
-/*!********************************!*\
-  !*** ./scripts/util/Router.js ***!
-  \********************************/
-/*! exports provided: default */
-/*! exports used: default */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(/*! ./camelCase */ 23);
+/* WEBPACK VAR INJECTION */(function($) {var Nav = function Nav() {
+	this.cache();
+	this.bind();
+};
+
+Nav.prototype.cache = function cache () {
+	this.$dropdown = $('.dropdown');
+	this.$toggleSublistButtons = this.$dropdown.find('.dropdown__toggle-btn');
+	this.$toggleNavButton = $('.main-nav__menu-btn');
+};
+
+Nav.prototype.bind = function bind () {
+		var this$1 = this;
+
+	this.$toggleSublistButtons.each(function (i, el) {
+		el = $(el);
+		var sublist = $(el.siblings('.dropdown__sublist'));
+			
+		el.on('click', function () {
+			this$1.toggleSublist(sublist[0]);
+		});
+	});
+	this.$toggleNavButton.on('click', function () {
+		this$1.toggleNav();
+	})
+};
+
+Nav.prototype.toggleSublist = function toggleSublist (el) {
+	$(el).toggleClass('is-open')
+};
+
+Nav.prototype.toggleNav = function toggleNav () {
+	this.$dropdown.toggleClass('is-open');
+};
+
+/* unused harmony default export */ var _unused_webpack_default_export = (new Nav());
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(8);
 
 
 /**
@@ -2703,12 +2763,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 23 */
-/*!***********************************!*\
-  !*** ./scripts/util/camelCase.js ***!
-  \***********************************/
-/*! exports provided: default */
-/*! exports used: default */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2724,12 +2779,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 24 */
-/*!**********************************!*\
-  !*** ./scripts/routes/common.js ***!
-  \**********************************/
-/*! exports provided: default */
-/*! exports used: default */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2744,12 +2794,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 25 */
-/*!********************************!*\
-  !*** ./scripts/routes/home.js ***!
-  \********************************/
-/*! exports provided: default */
-/*! exports used: default */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2764,6 +2809,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 26 */
 /*!**********************************!*\
   !*** ./scripts/routes/single.js ***!
@@ -2968,40 +3014,26 @@ var	memoize = function (fn) {
 		return memo;
 	};
 };
+=======
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var isOldIE = memoize(function () {
-	// Test for IE <= 9 as proposed by Browserhacks
-	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-	// Tests for existence of standard globals is to allow style-loader
-	// to operate correctly into non-standard environments
-	// @see https://github.com/webpack-contrib/style-loader/issues/177
-	return window && document && document.all && !window.atob;
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__ = __webpack_require__(12);
+// import external dependencies
+>>>>>>> master
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+	init: function init() {
+		this.nav = new __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__["a" /* default */]('.article', ['h2', 'h3']);
+	},
 });
 
-var getElement = (function (fn) {
-	var memo = {};
-
-	return function(selector) {
-		if (typeof memo[selector] === "undefined") {
-			var styleTarget = fn.call(this, selector);
-			// Special case to return head of iframe instead of iframe itself
-			if (styleTarget instanceof window.HTMLIFrameElement) {
-				try {
-					// This will throw an exception if access to iframe is blocked
-					// due to cross-origin restrictions
-					styleTarget = styleTarget.contentDocument.head;
-				} catch(e) {
-					styleTarget = null;
-				}
-			}
-			memo[selector] = styleTarget;
-		}
-		return memo[selector]
-	};
-})(function (target) {
-	return document.querySelector(target)
-});
-
+<<<<<<< HEAD
 var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
@@ -3028,398 +3060,52 @@ module.exports = function(list, options) {
 	if (!options.insertAt) options.insertAt = "bottom";
 
 	var styles = listToStyles(list, options);
-
-	addStylesToDom(styles, options);
-
-	return function update (newList) {
-		var mayRemove = [];
-
-		for (var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-
-			domStyle.refs--;
-			mayRemove.push(domStyle);
-		}
-
-		if(newList) {
-			var newStyles = listToStyles(newList, options);
-			addStylesToDom(newStyles, options);
-		}
-
-		for (var i = 0; i < mayRemove.length; i++) {
-			var domStyle = mayRemove[i];
-
-			if(domStyle.refs === 0) {
-				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
-
-				delete stylesInDom[domStyle.id];
-			}
-		}
-	};
-};
-
-function addStylesToDom (styles, options) {
-	for (var i = 0; i < styles.length; i++) {
-		var item = styles[i];
-		var domStyle = stylesInDom[item.id];
-
-		if(domStyle) {
-			domStyle.refs++;
-
-			for(var j = 0; j < domStyle.parts.length; j++) {
-				domStyle.parts[j](item.parts[j]);
-			}
-
-			for(; j < item.parts.length; j++) {
-				domStyle.parts.push(addStyle(item.parts[j], options));
-			}
-		} else {
-			var parts = [];
-
-			for(var j = 0; j < item.parts.length; j++) {
-				parts.push(addStyle(item.parts[j], options));
-			}
-
-			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-		}
-	}
-}
-
-function listToStyles (list, options) {
-	var styles = [];
-	var newStyles = {};
-
-	for (var i = 0; i < list.length; i++) {
-		var item = list[i];
-		var id = options.base ? item[0] + options.base : item[0];
-		var css = item[1];
-		var media = item[2];
-		var sourceMap = item[3];
-		var part = {css: css, media: media, sourceMap: sourceMap};
-
-		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
-		else newStyles[id].parts.push(part);
-	}
-
-	return styles;
-}
-
-function insertStyleElement (options, style) {
-	var target = getElement(options.insertInto)
-
-	if (!target) {
-		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
-	}
-
-	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
-
-	if (options.insertAt === "top") {
-		if (!lastStyleElementInsertedAtTop) {
-			target.insertBefore(style, target.firstChild);
-		} else if (lastStyleElementInsertedAtTop.nextSibling) {
-			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
-		} else {
-			target.appendChild(style);
-		}
-		stylesInsertedAtTop.push(style);
-	} else if (options.insertAt === "bottom") {
-		target.appendChild(style);
-	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
-		var nextSibling = getElement(options.insertInto + " " + options.insertAt.before);
-		target.insertBefore(style, nextSibling);
-	} else {
-		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
-	}
-}
-
-function removeStyleElement (style) {
-	if (style.parentNode === null) return false;
-	style.parentNode.removeChild(style);
-
-	var idx = stylesInsertedAtTop.indexOf(style);
-	if(idx >= 0) {
-		stylesInsertedAtTop.splice(idx, 1);
-	}
-}
-
-function createStyleElement (options) {
-	var style = document.createElement("style");
-
-	options.attrs.type = "text/css";
-
-	addAttrs(style, options.attrs);
-	insertStyleElement(options, style);
-
-	return style;
-}
-
-function createLinkElement (options) {
-	var link = document.createElement("link");
-
-	options.attrs.type = "text/css";
-	options.attrs.rel = "stylesheet";
-
-	addAttrs(link, options.attrs);
-	insertStyleElement(options, link);
-
-	return link;
-}
-
-function addAttrs (el, attrs) {
-	Object.keys(attrs).forEach(function (key) {
-		el.setAttribute(key, attrs[key]);
-	});
-}
-
-function addStyle (obj, options) {
-	var style, update, remove, result;
-
-	// If a transform function was defined, run it on the css
-	if (options.transform && obj.css) {
-	    result = options.transform(obj.css);
-
-	    if (result) {
-	    	// If transform returns a value, use that instead of the original css.
-	    	// This allows running runtime transformations on the css.
-	    	obj.css = result;
-	    } else {
-	    	// If the transform function returns a falsy value, don't add this css.
-	    	// This allows conditional loading of css
-	    	return function() {
-	    		// noop
-	    	};
-	    }
-	}
-
-	if (options.singleton) {
-		var styleIndex = singletonCounter++;
-
-		style = singleton || (singleton = createStyleElement(options));
-
-		update = applyToSingletonTag.bind(null, style, styleIndex, false);
-		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-
-	} else if (
-		obj.sourceMap &&
-		typeof URL === "function" &&
-		typeof URL.createObjectURL === "function" &&
-		typeof URL.revokeObjectURL === "function" &&
-		typeof Blob === "function" &&
-		typeof btoa === "function"
-	) {
-		style = createLinkElement(options);
-		update = updateLink.bind(null, style, options);
-		remove = function () {
-			removeStyleElement(style);
-
-			if(style.href) URL.revokeObjectURL(style.href);
-		};
-	} else {
-		style = createStyleElement(options);
-		update = applyToTag.bind(null, style);
-		remove = function () {
-			removeStyleElement(style);
-		};
-	}
-
-	update(obj);
-
-	return function updateStyle (newObj) {
-		if (newObj) {
-			if (
-				newObj.css === obj.css &&
-				newObj.media === obj.media &&
-				newObj.sourceMap === obj.sourceMap
-			) {
-				return;
-			}
-
-			update(obj = newObj);
-		} else {
-			remove();
-		}
-	};
-}
-
-var replaceText = (function () {
-	var textStore = [];
-
-	return function (index, replacement) {
-		textStore[index] = replacement;
-
-		return textStore.filter(Boolean).join('\n');
-	};
-})();
-
-function applyToSingletonTag (style, index, remove, obj) {
-	var css = remove ? "" : obj.css;
-
-	if (style.styleSheet) {
-		style.styleSheet.cssText = replaceText(index, css);
-	} else {
-		var cssNode = document.createTextNode(css);
-		var childNodes = style.childNodes;
-
-		if (childNodes[index]) style.removeChild(childNodes[index]);
-
-		if (childNodes.length) {
-			style.insertBefore(cssNode, childNodes[index]);
-		} else {
-			style.appendChild(cssNode);
-		}
-	}
-}
-
-function applyToTag (style, obj) {
-	var css = obj.css;
-	var media = obj.media;
-
-	if(media) {
-		style.setAttribute("media", media)
-	}
-
-	if(style.styleSheet) {
-		style.styleSheet.cssText = css;
-	} else {
-		while(style.firstChild) {
-			style.removeChild(style.firstChild);
-		}
-
-		style.appendChild(document.createTextNode(css));
-	}
-}
-
-function updateLink (link, options, obj) {
-	var css = obj.css;
-	var sourceMap = obj.sourceMap;
-
-	/*
-		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
-		and there is no publicPath defined then lets turn convertToAbsoluteUrls
-		on by default.  Otherwise default to the convertToAbsoluteUrls option
-		directly
-	*/
-	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
-
-	if (options.convertToAbsoluteUrls || autoFixUrls) {
-		css = fixUrls(css);
-	}
-
-	if (sourceMap) {
-		// http://stackoverflow.com/a/26603875
-		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-	}
-
-	var blob = new Blob([css], { type: "text/css" });
-
-	var oldSrc = link.href;
-
-	link.href = URL.createObjectURL(blob);
-
-	if(oldSrc) URL.revokeObjectURL(oldSrc);
-}
-
+=======
+>>>>>>> master
 
 /***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+var ContentNav = function ContentNav(container, tags) {
+	this.container = $(container);
+	this.tags = $(tags);
+	this.name = 'content_nav';
+	this.bind();
+};
+
+ContentNav.prototype.bind = function bind () {
+	/*
+	this.consentBtn.on('click', () => {
+		this.removeNotice();
+		this.setCookie(this.name);
+	})
+	*/
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (ContentNav);
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+<<<<<<< HEAD
 /* 31 */
 /*!**************************************************************************************************************************************************!*\
   !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/style-loader/lib/urls.js ***!
   \**************************************************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
+=======
+/* 13 */
+>>>>>>> master
 /***/ (function(module, exports) {
 
-
-/**
- * When source maps are enabled, `style-loader` uses a link element with a data-uri to
- * embed the css on the page. This breaks all relative urls because now they are relative to a
- * bundle instead of the current page.
- *
- * One solution is to only use full urls, but that may be impossible.
- *
- * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
- *
- * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
- *
- */
-
-module.exports = function (css) {
-  // get current location
-  var location = typeof window !== "undefined" && window.location;
-
-  if (!location) {
-    throw new Error("fixUrls requires window.location");
-  }
-
-	// blank or null?
-	if (!css || typeof css !== "string") {
-	  return css;
-  }
-
-  var baseUrl = location.protocol + "//" + location.host;
-  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
-
-	// convert each url(...)
-	/*
-	This regular expression is just a way to recursively match brackets within
-	a string.
-
-	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
-	   (  = Start a capturing group
-	     (?:  = Start a non-capturing group
-	         [^)(]  = Match anything that isn't a parentheses
-	         |  = OR
-	         \(  = Match a start parentheses
-	             (?:  = Start another non-capturing groups
-	                 [^)(]+  = Match anything that isn't a parentheses
-	                 |  = OR
-	                 \(  = Match a start parentheses
-	                     [^)(]*  = Match anything that isn't a parentheses
-	                 \)  = Match a end parentheses
-	             )  = End Group
-              *\) = Match anything and then a close parens
-          )  = Close non-capturing group
-          *  = Match anything
-       )  = Close capturing group
-	 \)  = Match a close parens
-
-	 /gi  = Get all matches, not the first.  Be case insensitive.
-	 */
-	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
-		// strip quotes (if they exist)
-		var unquotedOrigUrl = origUrl
-			.trim()
-			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
-			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
-
-		// already a full url? no change
-		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
-		  return fullMatch;
-		}
-
-		// convert the url to a full url
-		var newUrl;
-
-		if (unquotedOrigUrl.indexOf("//") === 0) {
-		  	//TODO: should we add protocol?
-			newUrl = unquotedOrigUrl;
-		} else if (unquotedOrigUrl.indexOf("/") === 0) {
-			// path should be relative to the base url
-			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
-		} else {
-			// path should be relative to current directory
-			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
-		}
-
-		// send back the fixed url(...)
-		return "url(" + JSON.stringify(newUrl) + ")";
-	});
-
-	// send back the fixed css
-	return fixedCss;
-};
-
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

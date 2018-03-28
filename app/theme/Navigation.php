@@ -7,7 +7,7 @@ class Navigation
 	public function __construct()
 	{
 		$this->registerMenus();
-
+		$this->getNavMenuItems();
 		add_action('save_post', array($this, 'purgeTreeMenuTransient'), 10, 2);
 	}
 
@@ -19,7 +19,6 @@ class Navigation
 	{
 		// Needs review: Should depend on if active is checked in theme options.
 		$menus['main-menu'] = __('Main menu', 'halland');
-
 		register_nav_menus($menus);
 	}
 
@@ -100,5 +99,36 @@ class Navigation
 		}
 
 		return $pages;
+	}
+
+	/**
+	 * Get array of wordpress nav menu items from a specified menu
+	 * @return array
+	 */
+	public function getNavMenuItems($menu = 'main-menu') {
+		global $post;
+
+		if (!is_a($post, 'WP_Post')) {
+			return;
+		}
+
+		if ($post->post_parent)	{
+			$ancestors=get_post_ancestors($post->ID);
+			$root=count($ancestors)-1;
+			$parent = $ancestors[$root];
+		} else {
+			$parent = $post->ID;
+		}
+
+		$nav = wp_get_nav_menu_items($menu);
+
+		foreach ($nav as $item) {
+			$pageID = get_post_meta( $item->ID, '_menu_item_object_id', true );
+			if ($pageID == $parent) {
+				$item->is_current = true;
+			}
+		}
+
+		return $nav;
 	}
 }
