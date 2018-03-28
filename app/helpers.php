@@ -138,3 +138,13 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * Makes an excerpt from content
+ * @param string
+ * @return string
+ */
+function trim_excerpt($content)
+{
+    return substr( $content, 0, 40 ) . '...';
+}
