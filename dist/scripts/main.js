@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "81eb79ca8cee17cab1b4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9244bed14d646f89218a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2298,7 +2298,7 @@ module.exports = function(hash, moduleMap, options) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ 28)(true);
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ 29)(true);
 // imports
 
 
@@ -2319,7 +2319,7 @@ exports.push([module.i, ".alternation:nth-child(even) {\n  background-color: #fa
 
 __webpack_require__(/*! /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/resources/assets/build/util/../helpers/hmr-client.js */2);
 __webpack_require__(/*! ./scripts/main.js */18);
-module.exports = __webpack_require__(/*! ./styles/main.scss */27);
+module.exports = __webpack_require__(/*! ./styles/main.scss */28);
 
 
 /***/ }),
@@ -2340,7 +2340,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_Router__ = __webpack_require__(/*! ./util/Router */ 22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_common__ = __webpack_require__(/*! ./routes/common */ 24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_home__ = __webpack_require__(/*! ./routes/home */ 25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_about__ = __webpack_require__(/*! ./routes/about */ 26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_single__ = __webpack_require__(/*! ./routes/single */ 26);
 // import external dependencies
 
 
@@ -2359,8 +2359,8 @@ var routes = new __WEBPACK_IMPORTED_MODULE_3__util_Router__["a" /* default */]({
 	common: __WEBPACK_IMPORTED_MODULE_4__routes_common__["a" /* default */],
 	// Home page
 	home: __WEBPACK_IMPORTED_MODULE_5__routes_home__["a" /* default */],
-	// About Us page, note the change from about-us to aboutUs.
-	aboutUs: __WEBPACK_IMPORTED_MODULE_6__routes_about__["a" /* default */],
+	// Single blogposts etc.
+	single: __WEBPACK_IMPORTED_MODULE_6__routes_single__["a" /* default */],
 });
 
 // Load Events
@@ -2765,23 +2765,64 @@ Router.prototype.loadEvents = function loadEvents () {
 
 /***/ }),
 /* 26 */
-/*!*********************************!*\
-  !*** ./scripts/routes/about.js ***!
-  \*********************************/
+/*!**********************************!*\
+  !*** ./scripts/routes/single.js ***!
+  \**********************************/
 /*! exports provided: default */
 /*! exports used: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__ = __webpack_require__(/*! ./../functions/content-nav */ 27);
+// import external dependencies
+
+
+
 /* harmony default export */ __webpack_exports__["a"] = ({
-  init: function init() {
-    // JavaScript to be fired on the about us page
-  },
+	init: function init() {
+		this.nav = new __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__["a" /* default */]('.article', ['h2', 'h3']);
+	},
 });
 
 
 /***/ }),
 /* 27 */
+/*!******************************************!*\
+  !*** ./scripts/functions/content-nav.js ***!
+  \******************************************/
+/*! exports provided: default */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+var ContentNav = function ContentNav(container, tags) {
+	this.container = $(container);
+	this.tags = $(tags);
+	this.name = 'content_nav';
+	this.bind();
+};
+
+ContentNav.prototype.bind = function bind () {
+	/*
+	this.consentBtn.on('click', () => {
+		this.removeNotice();
+		this.setCookie(this.name);
+	})
+	*/
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (ContentNav);
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
+
+/***/ }),
+/* 28 */
 /*!**************************!*\
   !*** ./styles/main.scss ***!
   \**************************/
@@ -2800,7 +2841,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ 29)(content, options);
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ 30)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(true) {
@@ -2817,7 +2858,7 @@ if(true) {
 }
 
 /***/ }),
-/* 28 */
+/* 29 */
 /*!****************************************************************************************************************************************************!*\
   !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/css-loader/lib/css-base.js ***!
   \****************************************************************************************************************************************************/
@@ -2904,7 +2945,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /*!*******************************************************************************************************************************************************!*\
   !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/style-loader/lib/addStyles.js ***!
   \*******************************************************************************************************************************************************/
@@ -2965,7 +3006,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(/*! ./urls */ 30);
+var	fixUrls = __webpack_require__(/*! ./urls */ 31);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -3281,7 +3322,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /*!**************************************************************************************************************************************************!*\
   !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/style-loader/lib/urls.js ***!
   \**************************************************************************************************************************************************/

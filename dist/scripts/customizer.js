@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "81eb79ca8cee17cab1b4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9244bed14d646f89218a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(31)(__webpack_require__.s = 31);
+/******/ 	return hotCreateRequire(32)(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2305,7 +2305,8 @@ module.exports = function(hash, moduleMap, options) {
 /* 28 */,
 /* 29 */,
 /* 30 */,
-/* 31 */
+/* 31 */,
+/* 32 */
 /*!***************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/customizer.js ***!
   \***************************************************************************/
@@ -2314,11 +2315,11 @@ module.exports = function(hash, moduleMap, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/resources/assets/build/util/../helpers/hmr-client.js */2);
-module.exports = __webpack_require__(/*! ./scripts/customizer.js */32);
+module.exports = __webpack_require__(/*! ./scripts/customizer.js */33);
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /*!*******************************!*\
   !*** ./scripts/customizer.js ***!
   \*******************************/
