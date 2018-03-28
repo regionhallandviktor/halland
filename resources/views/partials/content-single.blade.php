@@ -1,7 +1,26 @@
 <div class="alternation py4">
 
 <div class="container mx-auto clearfix">
-	<div class="col col-12 sm-col-2 px2">En meny</div>
+	<div class="col col-12 sm-col-2 px2 d-print-none">
+		
+		<nav class="mb4">
+			<ul class="vertical-nav">
+				<li class="vertical-nav__header">
+					<span class="vertical-nav__heading--dynamic">Meny</span>
+					<span class="vertical-nav__heading--static">UI-komponenter</span>
+					<button class="vertical-nav__button">
+		 				<svg class="vertical-nav__icon  icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
+						</svg>
+					</button>
+				</li>
+				<li class="vertical-nav__item"><a class="vertical-nav__link" href="/components/article">Testmeny 1</a></li>
+				<li class="vertical-nav__item"><a class="vertical-nav__link" href="/components/breadcrumbs">Testmeny 2</a></li>
+			</ul>
+		</nav>
+
+
+	</div>
 	<div class="col col-12 sm-col-8 px2">
 		<article @php(post_class('article'))>	
 			<header>
@@ -16,16 +35,8 @@
 	</footer>
 		</article>	
 	</div>
-	<div class="col col-12 sm-col-2 px2">
-		 <nav class="content-nav">
-		 	<span class="content-nav__heading">Innehållsmeny</span>
-		 	<ul class="content-nav__list">
-	 			<li class="content-nav__item">
-	 				<a class=content-nav__link" href="#tobaksfritt-i-samband-med-operation">
-		 Tobaksfritt i samband med operation</a>
-				</li>
-			</ul>
-		</nav>
+	<div class="col col-12 sm-col-2 px2 d-print-none">
+		 <nav class="content-nav"></nav>
 	</div>
 </div>
 </div>

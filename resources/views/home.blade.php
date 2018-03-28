@@ -5,10 +5,6 @@
 @extends('layouts.app')
 
 @section('content')
-	
-
-	
-
 
 	@if (!have_posts())
 		<div class="alert alert-warning">
@@ -18,9 +14,6 @@
 	@endif
 
 	@while (have_posts()) @php(the_post())
-		
-		EAT MO!
-
 		@include('partials.content-'.get_post_type())
 	@endwhile
 
