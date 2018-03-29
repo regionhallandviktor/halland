@@ -1,27 +1,7 @@
 <div class="alternation py4">
 
 <div class="container mx-auto clearfix">
-	<div class="col col-12 sm-col-2 px2 d-print-none">
-		
-		<nav class="mb4">
-			<ul class="vertical-nav">
-				<li class="vertical-nav__header">
-					<span class="vertical-nav__heading--dynamic">Meny</span>
-					<span class="vertical-nav__heading--static">UI-komponenter</span>
-					<button class="vertical-nav__button">
-		 				<svg class="vertical-nav__icon  icon">
-							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
-						</svg>
-					</button>
-				</li>
-				<li class="vertical-nav__item"><a class="vertical-nav__link" href="/components/article">Testmeny 1</a></li>
-				<li class="vertical-nav__item"><a class="vertical-nav__link" href="/components/breadcrumbs">Testmeny 2</a></li>
-			</ul>
-		</nav>
-
-
-	</div>
-	<div class="col col-12 sm-col-8 px2">
+	<div class="col col-12 sm-col-9 px2">
 		<article @php(post_class('article'))>	
 			<header>
 				<h1 class="entry-title">{{ get_the_title() }}</h1>
@@ -35,7 +15,7 @@
 	</footer>
 		</article>	
 	</div>
-	<div class="col col-12 sm-col-2 px2 d-print-none">
+	<div class="col col-12 sm-col-3 px2 d-print-none">
 		<p>Some stuff before the menu</p>
 		 <nav id="content-nav">
 		 	
@@ -46,7 +26,7 @@
 <div class="alternation clearfix">
 <div class="container mx-auto alternation clearfix py4">
 		
-	<div class="col-12 sm-col-8 mx-auto px2">
+	<div class="col-12 sm-col-9 px2">
 		@php(comments_template('/partials/comments.blade.php'))
 	</div>
 </div>

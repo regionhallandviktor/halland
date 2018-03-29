@@ -86,13 +86,11 @@ class ContentNav {
 
 		if(!normal) {
 			h = 0;
-			t = (this.slider.position().top - offset) + (this.slider.height()/2);
+			t = 0;
 		} else {
 			let menuitem = this.currentPair.link;
-			
-
 			h = menuitem.height();
-			t = menuitem.position().top - offset
+			t = menuitem.position().top - offset;
 		}
 		
 		console.log(h,t);

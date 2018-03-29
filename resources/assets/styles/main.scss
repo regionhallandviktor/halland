@@ -459,8 +459,8 @@ p.light {
 		height: 0;
 		background: palette(dark-blue);
 		flex: none;
-		-webkit-transition: top 1s, height 1s;
-		transition: top 1s, height 1s;
+		-webkit-transition: top 1s, height 1s, width 1s;
+		transition: top 1s, height 1s, width 1s;
 	}
 
 	&__menu {
