@@ -1,14 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="py4">
 	<div class="container mx-auto">
-		@if (is_active_sidebar('sidebar-left'))
-			<div class="col col-12 md-col-3 px2">
+		
+		<div class="col col-12 md-col-3 px2">
+			@include('partials.nav-sidebar')
+			@if (is_active_sidebar('sidebar-left'))
 				@include('partials.sidebar-left')
-			</div>
-		@endif
+			@endif
+		</div>
+		
 
 		<div class="col col-12 md-col-6 px2">
+			<header>
+				<h1 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h1>
+			</header>
+			
 			@while(have_posts()) @php(the_post())
 				@include('partials.article')
 			@endwhile
@@ -26,4 +34,5 @@
 			</div>
 		@endif
 	</div>
+</div>
 @endsection
