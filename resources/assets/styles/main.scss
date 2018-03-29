@@ -351,7 +351,7 @@ p.light {
 		text-transform: uppercase;
 		display: block;
 		line-height: $space-4;
-		margin-bottom: $space-2;
+		padding-bottom: $space-2;
 	}
 
 	&__container {
@@ -364,8 +364,8 @@ p.light {
 		height: 0;
 		background: palette(dark-blue);
 		flex: none;
-		-webkit-transition: margin-top 1s, height 1s;
-		transition: margin-top 1s, height 1s;
+		-webkit-transition: top 1s, height 1s;
+		transition: top 1s, height 1s;
 	}
 
 	&__menu {

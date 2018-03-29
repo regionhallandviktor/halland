@@ -80,16 +80,14 @@ class ContentNav {
 	 */
 
 	setSlider() {
-			
-			console.log('switcharoo');
-
 			let menuitem = this.currentPair.link;
-			//console.log(menuitem.text());
-			this.slider.height(menuitem.height());
+			let offset = this.pairs[0].link.position().top;
+	
 			this.slider.css({
 				'height': menuitem.height(),
-				'margin-top': menuitem.position().top,
+				'top': menuitem.position().top - offset,
 			});
+			this.slider.addClass('relative');
 		
 	}
 
@@ -102,40 +100,34 @@ class ContentNav {
 		var c = this.currentPair;
 
 		if (this.posY > $(this.pairs[0].tag).position().top) {
-			$.each(this.pairs, (i, pair) => {
-				var current = $(pair.tag);
-				console.log(this.posY > current.position().top, this.posY, current.position().top);
-				//console.log(this.posY < current.position().top, current.position().top);
-				if(this.posY > current.position().top) {
-					this.currentPair = pair;
-					console.log(this.currentPair.tag.attr('id'));
-					return false;
+			for (var i = 0; i < this.pairs.length; i++) {
+				var currentTop = this.pairs[i].tag.position().top;
+				if( (this.posY - currentTop) > 0 ) {
+					this.currentPair = this.pairs[i];
 				}
-			});
-			console.log('---');
+			}
 		} else {
 			this.currentPair = null;
+			//this.slider.removeClass('relative');
 		}
 
 		if(c != this.currentPair && this.currentPair != null) {
 			this.setSlider();
 		}
+		
 	}
 
 	onScrollMenu() {
-		
-
-				if(this.posY >= (this.containerOffset + this.containerHeight - this.menuHeight)) {
-					this.menu.removeClass('fixed')
-						.addClass('relative')
-						.css('top', (this.containerHeight - this.menuHeight - (this.menuOffset - this.containerOffset)));
-				} else if (this.posY <= this.menuOffset) {
-					this.menu.removeClass(['fixed', 'relative']);
-				} else {
-					this.menu.addClass('fixed')
-						.css('top', 0);
-				}
-			
+		if(this.posY >= (this.containerOffset + this.containerHeight - this.menuHeight)) {
+			this.menu.removeClass('fixed')
+				.addClass('relative')
+				.css('top', (this.containerHeight - this.menuHeight - (this.menuOffset - this.containerOffset)));
+		} else if (this.posY <= this.menuOffset) {
+			this.menu.removeClass(['fixed', 'relative']);
+		} else {
+			this.menu.addClass('fixed')
+				.css('top', 0);
+		}
 	}
 
 	onReSize() {
@@ -146,8 +138,6 @@ class ContentNav {
 
 		$(document).on('scroll', () => { 
 			this.onScrollCommon();
-
-
 
 			var menuRange = (this.posY - this.containerOffset) / this.containerHeight;
 			//this.changeSliderHeight($(this.menuitems[0]).height());
