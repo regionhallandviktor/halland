@@ -1,4 +1,4 @@
-@include('partials.main-nav')
+@include('partials.nav-main')
 
 @if(isset($breadcrumbs))
 <div class="breadcrumbs-container">

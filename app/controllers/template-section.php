@@ -11,7 +11,7 @@ class TemplateSection extends Controller
 	 * Returns array for the section nav
 	 * @return string
 	 */
-	public function sectionNav()
+	public function navSection()
 	{
 		global $post;
 
