@@ -1,6 +1,6 @@
-@if(isset($section_nav))
+@if(isset($nav_section))
 <nav class="section-nav mxn2">
-	@foreach($section_nav as $page)
+	@foreach($nav_section as $page)
 	<div class="section-nav__item col col-12 md-col-6 px2 mb3">
 		<a class="card" href="{{ $page->url }}">
 			<h3 class="card__title">

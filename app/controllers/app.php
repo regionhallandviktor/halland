@@ -66,7 +66,7 @@ class App extends Controller
 	 * Returns array with the sidebar menu
 	 * @return array
 	 */
-	public function sidebarMenu()
+	public function navSidebar()
 	{
 		$menu = new \App\Theme\Navigation();
 		$menu = $menu->getSidebarMenu();
@@ -109,7 +109,7 @@ class App extends Controller
 	 * Return the main nav
 	 * @return array
 	 */
-	public function mainNav()
+	public function navMain()
 	{
 		$menu = new \App\Theme\Navigation();
 		$menu = $menu->getNavMenuItems('main-menu');

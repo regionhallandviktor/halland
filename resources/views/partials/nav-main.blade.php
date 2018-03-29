@@ -1,4 +1,4 @@
-@if(isset($main_nav))
+@if(isset($nav_main))
 <nav class="main-nav">
 	<div class="main-nav__container">
 		<a class="main-nav__logo-wrapper" href="{{ esc_url( home_url( '/' ) ) }}">
@@ -21,7 +21,7 @@
 			</li>
 		</ul>
 		<ul class="main-nav__list">
-			@foreach ($main_nav as $item)
+			@foreach ($nav_main as $item)
 			<li class="main-nav__item @if ($item->is_current) active @endif">
 				<a class="main-nav__link" href="{{ $item->url }}">{!! $item->title !!}</a>
 			</li>
