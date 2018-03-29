@@ -36,7 +36,10 @@
 		</article>	
 	</div>
 	<div class="col col-12 sm-col-2 px2 d-print-none">
-		 <nav class="content-nav"></nav>
+		<p>Some stuff before the menu</p>
+		 <nav id="content-nav">
+		 	
+		 </nav>
 	</div>
 </div>
 </div>
