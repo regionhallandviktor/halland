@@ -361,8 +361,11 @@ p.light {
 
 	&__slider {
 		width: 4px;
+		height: 0;
 		background: palette(dark-blue);
 		flex: none;
+		-webkit-transition: margin-top 1s, height 1s;
+		transition: margin-top 1s, height 1s;
 	}
 
 	&__menu {
