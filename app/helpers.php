@@ -146,5 +146,5 @@ function display_sidebar()
  */
 function trim_excerpt($content)
 {
-    return substr( $content, 0, 40 ) . '...';
+    return substr( $content, 0, 120 ) . '...';
 }
