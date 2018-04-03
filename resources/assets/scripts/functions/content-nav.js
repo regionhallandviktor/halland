@@ -9,7 +9,6 @@ class ContentNav {
 		this.container 				= $(container);
 		this.containerHeight 		= this.container.height();
 		this.containerOffset 		= this.container.position().top;
-
 		
 		this.menu 					= $(menu);
 		this.menuHeight;
@@ -44,13 +43,15 @@ class ContentNav {
 	 */
 
 	createMenu() {
-		var ul;
+		let ul;
+		let idHash = 'content_nav_'+Date.now();
 
 		this.menu.addClass('content-nav');
-		this.menu.append('<span class="content-nav__heading">På denna sidan:</span>');
-		this.menu.append('<div class="clearfix content-nav__container"><div class="content-nav__slider relative"></div><ul class="content-nav__menu"></ul></div>');
+		this.menu.append('<span class="content-nav__heading" id="'+idHash+'">På denna sidan:</span>');
+		this.menu.append('<div class="clearfix content-nav__container"><div class="content-nav__slider relative"></div><ul class="content-nav__menu" aria-labelledby="'+idHash+'"></ul></div>');
 		
 		ul = $('.content-nav__menu', this.menu);
+
 		$.each(this.tags, (index, e) => {
 
 			let id = this.urlify(index+' '+$(e).text());
@@ -93,8 +94,6 @@ class ContentNav {
 			t = menuitem.position().top - offset;
 		}
 		
-		console.log(h,t);
-
 		this.slider.css({
 			'height': h,
 			'top': t,
@@ -112,6 +111,7 @@ class ContentNav {
 		if (this.posY > $(this.pairs[0].tag).position().top) {
 			for (var i = 0; i < this.pairs.length; i++) {
 				var currentTop = this.pairs[i].tag.position().top;
+				
 				if( (this.posY - currentTop) > 0 ) {
 					this.currentPair = this.pairs[i];
 				}
@@ -150,8 +150,7 @@ class ContentNav {
 			this.onScrollCommon();
 
 			var menuRange = (this.posY - this.containerOffset) / this.containerHeight;
-			//this.changeSliderHeight($(this.menuitems[0]).height());
-
+			
 			if (menuRange > 0 && menuRange < 1) {
 				this.onScrollMenu();
 				this.onSetActiveId();
@@ -167,7 +166,6 @@ class ContentNav {
 
 		this.onReSize();
 	}
-
 }
 
 export default ContentNav;
