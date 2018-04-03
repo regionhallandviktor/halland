@@ -350,32 +350,6 @@ p.light {
 	justify-content: stretch;
 }
 
-// Card
-.card {
-	display: flex;
-	flex-wrap: wrap;
-	padding: $space-3 $space-3;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.04);
-	transition: box-shadow 0.125s ease-in-out;
-
-	&:hover,
-	&:active,
-	&:focus {
-		box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.04);
-	}
-}
-
-.card__title {
-	width: 100%;
-	color: $dark-blue;
-	fill: $dark-blue;
-}
-
-.card__excerpt {
-	font-size: 0.9375rem;
-	color: palette(black, base);
-}
-
 // Sidebar nav
 .sidebar-nav {
 	display: flex;
