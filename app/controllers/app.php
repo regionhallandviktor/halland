@@ -6,9 +6,10 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
-	
+	use Traits\CookieNotice;
 	use Traits\Breadcrumbs;
 	use Traits\NavSidebar;
+
 
 	/**
 	 * Returns the name of the site
@@ -28,21 +29,6 @@ class App extends Controller
 		$comments = new \App\Theme\Comments();
 		$comments = $comments->getComments();
 		return $comments;
-	}
-	
-	/**
-	 * Returns cookie notice from Advanced Custom Fields
-	 * @return array
-	 */
-	public function cookieNotice()
-	{
-		$cookieName = 'cookie_notice_accepted';
-
-		if (!isset($_COOKIE[$cookieName])) {
-			$cookie_notice['message'] = get_field('cookie-notice_message', 'options');
-			$cookie_notice['button'] = get_field('cookie-notice_button', 'options');
-			return $cookie_notice;
-		}
 	}
 
 	/**
