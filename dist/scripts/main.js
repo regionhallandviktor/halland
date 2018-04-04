@@ -380,7 +380,7 @@ Icons.prototype.getIcons = function getIcons (url) {
 Nav.prototype.cache = function cache () {
 	this.$dropdown = $('.dropdown');
 	this.$toggleSublistButtons = this.$dropdown.find('.dropdown__toggle-btn');
-	this.$toggleNavButton = $('.main-nav__menu-btn');
+	this.$toggleNavButton = $('.site-nav__menu-btn');
 };
 
 Nav.prototype.bind = function bind () {
