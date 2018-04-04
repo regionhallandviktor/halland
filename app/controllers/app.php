@@ -8,6 +8,7 @@ class App extends Controller
 {
 	
 	use Traits\Breadcrumbs;
+	use Traits\NavSidebar;
 
 	/**
 	 * Returns the name of the site
@@ -53,17 +54,6 @@ class App extends Controller
 		return $comments;
 	}
 
-	/**
-	 * Returns array with the sidebar menu
-	 * @return array
-	 */
-	public function navSidebar()
-	{
-		$menu = new \App\Theme\Navigation();
-		$menu = $menu->getSidebarMenu();
-		return $menu;
-	}
-	
 	/**
 	 * Returns cookie notice from Advanced Custom Fields
 	 * @return array
