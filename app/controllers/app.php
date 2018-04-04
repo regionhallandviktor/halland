@@ -6,6 +6,8 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+	
+	use Traits\Breadcrumbs;
 
 	/**
 	 * Returns the name of the site
@@ -38,17 +40,6 @@ class App extends Controller
 			return __('Not Found', 'sage');
 		}
 		return get_the_title();
-	}
-
-	/**
-	 * Returns array of breadcrumbs
-	 * @return array
-	 */
-	public function breadcrumbs()
-	{
-		$breadcrumbs = new \App\Theme\Breadcrumbs();
-		$breadcrumbs = $breadcrumbs->getBreadcrumbs();
-		return $breadcrumbs;
 	}
 
 	/**

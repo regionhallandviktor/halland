@@ -1,21 +1,15 @@
 <?php
 
-namespace App\Theme;
+namespace App\Traits;
 
-class Breadcrumbs
+trait Breadcrumbs
 {
-	public function __construct()
-	{
-
-	}
-
 	/**
 	 * Returns array of breadcrumbs.
 	 * @return array
 	 */
-	public function getBreadcrumbs()
+	public function breadcrumbs()
 	{
-
 		global $post;
 
 		if (!is_a($post, 'WP_Post') || is_front_page()) {
@@ -24,7 +18,7 @@ class Breadcrumbs
 		
 		$title = get_the_title();
 		$post_type = get_post_type_object($post->post_type);
-		$breadcrumbs = $this->addItem(array(), __('Home'), get_home_url());
+		$breadcrumbs = self::addBreadcrumb(array(), __('Home'), get_home_url());
 		
 
 		if (is_single() && $post_type->has_archive) {
@@ -32,7 +26,7 @@ class Breadcrumbs
 				get_permalink(get_page_by_path($post_type->has_archive)) : 
 				get_post_type_archive_link($post_type->name);
 
-			$breadcrumbs = $this->addItem($breadcrumbs, $post_type->label, $cpt_archive_link);
+			$breadcrumbs = self::addBreadcrumb($breadcrumbs, $post_type->label, $cpt_archive_link);
 		}
 
 		if (is_page() || (is_single() && $post_type->hierarchical == true)) {
@@ -43,14 +37,14 @@ class Breadcrumbs
 					foreach ($anc as $ancestor) {
 						if (get_post_status($ancestor) != 'private') {
 
-							$breadcrumbs = $this->addItem($breadcrumbs, get_the_title($ancestor), get_permalink($ancestor));
+							$breadcrumbs = self::addBreadcrumb($breadcrumbs, get_the_title($ancestor), get_permalink($ancestor));
 						}
 					}
 					
-					$breadcrumbs = $this->addItem($breadcrumbs, $title, false);
+					$breadcrumbs = self::addBreadcrumb($breadcrumbs, $title, false);
 
 				} else {
-					$breadcrumbs = $this->addItem($breadcrumbs, get_the_title(), false);
+					$breadcrumbs = self::addBreadcrumb($breadcrumbs, get_the_title(), false);
 				}
 			} else {
 				if (is_home()) {
@@ -65,7 +59,7 @@ class Breadcrumbs
 					$title = get_the_title();
 				}
 				
-				$breadcrumbs = $this->addItem($breadcrumbs, $title, false);
+				$breadcrumbs = self::addBreadcrumb($breadcrumbs, $title, false);
 		}
 
 		return $breadcrumbs;
@@ -78,7 +72,7 @@ class Breadcrumbs
 	 * @param string|boolean $url
 	 * @return array
 	 */
-	public function addItem($list, $name, $url) {
+	protected function addBreadcrumb($list, $name, $url) {
 		$list[] = array(
 			'name' => $name,
 			'url' => $url
