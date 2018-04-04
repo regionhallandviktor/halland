@@ -2,7 +2,7 @@
 
 namespace App\Traits;
 
-trait Breadcrumbs
+trait Title
 {
 	/**
 	 * Returns the title of the current page
