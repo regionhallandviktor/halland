@@ -10,7 +10,6 @@ class App extends Controller
 	use Traits\Breadcrumbs;
 	use Traits\NavSidebar;
 
-
 	/**
 	 * Returns the name of the site
 	 * @return string
@@ -57,11 +56,5 @@ class App extends Controller
 		$menu = new \App\Theme\Navigation();
 		$menu = $menu->getNavMenuItems('main-menu');
 		return $menu;
-	}
-
-	public function dropdown()
-	{
-		$menu = new \App\Theme\NavigationTree();
-		//return $menu;
 	}
 }
