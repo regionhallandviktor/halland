@@ -2,13 +2,6 @@
 @import '../../../../../../../../../styleguide/src/scss/mixins/palette';
 
 // Article
-
-.alternation {
-	&:nth-child(even) {
-		background-color: #fafafa;
-	}
-}
-
 p.light {
 	font-family: 'Lato';
 	color: #3e3e3e;

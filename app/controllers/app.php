@@ -51,7 +51,7 @@ class App extends Controller
 	 * Return the main nav
 	 * @return array
 	 */
-	public function navMain()
+	public function navSite()
 	{
 		$menu = new \App\Theme\Navigation();
 		$menu = $menu->getNavMenuItems('main-menu');

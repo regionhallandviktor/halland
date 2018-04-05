@@ -1,4 +1,4 @@
-@if(isset($nav_main))
+@if(isset($nav_site))
 <header class="site-nav">
 	<nav class="site-nav-top">
 		<div class="site-nav__container">
@@ -26,7 +26,7 @@
 	<nav class="site-nav-bottom">
 		<div class="site-nav__container">
 			<ul class="site-nav__list">
-				@foreach ($nav_main as $item)
+				@foreach ($nav_site as $item)
 					<li class="site-nav__item @if ($item->is_current) active @endif">
 					<a class="site-nav__link" href="{{ $item->url }}">{!! $item->title !!}</a>
 				</li>

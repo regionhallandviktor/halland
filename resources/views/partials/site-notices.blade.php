@@ -1,21 +1,20 @@
 @if (isset($notices) && !empty($notices))
-	@foreach ($notices as $notice)
-		<div class="notice col-12 py2 mb2 background-yellow">
-			<div class="container mx-auto">
-				<div class="clearfix">
-					<div class="col-12 px2">
-						<div class="notice__text">
-							<svg class="icon mr2">
-								<use href="#bell">
-							</svg>
-							<div class="notice__text inline-block">
-								{!! $notice['notice_message'] !!}
-							</div>
-						</div>
+@foreach ($notices as $notice)
+<div class="notice">
+	<div class="container mx-auto">
+		<div class="clearfix mxn2">
+			<div class="col col-12 px2">
+				<div class="notice__text">
+					<svg class="icon mr2">
+						<use href="#bell">
+					</svg>
+					<div class="notice__text inline-block">
+						{!! $notice['notice_message'] !!}
 					</div>
 				</div>
 			</div>
 		</div>
-	@endforeach
+	</div>
+</div>
+@endforeach
 @endif
-

@@ -1,5 +1,7 @@
-<footer class="content-info">
-	<div class="container">
-		@php(dynamic_sidebar('sidebar-footer'))
+<footer>
+	<div class="container mx-auto">
+		<div class="clearfix">
+		</div>
 	</div>
 </footer>
+@php(wp_footer())
