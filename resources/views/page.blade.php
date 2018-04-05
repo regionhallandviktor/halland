@@ -34,6 +34,8 @@
 	</div>
 </div>
 
-@php(comments_template('/partials/comments.blade.php'))
+@if (have_comments() || comments_open())
+@include('partials.comments')
+@endif
 
 @endsection
