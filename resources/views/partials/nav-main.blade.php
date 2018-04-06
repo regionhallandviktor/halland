@@ -1,36 +1,45 @@
 @if(isset($nav_main))
-<nav class="main-nav">
-	<div class="main-nav__container">
-		<a class="main-nav__logo-wrapper" href="{{ esc_url( home_url( '/' ) ) }}">
-			<img src="@asset('images/navigation_logo.svg')">
-		</a>
-		<ul class="main-nav__utilities">
-			<li class="main-nav__icon-btn">
-				<button class="icon-button main-nav__search-btn" href="#">
-					<svg class="icon">
-						<use xlink:href="#magnifying-glass"/>
-					</svg>
-				</button>
-			</li>
-			<li class="main-nav__icon-btn">
-				<button class="icon-button main-nav__menu-btn" href="#">
-	 				<svg class="icon">
-						<use xlink:href="#menu"/>
-					</svg>
-				</button>
-			</li>
-		</ul>
-		<ul class="main-nav__list">
-			@foreach ($nav_main as $item)
-			<li class="main-nav__item @if ($item->is_current) active @endif">
-				<a class="main-nav__link" href="{{ $item->url }}">{!! $item->title !!}</a>
-			</li>
-			@endforeach
-		</ul>
-	</div>
-</nav>	
-@endif
-
+<header class="site-nav">
+	<nav class="site-nav-top">
+		<div class="site-nav__container">
+			<a class="site-nav__logo" href="{{ esc_url( home_url( '/' ) ) }}">
+				<img src="@asset('images/navigation_logo.svg')">
+			</a>
+			<ul class="site-nav__utilities">
+				<li class="site-nav__icon-btn">
+					<button class="icon-button site-nav__search-btn" href="#">
+						<svg class="icon">
+							<use xlink:href="#magnifying-glass"/>
+						</svg>
+					</button>
+				</li>
+				<li class="main-nav__icon-btn">
+					<button class="icon-button site-nav__menu-btn" href="#">
+						<svg class="icon">
+							<use xlink:href="#menu"/>
+						</svg>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="site-nav-bottom">
+		<div class="site-nav__container">
+			<ul class="site-nav__list">
+				@foreach ($nav_main as $item)
+					<li class="site-nav__item @if ($item->is_current) active @endif">
+					<a class="site-nav__link" href="{{ $item->url }}">{!! $item->title !!}</a>
+				</li>
+				@endforeach
+			</ul>
+			<a href="#" class="site-nav__show-more-btn">
+				<span>Visa alla</span>
+				<svg class="icon icon--sm"><use xlink:href="#caret-right"/></svg>
+			</a>
+			</div>
+		</div>
+	</nav>
+</header>
 <nav class="dropdown">
 	<div class="dropdown__container">
 		
@@ -116,3 +125,4 @@
 		</div>
 	</div>
 </nav>
+@endif
