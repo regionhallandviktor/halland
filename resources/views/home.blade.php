@@ -6,6 +6,17 @@
 
 @section('content')
 
+			<p>---</p>
+		<p>---</p>
+
+<p>---</p>
+
+<p>---</p>
+
+		<pre>
+			{{ get_post_type() }}
+		</pre>
+
 	@if (!have_posts())
 		<div class="alert alert-warning">
 			{{ __('Oj, här var det tomt!', 'sage') }}

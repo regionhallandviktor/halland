@@ -4,22 +4,45 @@
 	<div class="col col-12 sm-col-9 px2">
 		<article @php(post_class('article'))>	
 			<header>
-				<h1 class="entry-title">{{ get_the_title() }}</h1>
+				<h1>{{ get_the_title() }}</h1>
 			</header>
 
 			@php(the_content())
-			<hr>
+			
 			@include('partials/entry-meta')
-			<footer>
-		{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-	</footer>
-		</article>	
+		</article>
+
+		<footer>
+			{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+		</footer>
+			
 	</div>
 	<div class="col col-12 sm-col-3 px2 d-print-none">
-		<p>Some stuff before the menu</p>
-		 <nav id="content-nav">
-		 	
-		 </nav>
+
+		<aside class="aside">
+			@if(isset($categories))
+				<h3>{{ __('Kategorier', 'sage') }}</h3>
+				@foreach($categories as $item)
+					<a href="{{ $item['url'] }}">{{ $item['name'] }}</a> 
+					<span class="light small">({{ $item['count'] }})</span>@if (!$loop->last), @endif
+				@endforeach
+			@endif
+		</aside>
+		<aside class="aside">
+			@if(isset($tags))
+				<h3>{{ __('Taggar', 'sage') }}</h3>
+				@foreach($tags as $item)
+					<a href="{{ $item['url'] }}" class="btn btn--small btn--neutral mr2 mb2">
+						{{ $item['name'] }}
+					</a>
+				@endforeach
+			@endif
+		</aside>
+		<aside class="aside">
+			<nav id="content-nav">
+			 	
+			</nav>
+		</aside>
 	</div>
 </div>
 </div>

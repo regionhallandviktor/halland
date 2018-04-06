@@ -308,12 +308,6 @@
 	}
 }
 
-p.light {
-	font-family: 'Lato';
-	color: #3e3e3e;
-	font-size: 0.9em;
-}
-
 .alignright {
 	float: right;
 	margin: 0 0 1em 1em;
@@ -439,16 +433,6 @@ p.light {
 }
 
 .content-nav {
-	&__heading {
-		font-size: 0.75rem;
-		color: palette(grey, x-dark);
-		font-family: $sans-font-family;
-		text-transform: uppercase;
-		display: block;
-		line-height: $space-4;
-		padding-bottom: $space-2;
-	}
-
 	&__container {
 		display: flex;
 		flex-wrap: row wrap;
@@ -459,6 +443,7 @@ p.light {
 		height: 0;
 		background: palette(dark-blue);
 		flex: none;
+		border-radius: 500px;
 		-webkit-transition: top 1s, height 1s, width 1s;
 		transition: top 1s, height 1s, width 1s;
 	}
