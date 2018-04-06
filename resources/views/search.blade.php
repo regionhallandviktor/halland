@@ -4,13 +4,12 @@
 
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{  __('Sorry, no results were found.', 'sage') }}
+      {{ __('Oj, här var det tomt!', 'sage') }}
     </div>
     {!! get_search_form(false) !!}
   @endif
-
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-search')
+  @while (have_posts()) @php(the_post())
+    @include('partials.content.search')
   @endwhile
 
   {!! get_the_posts_navigation() !!}

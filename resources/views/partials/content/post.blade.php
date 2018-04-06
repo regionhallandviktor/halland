@@ -9,7 +9,7 @@
 
 			@php(the_content())
 			
-			@include('partials/entry-meta')
+			@include('partials.components.entry-meta')
 		</article>
 
 		<footer>
@@ -27,8 +27,7 @@
 					<span class="light small">({{ $item['count'] }})</span>@if (!$loop->last), @endif
 				@endforeach
 			@endif
-		</aside>
-		<aside class="aside">
+		
 			@if(isset($tags))
 				<h3>{{ __('Taggar', 'sage') }}</h3>
 				@foreach($tags as $item)
@@ -37,11 +36,8 @@
 					</a>
 				@endforeach
 			@endif
-		</aside>
-		<aside class="aside">
-			<nav id="content-nav">
-			 	
-			</nav>
+		
+			<div id="content-nav"></div>
 		</aside>
 	</div>
 </div>
@@ -50,7 +46,7 @@
 <div class="container mx-auto alternation clearfix py4">
 		
 	<div class="col-12 sm-col-9 px2">
-		@php(comments_template('/partials/comments.blade.php'))
+		@php(comments_template('/partials/components/comments.blade.php'))
 	</div>
 </div>
 </div>
