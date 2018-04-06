@@ -5,19 +5,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py4 px2">
+<div class="px2 py4 background-dark-blue" style="background: linear-gradient(45deg, #257ccb, #2284ca)">
+	<div class="container mx-auto">
+		<div class="clearfix mxn2">
+			<div class="col col-12 mt4 mb5 px2">
+				<header>
+					<h1 class="text-white mb0">{!! get_the_title() !!}</h1>
+				</header>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="px2" style="margin-top: -2.5rem">
 	<div class="container mx-auto">
 		<div class="clearfix mxn2">
 			<main class="col col-12 px2">
-				<div class="col col-12 mb4">
-					<header>
-						<h1>{!! get_the_title() !!}</h1>
-					</header>
-
-					@include('partials.content-page')
-
-				</div>
-
 				<div class="col col-12 mb3">
 					@include('partials.nav-section')
 				</div>
