@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Admin\Options;
+namespace App\Admin;
 
-class Theme
+class Options
 {
 	public function __construct()
 	{
