@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="px2 py4 background-dark-blue" style="background: linear-gradient(45deg, #257ccb, #2284ca)">
+<div class="px2 py4 background-gradient-blue">
 	<div class="container mx-auto">
 		<div class="clearfix mxn2">
 			<div class="col col-12 mt4 mb5 px2">
@@ -17,7 +17,7 @@
 	</div>
 </div>
 
-<div class="px2" style="margin-top: -2.5rem">
+<div class="px2">
 	<div class="container mx-auto">
 		<div class="clearfix mxn2">
 			<main class="col col-12 px2">
