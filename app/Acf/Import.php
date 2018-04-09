@@ -11,11 +11,9 @@ class Import
 		 */
 		add_action('init', function() {
 			if (class_exists('AcfExportManager\AcfExportManager')) {
-				var_dump('class exists!');
-				var_dump('__DIR__: ' . __DIR__);
 				$acfExportManager = new \AcfExportManager\AcfExportManager();
 				$acfExportManager->setTextdomain('halland');
-				$acfExportManager->setExportFolder(__DIR__);
+				$acfExportManager->setExportFolder(__DIR__ . '/');
 				$acfExportManager->autoExport(array(
 				    'options-theme-cookie-notice' => 'group_5aa63e3f4d0c8',
 				    'options-theme-data-curator' => 'group_5ac48d9ea70de'
