@@ -1,6 +1,6 @@
-@if(isset($nav_section))
+@if(isset($page_children))
 <nav class="section-nav mxn2 mtn4">
-	@foreach($nav_section as $page)
+	@foreach($page_children as $page)
 	<div class="section-nav__item col col-12 sm-col-6 md-col-4 px2 mb3">
 		<a class="featured-link background-white" href="{{ $page->url }}">
 			<h3 class="featured-link__title">
