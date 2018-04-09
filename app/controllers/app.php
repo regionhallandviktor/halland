@@ -9,6 +9,7 @@ class App extends Controller
 	use Traits\CookieNotice;
 	use Traits\Breadcrumbs;
 	use Traits\NavSidebar;
+	use Traits\Comments;
 
 	/**
 	 * Returns the name of the site
@@ -17,17 +18,6 @@ class App extends Controller
 	public function siteName()
 	{
 		return get_bloginfo('name');
-	}
-
-	/**
-	 * Returns array of comments for a post
-	 * @return array
-	 */
-	public function comments()
-	{
-		$comments = new \App\Theme\Comments();
-		$comments = $comments->getComments();
-		return $comments;
 	}
 
 	/**

@@ -1,14 +1,9 @@
 <?php
 
-namespace App\Theme;
+namespace App\Traits;
 
-class Comments
+trait Comments
 {
-	public function __construct()
-	{
-
-	}
-
 	/**
 	 * Returns array of comments.
 	 * @return array
