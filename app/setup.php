@@ -64,10 +64,3 @@ add_action('after_setup_theme', function () {
 		return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
 	});
 });
-
-/**
- * Add excerpt to pages
- */
-add_action('init', function() {
-    add_post_type_support( 'page', 'excerpt' );
-});

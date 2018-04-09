@@ -31,6 +31,7 @@ trait PageChildren
 				$page->is_current = true;
 			}
 
+			$page->acf_excerpt = get_field('excerpt', $page->ID);
 			$page->url = get_page_link($page->ID);
 		}
 
