@@ -6,6 +6,10 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+	use Traits\CookieNotice;
+	use Traits\Breadcrumbs;
+	use Traits\NavSidebar;
+	use Traits\Comments;
 
 	/**
 	 * Returns the name of the site
@@ -14,78 +18,6 @@ class App extends Controller
 	public function siteName()
 	{
 		return get_bloginfo('name');
-	}
-
-	/**
-	 * Returns the title of the current page
-	 * @return string
-	 */
-	public function title()
-	{
-		if (is_home()) {
-			if ($home = get_option('page_for_posts', true)) {
-				return get_the_title($home);
-			}
-			return __('Latest Posts', 'sage');
-		}
-		if (is_archive()) {
-			return get_the_archive_title();
-		}
-		if (is_search()) {
-			return sprintf(__('Search Results for %s', 'sage'), get_search_query());
-		}
-		if (is_404()) {
-			return __('Not Found', 'sage');
-		}
-		return get_the_title();
-	}
-
-	/**
-	 * Returns array of breadcrumbs
-	 * @return array
-	 */
-	public function breadcrumbs()
-	{
-		$breadcrumbs = new \App\Theme\Breadcrumbs();
-		$breadcrumbs = $breadcrumbs->getBreadcrumbs();
-		return $breadcrumbs;
-	}
-
-	/**
-	 * Returns array of comments for a post
-	 * @return array
-	 */
-	public function comments()
-	{
-		$comments = new \App\Theme\Comments();
-		$comments = $comments->getComments();
-		return $comments;
-	}
-
-	/**
-	 * Returns array with the sidebar menu
-	 * @return array
-	 */
-	public function navSidebar()
-	{
-		$menu = new \App\Theme\Navigation();
-		$menu = $menu->getSidebarMenu();
-		return $menu;
-	}
-	
-	/**
-	 * Returns cookie notice from Advanced Custom Fields
-	 * @return array
-	 */
-	public function cookieNotice()
-	{
-		$cookieName = 'cookie_notice_accepted';
-
-		if (!isset($_COOKIE[$cookieName])) {
-			$cookie_notice['message'] = get_field('cookie-notice_message', 'options');
-			$cookie_notice['button'] = get_field('cookie-notice_button', 'options');
-			return $cookie_notice;
-		}
 	}
 
 	/**
@@ -109,16 +41,10 @@ class App extends Controller
 	 * Return the main nav
 	 * @return array
 	 */
-	public function navMain()
+	public function navSite()
 	{
 		$menu = new \App\Theme\Navigation();
 		$menu = $menu->getNavMenuItems('main-menu');
 		return $menu;
-	}
-
-	public function dropdown()
-	{
-		$menu = new \App\Theme\NavigationTree();
-		//return $menu;
 	}
 }

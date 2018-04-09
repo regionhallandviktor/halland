@@ -1,7 +1,3 @@
-.alternation:nth-child(even) {
-  background-color: #fafafa;
-}
-
 p.light {
   font-family: 'Lato';
   color: #3e3e3e;
@@ -33,17 +29,6 @@ p.light {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   background: #f8fbfc;
   margin-bottom: 0;
-}
-
-.section-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
 }
 
 .sidebar-nav {

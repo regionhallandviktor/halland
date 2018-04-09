@@ -36,7 +36,6 @@ class Enqueue
 	{
 		// Theme JS
 		wp_enqueue_script('halland/main.js', \App\asset_path('scripts/main.js'), ['jquery'], null, true);
-
 	}
 
 	/**
