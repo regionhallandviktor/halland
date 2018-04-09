@@ -18,22 +18,13 @@ new \App\Theme\Sidebars();
 /**
  * Admin
  */
-new \App\Admin\Options\Theme();
+new \App\Admin\Options();
 
 /**
- * ACF auto import and export
+ * ACF
  */
-add_action('init', function() {
-	if (class_exists('AcfExportManager\AcfExportManager')) {
-		$acfExportManager = new \AcfExportManager\AcfExportManager();
-		$acfExportManager->setTextdomain('halland');
-		$acfExportManager->setExportFolder(__DIR__ . '/acf/');
-		$acfExportManager->autoExport(array(
-		    'options-theme-cookie-notice' => 'group_5aa63e3f4d0c8'
-		));
-		$acfExportManager->import();
-	}
-});
+new \App\Acf\Import();
+new \App\Acf\DataCurator();
 
 /**
  * Updates the `$post` variable on each iteration of the loop.
@@ -72,27 +63,4 @@ add_action('after_setup_theme', function () {
 	sage('blade')->compiler()->directive('asset', function($asset) {
 		return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
 	});
-});
-
-/**
- * Add excerpt to pages
- */
-add_action('init', function() {
-    add_post_type_support( 'page', 'excerpt' );
-});
-
-/**
- * Add users list to the data_curator field
- */
-add_filter('acf/load_field/name=data_curator', function($field) {	
-
-	$field['choices'] = array();
-	
-	$users = get_users();
-	
-	foreach ($users as $user) {
-		$field['choices'][ $user->ID ] = $user->user_firstname . ' ' . $user->user_lastname;
-	}
-
-	return $field;
 });

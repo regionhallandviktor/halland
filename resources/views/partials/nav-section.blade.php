@@ -11,7 +11,7 @@
 			</h3>
 			<p class="featured-link__excerpt">
 			@if(has_excerpt($page->ID)) 
-				{{ $page->post_excerpt }}
+				{{ $page->acf_excerpt }}
 			@else
 				{{ \App\trim_excerpt($page->post_content) }}
 			@endif
