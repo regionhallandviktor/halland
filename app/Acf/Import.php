@@ -11,6 +11,8 @@ class Import
 		 */
 		add_action('init', function() {
 			if (class_exists('AcfExportManager\AcfExportManager')) {
+				var_dump('class exists!');
+				var_dump('__DIR__: ' . __DIR__);
 				$acfExportManager = new \AcfExportManager\AcfExportManager();
 				$acfExportManager->setTextdomain('halland');
 				$acfExportManager->setExportFolder(__DIR__);
