@@ -1,0 +1,1 @@
+Senast uppdaterad: {{ the_modified_time('G:i') }} den {{ the_modified_time('j F Y') }}
