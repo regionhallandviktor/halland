@@ -1,0 +1,140 @@
+[
+	{
+		"key": "group_5accade8e6c07",
+		"title": "Topplänkar",
+		"fields": [
+			{
+				"key": "field_5accaed3bef78",
+				"label": "Topplänkar",
+				"name": "top_links",
+				"type": "repeater",
+				"instructions": "",
+				"required": 0,
+				"conditional_logic": 0,
+				"wrapper": {
+					"width": "",
+					"class": "",
+					"id": ""
+				},
+				"collapsed": "",
+				"min": 0,
+				"max": 0,
+				"layout": "table",
+				"button_label": "",
+				"sub_fields": [
+					{
+						"key": "field_5accaf5abef7b",
+						"label": "Ska länken vara till en extern webbplats?",
+						"name": "external_link_toggle",
+						"type": "true_false",
+						"instructions": "",
+						"required": 0,
+						"conditional_logic": 0,
+						"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+						},
+						"message": "Länka till extern webbplats",
+						"default_value": 0,
+						"ui": 0,
+						"ui_on_text": "",
+						"ui_off_text": ""
+					},
+					{
+						"key": "field_5accc2bdc79dd",
+						"label": "Länketikett",
+						"name": "link_label",
+						"type": "text",
+						"instructions": "",
+						"required": 0,
+						"conditional_logic": 0,
+						"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+						},
+						"default_value": "",
+						"placeholder": "",
+						"prepend": "",
+						"append": "",
+						"maxlength": ""
+					},
+					{
+						"key": "field_5accafb2bef7c",
+						"label": "Extern länk",
+						"name": "external_link",
+						"type": "text",
+						"instructions": "Ange en extern länk.",
+						"required": 0,
+						"conditional_logic": [
+							[
+								{
+									"field": "field_5accaf5abef7b",
+									"operator": "==",
+									"value": "1"
+								}
+							]
+						],
+						"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+						},
+						"default_value": "",
+						"placeholder": "",
+						"prepend": "",
+						"append": "",
+						"maxlength": ""
+					},
+					{
+						"key": "field_5accaf10bef79",
+						"label": "Länk till",
+						"name": "link",
+						"type": "page_link",
+						"instructions": "",
+						"required": 0,
+						"conditional_logic": [
+							[
+								{
+									"field": "field_5accaf5abef7b",
+									"operator": "!=",
+									"value": "1"
+								}
+							]
+						],
+						"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+						},
+						"post_type": [
+							"page"
+						],
+						"taxonomy": [],
+						"allow_null": 0,
+						"allow_archives": 0,
+						"multiple": 0
+					}
+				]
+			}
+		],
+		"location": [
+			[
+				{
+					"param": "post_template",
+					"operator": "==",
+					"value": "views\/template-section-landing.blade.php"
+				}
+			]
+		],
+		"menu_order": 0,
+		"position": "normal",
+		"style": "default",
+		"label_placement": "top",
+		"instruction_placement": "label",
+		"hide_on_screen": "",
+		"active": 1,
+		"description": ""
+	}
+]
