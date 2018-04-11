@@ -1,36 +1,21 @@
 {{--
-	Template Name: Section
+	Template Name: Section Overview
 --}}
 
 @extends('layouts.app')
 
 @section('content')
-<div class="px2 py4 background-gradient-blue">
-	<div class="container mx-auto">
-		<div class="clearfix mxn2">
-			<div class="col col-12 mt4 mb5 px2">
-				<header>
-					<h1 class="text-white mb0">{!! get_the_title() !!}</h1>
-				</header>
-			</div>
+
+<div class="container mx-auto mt4 mb4">
+	<div class="clearfix mxn2 mt4">
+		<div class="col col-12 sm-col-4 md-col-4 mt2 mb2 px2">
+			<h2 class="mb2">{!! get_the_title() !!} - Översikt</h2>
+			@while(have_posts()) @php(the_post())
+				@php(the_content())
+			@endwhile
 		</div>
-	</div>
-</div>
-
-<div class="px2">
-	<div class="container mx-auto">
-		<div class="clearfix mxn2">
-			<main class="col col-12 px2">
-				<div class="col col-12 mb3">
-					@include('partials.nav-section')
-				</div>
-
-				@if (is_active_sidebar('sidebar-bottom'))
-				<div class="col col-12">
-					@include('partials.sidebar-bottom')
-				</div>
-				@endif
-			</main>	
+		<div class="col col-12 sm-col-8 md-col-8 mt2 mb2 px2">
+			@include('partials.nav-section')
 		</div>
 	</div>
 </div>

@@ -89,7 +89,7 @@ acf_add_local_field_group(array(
                             'key' => 'field_5accafb2bef7c',
                             'label' => 'Extern länk',
                             'name' => 'link',
-                            'type' => 'text',
+                            'type' => 'url',
                             'instructions' => 'Ange en extern länk.',
                             'required' => 0,
                             'conditional_logic' => array(
