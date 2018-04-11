@@ -14,12 +14,15 @@
 					<div class="site-nav__container">
 						<ul class="dropdown__list">
 							@foreach($topLevelPage->children as $childPage)
-							<li class="dropdown__item">
-								<a href="{{ get_page_link($childPage->ID) }}" class="site-nav-dropdown__link">{{ $childPage->post_title }}</a>
+							<li class="dropdown__item col col-12 md-col-4">
+								<a href="{{ get_page_link($childPage->ID) }}" class="dropdown__link">{{ $childPage->post_title }}</a>
+								<span class="dropdown__link-description">Information om ambulanssjukvården</span>
 							</li>
 							@endforeach
 						</ul>
+						<div class="col col-12">
 						<a class="dropdown__see-all-btn" href="{{ get_page_link($topLevelPage->ID) }}" class="">Se allt inom {{ $topLevelPage->post_title }}</a>
+						</div>
 					</div>
 				</nav>
 				@endif

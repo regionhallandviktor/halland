@@ -189,7 +189,7 @@ p.light {
 
 .site-nav__link {
 	display: block;
-	color: $black;
+	color: palette(black, base);
 	position: relative;
 	overflow: hidden;
 	font-weight: $bold-font-weight;
@@ -232,6 +232,33 @@ p.light {
 		width: 100vw;
 		background: palette($white, base);
 		padding: $space-3;
+	}
+}
+
+.dropdown__list {
+	//
+}
+
+.dropdown__item {
+	@media screen and (min-width: $breakpoint-md) {
+		width: calc(4 / 12 * 100%);
+		margin-bottom: $space-3;
+	}
+}
+
+.dropdown__link {
+	@media screen and (min-width: $breakpoint-md) {
+		font-weight: $bold-font-weight;
+		color: palette(black, base);
+	}
+}
+
+.dropdown__link-description {
+	@media screen and (min-width: $breakpoint-md) {
+		display: block;
+		font-size: $h5;
+		font-style: italic;
+		color: palette(grey, x-dark);
 	}
 }
 
