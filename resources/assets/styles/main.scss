@@ -345,3 +345,13 @@ p.light {
 		padding: 0;
 	}
 }
+
+//Footer
+.footer {
+	background: palette(light-blue, light);
+	border-top: 1px solid palette(grey, light);
+	margin-top: $space-5;
+	padding-top: $space-3;
+	padding-bottom: $space-5;
+}
+

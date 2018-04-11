@@ -26,7 +26,7 @@
 										<h3 class="featured-link__title">
 											<span>{{ $top_link["external_link"]["link_label"] ? $top_link["external_link"]["link_label"] : $top_link["external_link"]["link"]}}</span>
 										</h3>
-										<svg class="icon-badge featured-link__icon icon-badge--md">
+										<svg class="icon-badge featured-link__icon">
 									 		<use xlink:href="#external-link"/>
 										</svg>
 									</a>
@@ -37,7 +37,7 @@
 										<h3 class="featured-link__title">
 											<span>{{ $top_link["internal_link"]["link_label"] ? $top_link["internal_link"]["link_label"] : $top_link["internal_link"]["link"][0]->post_title }}</span>
 										</h3>
-										<svg class="featured-link__icon icon-badge icon-badge--md">
+										<svg class="featured-link__icon icon-badge">
 									 		<use xlink:href="#arrow-right"/>
 										</svg>
 									</a>

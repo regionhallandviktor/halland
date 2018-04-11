@@ -6,7 +6,7 @@
 			<h3 class="featured-link__title">
 				<span>{{ $page->post_title }}</span>
 			</h3>
-			<svg class="featured-link__icon icon-badge icon-badge--md">
+			<svg class="featured-link__icon icon-badge">
 		 		<use xlink:href="#arrow-right"/>
 			</svg>
 			{{-- <p class="featured-link__excerpt">
