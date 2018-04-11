@@ -14,13 +14,15 @@
 	<h2>Topplänkar för dig</h2>
 	<i>Här hittar du de mest populära länkarna</i>
 	<ul>
-		@foreach($top_links as $key => $top_link)
-			@if($top_link["external_link_toggle"])
-				<li><a href="{{ $top_link["external_link"] }}">{{ $top_link["link_label"] ? $top_link["link_label"] : $top_link["external_link"]}}</a></li>
+		@if($top_links)
+			@foreach($top_links as $key => $top_link)
+				@if($top_link["external_link_toggle"])
+					<li class="link--external"><a href="{{ $top_link["external_link"]["link"] }}">{{ $top_link["external_link"]["link_label"] ? $top_link["external_link"]["link_label"] : $top_link["external_link"]["link"]}}</a></li>
 				@else
-				<li><a href="{{ $top_link["link"] }}">{{ $top_link["link_label"] ? $top_link["link_label"] : $top_link["link"]}}</li>
-			@endif
-		@endforeach
+					<li class="link--internal"><a href="{{ get_permalink($top_link["internal_link"]["link"][0]->ID) }}">{{ $top_link["internal_link"]["link_label"] ? $top_link["internal_link"]["link_label"] : $top_link["internal_link"]["link"][0]->post_title }}</li>
+				@endif
+			@endforeach
+		@endif
 	</ul>
 </div>
 
