@@ -4,18 +4,16 @@
 <div class="py4 px2">
 	<div class="container mx-auto">
 		<div class="clearfix mxn2">
-			<div class="col col-12 px2">
-			@if (!have_posts())
+		@if (!have_posts())
 			<div class="alert alert-warning">
-				{{  __('Ledsen, vi hittade inga resultat.', 'sage') }}
+				{{ __('Oj, här var det tomt!', 'sage') }}
 			</div>
 			{!! get_search_form(false) !!}
-			@endif
+		@endif
 
-			@while(have_posts()) @php(the_post())
-				@include('partials.content.search')
-			@endwhile
-			</div>
+		@while (have_posts()) @php(the_post())
+			@include('partials.content-'.get_post_type())
+		@endwhile
 		</div>
 	</div>
 </div>

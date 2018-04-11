@@ -1,36 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py4">
+<div class="py4 px2">
 	<div class="container mx-auto">
-
-		@if (is_active_sidebar('sidebar-left'))		
-		<div class="col col-12 md-col-3 px2">
-			@include('partials.sidebar.left')
-		</div>
-		@endif
-
-		<div class="col col-12 md-col-6 px2">
-			<header>
-				<h1>{!! get_the_title() !!}</h1>
-			</header>
-			
-			@while(have_posts()) @php(the_post())
-				@include('partials.components.article')
-			@endwhile
-
-			@if (is_active_sidebar('sidebar-bottom'))
-				<div class="col col-12">
-					@include('partials.sidebar.bottom')
-				</div>
+		<div class="clearfix mxn2">
+			@if (is_active_sidebar('sidebar-left'))		
+			<div class="col col-12 md-col-3 px2">
+				@include('partials.sidebar-left')
+			</div>
 			@endif
-		</div>
+
+
+			<main class="col col-12 md-col-6 px2">
+				<header>
+					<h1>{!! get_the_title() !!}</h1>
+				</header>
+			
+				@include('partials.content.page')
+
+
+				@if (is_active_sidebar('sidebar-article-bottom'))
+				<div class="col col-12">
+					@include('partials.sidebar.article.bottom')
+				</div>
+				@endif
+			</main>
 
 		@if (is_active_sidebar('sidebar-right'))
 			<div class="col col-12 md-col-3">
 				@include('partials.sidebar.right')
 			</div>
-		@endif
+			@endif
+		</div>
 	</div>
 </div>
 @endsection

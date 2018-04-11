@@ -2,10 +2,17 @@
 
 @section('content')
 
-	@if (!have_posts())
-		<div class="alert alert-warning">
-			{{ __('Doh! Sidan du sökte finns inte.', 'halland') }}
+<div class="py4 px2">
+	<div class="container mx-auto">
+		<div class="clearfix mxn2">
+			<div class="col col-12 px2">
+				@if (!have_posts())
+				<div class="alert alert-warning">
+					{{ __('Doh! Sidan du sökte finns inte.', 'halland') }}
+				</div>
+				@endif
+			</div>
 		</div>
-		{!! get_search_form(false) !!}
-	@endif
+	</div>
+</div>
 @endsection

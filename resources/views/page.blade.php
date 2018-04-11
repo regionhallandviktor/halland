@@ -6,36 +6,44 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py4">
+<div class="py4 px2">
 	<div class="container mx-auto">
 
-		@if (is_active_sidebar('sidebar-left'))		
-		<div class="col col-12 md-col-3 px2">
-			@include('partials.sidebar.left')
-		</div>
-		@endif
+		<div class="clearfix mxn2">
+			<div class="col col-12 md-col-3 px2">
+				@include('partials.nav.sidebar')
+				@if (is_active_sidebar('sidebar-left'))
+				@include('partials.sidebar.left')
+				@endif
+			</div>
 
-		<div class="col col-12 md-col-6 px2">
-			<header>
-				<h1>{!! get_the_title() !!}</h1>
-			</header>
-			
-			@while(have_posts()) @php(the_post())
-				@include('partials.components.article')
-			@endwhile
+			<main class="col col-12 md-col-6 px2">
+				<header>
+					<h1>{!! get_the_title() !!}</h1>
+				</header>
+				
+				@include('partials.content.page')
 
-			@if (is_active_sidebar('sidebar-bottom'))
+
+				@if (is_active_sidebar('sidebar-bottom'))
 				<div class="col col-12">
 					@include('partials.sidebar.bottom')
 				</div>
-			@endif
-		</div>
+				@endif
+			</main>
 
-		@if (is_active_sidebar('sidebar-right'))
-			<div class="col col-12 md-col-3">
+
+			@if (is_active_sidebar('sidebar-right'))
+			<div class="col col-12 md-col-3 px2">
 				@include('partials.sidebar.right')
 			</div>
-		@endif
+			@endif
+		</div>
 	</div>
 </div>
+
+@if (have_comments() || comments_open())
+@include('partials.comments')
+@endif
+
 @endsection

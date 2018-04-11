@@ -2,12 +2,10 @@
 @import '../../../../../../../../../styleguide/src/scss/mixins/palette';
 
 // Article
-
 .alternation {
 	&:nth-child(even) {
 		background-color: #fafafa;
 	}
-}
 
 .alignright {
 	float: right;
@@ -36,13 +34,6 @@
 			margin-bottom: 0;
 		}
 	}
-}
-
-// Section nav
-.section-nav {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: stretch;
 }
 
 // Sidebar nav

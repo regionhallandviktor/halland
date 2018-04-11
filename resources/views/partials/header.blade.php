@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @include('partials.nav.main')
 
 @if(isset($breadcrumbs))
@@ -11,3 +12,7 @@
 	</div>
 </div>
 @endif
+=======
+@include('partials.nav-site')
+@include('partials.breadcrumbs')
+>>>>>>> master
