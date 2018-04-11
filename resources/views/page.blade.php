@@ -10,7 +10,7 @@
 				@if ( $post->post_parent )
 				<a class="mr1" href="{{ get_permalink( $post->post_parent ) }}" >
 					<svg class="icon-badge icon-badge--md">
-				 		<use xlink:href="#arrow-right"/>
+				 		<use xlink:href="#arrow-left"/>
 					</svg>
 				</a>
 				@endif

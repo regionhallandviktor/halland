@@ -258,6 +258,25 @@ p.light {
     font-size: 0.9375rem;
   }
 
+  .site-nav__link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 5px solid #6ca2d5;
+    border-radius: 1px 1px 0 0;
+    -webkit-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.1s ease-in-out;
+    transition: -webkit-transform 0.1s ease-in-out;
+    -o-transition: -o-transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out, -o-transform 0.1s ease-in-out;
+  }
+
   .site-nav__link.active::after {
     border-bottom: 5px solid #0e5aa4;
     -webkit-transform: translateY(0);
@@ -279,6 +298,7 @@ p.light {
   width: 100%;
   background: #f6f6f6;
   border-left: 0.5rem solid #cee2f2;
+  z-index: 4;
 }
 
 @media screen and (min-width: 65em) {

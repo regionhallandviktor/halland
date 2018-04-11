@@ -1,5 +1,5 @@
 @if(isset($nav_sidebar))
-@php(var_dump($nav_sidebar))
+{{-- @php(var_dump($nav_sidebar)) --}}
 {{-- <nav class="sidebar-nav">
 	<ul class="sidebar-nav__list">
 		<li class="sidebar-nav__item active">

@@ -224,6 +224,19 @@ p.light {
 		display: inherit;
 		font-size: 0.9375rem;
 
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			border-bottom: 5px solid $blue;
+			border-radius: 1px 1px 0 0;
+			transform: translateY(100%);
+			transition: transform 0.1s ease-in-out;
+		}
+
 		&.active {
 			&::after {
 				border-bottom: 5px solid palette(dark-blue, base);
@@ -244,6 +257,7 @@ p.light {
 	width: 100%;
 	background: palette(grey, xx-light);
 	border-left: $space-2 solid palette(light-blue, base);
+	z-index: $z4;
 
 	@media screen and (min-width: $breakpoint-md) {
 		display: block;
