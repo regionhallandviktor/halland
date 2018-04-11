@@ -12,7 +12,7 @@
 		<div class="clearfix mxn2">
 			@if (is_active_sidebar('sidebar-left'))		
 			<div class="col col-12 md-col-3 px2">
-				@include('partials.sidebar-left')
+				@include('partials.sidebar.left')
 			</div>
 			@endif
 
@@ -21,7 +21,9 @@
 					<h1>{!! get_the_title() !!}</h1>
 				</header>
 			
-				@include('partials.content.single')
+				@while(have_posts()) @php(the_post())
+					@include('partials.components.article')
+				@endwhile
 
 				@if (is_active_sidebar('sidebar-article-bottom'))
 				<div class="col col-12">

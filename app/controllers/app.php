@@ -1,16 +1,14 @@
-	<?php
-
+<?php
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use Traits\CookieNotice;
+use Traits\Breadcrumbs;
+use Traits\NavSidebar;
+use Traits\Comments;
 
 class App extends Controller
 {
-	use Traits\CookieNotice;
-	use Traits\Breadcrumbs;
-	use Traits\NavSidebar;
-	use Traits\Comments;
-
 	/**
 	 * Returns the name of the site
 	 * @return string
