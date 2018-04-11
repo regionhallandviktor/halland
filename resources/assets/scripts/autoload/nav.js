@@ -5,18 +5,19 @@ class Nav {
 	}
 
 	cache() {
-		this.$dropdown = $('.dropdown');
-		this.$toggleSublistButtons = this.$dropdown.find('.dropdown__toggle-btn');
+		this.$nav = $('.site-nav');
+		this.$toggleDropdownButtons = this.$nav.find('.site-nav__item');
+		this.$dropdowns = this.$nav.find('.dropdown');
 		this.$toggleNavButton = $('.site-nav__menu-btn');
 	}
 
 	bind() {
-		this.$toggleSublistButtons.each((i, el) => {
+		this.$toggleDropdownButtons.each((i, el) => {
 			el = $(el);
-			let sublist = $(el.siblings('.dropdown__sublist'));
+			let dropdown = $(el.find('.dropdown'));
 			
 			el.on('click', () => {
-				this.toggleSublist(sublist[0]);
+				this.toggleDropdown(dropdown[0]);
 			});
 		});
 		this.$toggleNavButton.on('click', () => {
@@ -24,12 +25,13 @@ class Nav {
 		})
 	}
 
-	toggleSublist(el) {
-		$(el).toggleClass('is-open')
+	toggleDropdown(el) {
+		$(el).hasClass('open') ?
+			$(el).removeClass('open') : $(el).addClass('open');
 	}
 
 	toggleNav() {
-		this.$dropdown.toggleClass('is-open');
+		this.$dropdown.toggleClass('open');
 	}
 }
 

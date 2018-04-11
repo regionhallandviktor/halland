@@ -197,16 +197,6 @@ p.light {
 		&:last-of-type {
 			padding-right: 0;
 		}
-
-		.dropdown {
-			display: none;
-		}
-
-		&:hover {
-			.dropdown {
-				display: block !important;
-			}
-		}
 	}
 }
 
@@ -253,14 +243,13 @@ p.light {
 }
 
 .dropdown {
-	display: flex;
+	display: none;
 	width: 100%;
 	background: palette(grey, xx-light);
 	border-left: $space-2 solid palette(light-blue, base);
 	z-index: $z4;
 
 	@media screen and (min-width: $breakpoint-md) {
-		display: block;
 		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
 		position: absolute;
 		left: 0;
@@ -268,6 +257,10 @@ p.light {
 		background: palette($white, base);
 		padding: $space-4 $space-3;
 		border-left: none;
+	}
+
+	&.open {
+		display: flex;
 	}
 }
 

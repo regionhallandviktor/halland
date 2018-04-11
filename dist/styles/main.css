@@ -231,14 +231,6 @@ p.light {
   .site-nav__item:last-of-type {
     padding-right: 0;
   }
-
-  .site-nav__item .dropdown {
-    display: none;
-  }
-
-  .site-nav__item:hover .dropdown {
-    display: block !important;
-  }
 }
 
 .site-nav__link {
@@ -292,9 +284,7 @@ p.light {
 }
 
 .dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 100%;
   background: #f6f6f6;
   border-left: 0.5rem solid #cee2f2;
@@ -303,7 +293,6 @@ p.light {
 
 @media screen and (min-width: 65em) {
   .dropdown {
-    display: block;
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
             box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
     position: absolute;
@@ -313,6 +302,12 @@ p.light {
     padding: 2rem 1rem;
     border-left: none;
   }
+}
+
+.dropdown.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .dropdown__list {

@@ -378,20 +378,21 @@ Icons.prototype.getIcons = function getIcons (url) {
 };
 
 Nav.prototype.cache = function cache () {
-	this.$dropdown = $('.dropdown');
-	this.$toggleSublistButtons = this.$dropdown.find('.dropdown__toggle-btn');
+	this.$nav = $('.site-nav');
+	this.$toggleDropdownButtons = this.$nav.find('.site-nav__item');
+	this.$dropdowns = this.$nav.find('.dropdown');
 	this.$toggleNavButton = $('.site-nav__menu-btn');
 };
 
 Nav.prototype.bind = function bind () {
 		var this$1 = this;
 
-	this.$toggleSublistButtons.each(function (i, el) {
+	this.$toggleDropdownButtons.each(function (i, el) {
 		el = $(el);
-		var sublist = $(el.siblings('.dropdown__sublist'));
+		var dropdown = $(el.find('.dropdown'));
 			
 		el.on('click', function () {
-			this$1.toggleSublist(sublist[0]);
+			this$1.toggleDropdown(dropdown[0]);
 		});
 	});
 	this.$toggleNavButton.on('click', function () {
@@ -399,12 +400,13 @@ Nav.prototype.bind = function bind () {
 	})
 };
 
-Nav.prototype.toggleSublist = function toggleSublist (el) {
-	$(el).toggleClass('is-open')
+Nav.prototype.toggleDropdown = function toggleDropdown (el) {
+	$(el).hasClass('open') ?
+		$(el).removeClass('open') : $(el).addClass('open');
 };
 
 Nav.prototype.toggleNav = function toggleNav () {
-	this.$dropdown.toggleClass('is-open');
+	this.$dropdown.toggleClass('open');
 };
 
 /* unused harmony default export */ var _unused_webpack_default_export = (new Nav());
