@@ -16,22 +16,28 @@ trait NavSidebar
 			return;
 		}
 
-		$pages['current_page'] = $post;
+		$topAncestor = self::getTopPageAncestor($post);
 
-		$args = array( 
-			'child_of' => $post->ID, 
-			'parent' => $post->ID,
-			'hierarchical' => 0,
-			'sort_column' => 'menu_order', 
-			'sort_order' => 'asc'
-		);
-		$pages['page_children'] = get_pages($args);
+		var_dump($topAncestor);
 
-		foreach ($pages['page_children'] as $page) {
-			$page->url = get_page_link($page->ID);
+	}
+
+	/**
+	 * Get top ancestor that uses the page.php template
+	 * @return string Menu markup
+	 */
+	private function getTopPageAncestor($post)
+	{
+		$ancestors = get_ancestors($post->ID, $post->post_type);
+		$topDefaultAncestor;
+
+		foreach($ancestors as $key => $value) {
+			$template = get_post_meta($value, '_wp_page_template', true);
+			
+			if ($template !== 'default') {
+				return $ancestors[$key + 1];
+			}
 		}
-
-		return $pages;
 	}
 }
 
