@@ -26,7 +26,7 @@
 								@endforeach
 							</ul>
 							<div class="dropdown__see-all">
-							<a class="dropdown__see-all-btn" href="{{ get_page_link($topLevelPage->ID) }}" class="">
+							<a class="dropdown__see-all-btn" href="{{ get_page_link($topLevelPage->ID) }}">
 								<span class="mr1">Se allt inom {{ $topLevelPage->post_title }}</span>
 								<svg class="icon-badge icon-badge--md">
 									<use xlink:href="#arrow-right"/>
