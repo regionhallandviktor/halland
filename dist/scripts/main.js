@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "244c8d6fdbaefbce0582"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c711a497641af0aa3612"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2640,13 +2640,18 @@ Icons.prototype.getIcons = function getIcons (url) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {var Nav = function Nav() {
+	// Classnames
+	this.OPEN = 'open';
+
+	// Init
 	this.cache();
 	this.bind();
 };
 
 Nav.prototype.cache = function cache () {
 	this.$nav = $('.site-nav');
-	this.$toggleDropdownButtons = this.$nav.find('.site-nav__item');
+	this.$toggleDropdownItems = this.$nav.find('.site-nav__item');
+	this.$toggleDropdownLinks = this.$toggleDropdownItems.find('.site-nav__link');
 	this.$dropdowns = this.$nav.find('.dropdown');
 	this.$toggleNavButton = $('.site-nav__menu-btn');
 };
@@ -2654,9 +2659,10 @@ Nav.prototype.cache = function cache () {
 Nav.prototype.bind = function bind () {
 		var this$1 = this;
 
-	this.$toggleDropdownButtons.each(function (i, el) {
+	this.$toggleDropdownItems.each(function (i, el) {
 		el = $(el);
 		var dropdown = $(el.find('.dropdown'));
+		console.log(dropdown);
 			
 		el.on('click', function () {
 			this$1.toggleDropdown(dropdown[0]);
@@ -2668,12 +2674,17 @@ Nav.prototype.bind = function bind () {
 };
 
 Nav.prototype.toggleDropdown = function toggleDropdown (el) {
-	$(el).hasClass('open') ?
-		$(el).removeClass('open') : $(el).addClass('open');
+	this.closeDropdowns();
+	$(el).hasClass(this.OPEN) ?
+		$(el).removeClass(this.OPEN) : $(el).addClass(this.OPEN);
+};
+
+Nav.prototype.closeDropdowns = function closeDropdowns () {
+	this.$dropdowns.removeClass(this.OPEN);
 };
 
 Nav.prototype.toggleNav = function toggleNav () {
-	this.$dropdown.toggleClass('open');
+	this.$dropdown.toggleClass(this.OPEN);
 };
 
 /* unused harmony default export */ var _unused_webpack_default_export = (new Nav());

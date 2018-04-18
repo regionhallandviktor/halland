@@ -1,8 +1,17 @@
 class Nav {
 	constructor() {
-		// Classnames
-		this.OPEN = 'open';
-		this.ACTIVE = 'active';
+		this.classes = {
+			NAV: '.site-nav',
+			NAV_ITEM: '.site-nav__item',
+			NAV_LINK: '.site-nav__link',
+			NAV_DROPDOWN: '.dropdown',
+			NAV_TOGGLE_BTN: '.site-nav__menu-btn',
+		};
+
+		this.states = {
+			OPEN: 'open',
+			ACTIVE: 'active',
+		};
 
 		// Init
 		this.cache();
@@ -10,40 +19,40 @@ class Nav {
 	}
 
 	cache() {
-		this.$nav = $('.site-nav');
-		this.$toggleDropdownItems = this.$nav.find('.site-nav__item');
-		this.$toggleDropdownLinks = this.$toggleDropdownItems.find('.site-nav__link');
-		this.$dropdowns = this.$nav.find('.dropdown');
-		this.$toggleNavButton = $('.site-nav__menu-btn');
+		this.$nav = $(this.classes.NAV);
+		this.$toggleDropdownItems = this.$nav.find(this.classes.NAV_ITEM);
+		this.$dropdowns = this.$nav.find(this.classes.NAV_DROPDOWN);
+		this.$toggleNavButton = $(this.classes.NAV_TOGGLE_BTN);
 	}
 
 	bind() {
 		this.$toggleDropdownItems.each((i, el) => {
-			el = $(el);
-			let dropdown = $(el.find('.dropdown'));
-			console.log(dropdown);
-			
-			el.on('click', () => {
-				this.toggleDropdown(dropdown[0]);
-			});
+			$(el).on('click', () => this.toggle(el));
 		});
-		this.$toggleNavButton.on('click', () => {
-			this.toggleNav();
-		})
 	}
 
-	toggleDropdown(el) {
-		this.closeDropdowns();
-		$(el).hasClass(this.OPEN) ?
-			$(el).removeClass(this.OPEN) : $(el).addClass(this.OPEN);
-	}
+	toggle(target) {
+		for (let i = 0; i < this.$toggleDropdownItems.length; i++) {
+			let $item = $(this.$toggleDropdownItems[i]);
+			let $link = $item.children(this.classes.NAV_LINK);
+			let $dropdown = $item.children(this.classes.DROPDOWN);
 
-	closeDropdowns() {
-		this.$dropdowns.removeClass(this.OPEN);
-	}
-
-	toggleNav() {
-		this.$dropdown.toggleClass(this.OPEN);
+			if (this.$toggleDropdownItems[i] === target) {
+				if ($item.hasClass(this.states.OPEN)) {
+					$item.removeClass(this.states.OPEN);
+					$link.removeClass(this.states.ACTIVE);
+					$dropdown.removeClass(this.states.OPEN);
+				} else {
+					$item.addClass(this.states.OPEN);
+					$link.addClass(this.states.ACTIVE);
+					$dropdown.addClass(this.states.OPEN);
+				}
+			} else {
+				$item.removeClass(this.states.OPEN);
+				$link.removeClass(this.states.ACTIVE);
+				$dropdown.removeClass(this.states.OPEN);
+			}
+		}
 	}
 }
 
