@@ -6,9 +6,6 @@ class Nav {
 			NAV_LINK: '.site-nav__link',
 			NAV_DROPDOWN: '.dropdown',
 			NAV_TOGGLE_BTN: '.site-nav__menu-btn',
-		};
-
-		this.states = {
 			OPEN: 'open',
 			ACTIVE: 'active',
 		};
@@ -34,23 +31,23 @@ class Nav {
 	toggle(target) {
 		for (let i = 0; i < this.$toggleDropdownItems.length; i++) {
 			let $item = $(this.$toggleDropdownItems[i]);
-			let $link = $item.children(this.classes.NAV_LINK);
+			// let $link = $item.children(this.classes.NAV_LINK);
 			let $dropdown = $item.children(this.classes.DROPDOWN);
 
 			if (this.$toggleDropdownItems[i] === target) {
-				if ($item.hasClass(this.states.OPEN)) {
-					$item.removeClass(this.states.OPEN);
-					$link.removeClass(this.states.ACTIVE);
-					$dropdown.removeClass(this.states.OPEN);
+				if ($item.hasClass(this.classes.OPEN)) {
+					$item.removeClass(this.classes.OPEN);
+					// $link.removeClass(this.classes.ACTIVE);
+					$dropdown.removeClass(this.classes.OPEN);
 				} else {
-					$item.addClass(this.states.OPEN);
-					$link.addClass(this.states.ACTIVE);
-					$dropdown.addClass(this.states.OPEN);
+					$item.addClass(this.classes.OPEN);
+					// $link.addClass(this.classes.ACTIVE);
+					$dropdown.addClass(this.classes.OPEN);
 				}
 			} else {
-				$item.removeClass(this.states.OPEN);
-				$link.removeClass(this.states.ACTIVE);
-				$dropdown.removeClass(this.states.OPEN);
+				$item.removeClass(this.classes.OPEN);
+				// $link.removeClass(this.classes.ACTIVE);
+				$dropdown.removeClass(this.classes.OPEN);
 			}
 		}
 	}
