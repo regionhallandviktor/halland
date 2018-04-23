@@ -28,32 +28,36 @@ class Nav {
 
 	bind() {
 		this.$navLinks.each((i, el) => {
-			$(el).on('click', (event) => this.toggle(event.target));
+			$(el).on('click', (event) => this.toggleItem(event.target));
 		});
 	}
 
-	toggle(target) {
-
+	toggleItem(target) {
 		for (let i = 0; i < this.$navLinks.length; i++) {
 			let $item = $(this.$navItems[i]);
 			let $link = $item.children(this.classes.NAV_LINK);
 			let $dropdown = $item.children(this.classes.DROPDOWN);
 
 			if ($item[0] === $(target).parent()[0]) {
+				
 				if ($item.hasClass(this.classes.OPEN)) {
 					$item.removeClass(this.classes.OPEN);
 					$link.removeClass(this.classes.OPEN);
 					$dropdown.removeClass(this.classes.OPEN);
-				} else {
-					$item.addClass(this.classes.OPEN);
-					$link.addClass(this.classes.OPEN);
-					$dropdown.addClass(this.classes.OPEN);
+					
+					continue;
 				}
-			} else {
-				$item.removeClass(this.classes.OPEN);
-				$link.removeClass(this.classes.OPEN);
-				$dropdown.removeClass(this.classes.OPEN);
+				
+				$item.addClass(this.classes.OPEN);
+				$link.addClass(this.classes.OPEN);
+				$dropdown.addClass(this.classes.OPEN);
+				
+				continue;
 			}
+			
+			$item.removeClass(this.classes.OPEN);
+			$link.removeClass(this.classes.OPEN);
+			$dropdown.removeClass(this.classes.OPEN);
 		}
 	}
 }
