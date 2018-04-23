@@ -28,8 +28,10 @@ class Nav {
 
 	bind() {
 		this.$navLinks.each((i, el) => {
-			$(el).on('click', (event) => this.toggleItem(event.target));
+			$(el).on('click', event => this.toggleItem(event.target));
 		});
+
+		this.$toggleNavButton.on('click', () => this.toggleNav());
 	}
 
 	toggleItem(target) {
@@ -59,6 +61,12 @@ class Nav {
 			$link.removeClass(this.classes.OPEN);
 			$dropdown.removeClass(this.classes.OPEN);
 		}
+	}
+
+	toggleNav() {
+		this.$navList.hasClass(this.classes.OPEN) ?
+			this.$navList.removeClass(this.classes.OPEN) :
+			this.$navList.addClass(this.classes.OPEN)
 	}
 }
 

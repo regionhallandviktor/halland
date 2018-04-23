@@ -5,6 +5,11 @@
 			<a href="{{ esc_url( home_url( '/' ) ) }}" class="site-nav__logo">
 				<img src="@asset('images/navigation_logo.svg')">
 			</a>
+			<button class="site-nav__menu-btn">
+				<svg class="icon-badge icon-badge--md">
+					<use xlink:href="#menu"/>
+				</svg>
+			</button>
 		</div>
 	</div>
 	<div class="site-nav__bottom">
