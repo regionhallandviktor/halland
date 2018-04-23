@@ -47,4 +47,5 @@
 		</div>
 	</div>
 </nav>
+<div class="site-nav-overlay"></div>
 @endif

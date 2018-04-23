@@ -5,6 +5,7 @@ class Nav {
 			NAV_LIST: '.site-nav__list',
 			NAV_ITEM: '.site-nav__item',
 			NAV_LINK: '.site-nav__link',
+			OVERLAY: '.site-nav-overlay',
 			NAV_DROPDOWN: '.dropdown',
 			NAV_TOGGLE_BTN: '.site-nav__menu-btn',
 			OPEN: 'open',
@@ -24,6 +25,7 @@ class Nav {
 		this.$navLinks = this.$nav.find(this.classes.NAV_LINK);
 		this.$dropdowns = this.$nav.find(this.classes.NAV_DROPDOWN);
 		this.$toggleNavButton = $(this.classes.NAV_TOGGLE_BTN);
+		this.$navOverlay = $(this.classes.OVERLAY);
 	}
 
 	bind() {
@@ -32,6 +34,7 @@ class Nav {
 		});
 
 		this.$toggleNavButton.on('click', () => this.toggleNav());
+		this.$navOverlay.on('click', () => this.closeNav());
 	}
 
 	toggleItem(target) {
@@ -61,12 +64,29 @@ class Nav {
 			$link.removeClass(this.classes.OPEN);
 			$dropdown.removeClass(this.classes.OPEN);
 		}
+
+		this.toggleOverlay();
+	}
+
+	isNavOpen() {
+		return this.$navItems.hasClass(this.classes.OPEN);
 	}
 
 	toggleNav() {
 		this.$navList.hasClass(this.classes.OPEN) ?
 			this.$navList.removeClass(this.classes.OPEN) :
 			this.$navList.addClass(this.classes.OPEN)
+	}
+
+	toggleOverlay() {
+		this.isNavOpen() ?
+			this.$navOverlay.addClass(this.classes.ACTIVE) :
+			this.$navOverlay.removeClass(this.classes.ACTIVE)
+	}
+
+	closeNav() {
+		this.$navOverlay.removeClass(this.classes.ACTIVE);
+		this.$dropdowns.removeClass(this.classes.OPEN);
 	}
 }
 

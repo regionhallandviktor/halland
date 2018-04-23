@@ -165,6 +165,8 @@ p.light {
   background: #fff;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
+  position: relative;
+  z-index: 4;
 }
 
 .site-nav__top {
@@ -437,6 +439,31 @@ p.light {
   .dropdown__see-all-btn {
     padding: 0;
   }
+}
+
+.site-nav-overlay {
+  display: none;
+  background-color: #000;
+  pointer-events: none;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  z-index: 3;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.site-nav-overlay:hover {
+  opacity: 0.9;
+}
+
+.site-nav-overlay.active {
+  display: block;
+  pointer-events: auto;
 }
 
 

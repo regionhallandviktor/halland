@@ -146,6 +146,8 @@ p.light {
 	align-items: center;
 	background: $white;
 	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
+	position: relative;
+	z-index: $z4;
 }
 
 .site-nav__top {
@@ -363,3 +365,27 @@ p.light {
 		padding: 0;
 	}
 }
+
+.site-nav-overlay {
+	display: none;
+	background-color: palette($black, base);
+	pointer-events: none;
+	opacity: 0.8;
+	transition: opacity 0.1s ease-in-out;
+	z-index: $z3;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&.active {
+		display: block;
+		pointer-events: auto;
+	}
+}
+

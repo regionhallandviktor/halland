@@ -378,6 +378,7 @@ Icons.prototype.getIcons = function getIcons (url) {
 		NAV_LIST: '.site-nav__list',
 		NAV_ITEM: '.site-nav__item',
 		NAV_LINK: '.site-nav__link',
+		OVERLAY: '.site-nav-overlay',
 		NAV_DROPDOWN: '.dropdown',
 		NAV_TOGGLE_BTN: '.site-nav__menu-btn',
 		OPEN: 'open',
@@ -397,6 +398,7 @@ Nav.prototype.cache = function cache () {
 	this.$navLinks = this.$nav.find(this.classes.NAV_LINK);
 	this.$dropdowns = this.$nav.find(this.classes.NAV_DROPDOWN);
 	this.$toggleNavButton = $(this.classes.NAV_TOGGLE_BTN);
+	this.$navOverlay = $(this.classes.OVERLAY);
 };
 
 Nav.prototype.bind = function bind () {
@@ -407,6 +409,7 @@ Nav.prototype.bind = function bind () {
 	});
 
 	this.$toggleNavButton.on('click', function () { return this$1.toggleNav(); });
+	this.$navOverlay.on('click', function () { return this$1.closeNav(); });
 };
 
 Nav.prototype.toggleItem = function toggleItem (target) {
@@ -438,12 +441,29 @@ Nav.prototype.toggleItem = function toggleItem (target) {
 		$link.removeClass(this$1.classes.OPEN);
 		$dropdown.removeClass(this$1.classes.OPEN);
 	}
+
+	this.toggleOverlay();
+};
+
+Nav.prototype.isNavOpen = function isNavOpen () {
+	return this.$navItems.hasClass(this.classes.OPEN);
 };
 
 Nav.prototype.toggleNav = function toggleNav () {
 	this.$navList.hasClass(this.classes.OPEN) ?
 		this.$navList.removeClass(this.classes.OPEN) :
 		this.$navList.addClass(this.classes.OPEN)
+};
+
+Nav.prototype.toggleOverlay = function toggleOverlay () {
+	this.isNavOpen() ?
+		this.$navOverlay.addClass(this.classes.ACTIVE) :
+		this.$navOverlay.removeClass(this.classes.ACTIVE)
+};
+
+Nav.prototype.closeNav = function closeNav () {
+	this.$navOverlay.removeClass(this.classes.ACTIVE);
+	this.$dropdowns.removeClass(this.classes.OPEN);
 };
 
 /* unused harmony default export */ var _unused_webpack_default_export = (new Nav());
