@@ -73,9 +73,15 @@ class Nav {
 	}
 
 	toggleNav() {
-		this.$navList.hasClass(this.classes.OPEN) ?
-			this.$navList.removeClass(this.classes.OPEN) :
-			this.$navList.addClass(this.classes.OPEN)
+		if (this.$navList.hasClass(this.classes.OPEN)) {
+			this.$navList.removeClass(this.classes.OPEN);
+			this.$navOverlay.removeClass(this.classes.ACTIVE);
+			return true;
+		}
+
+		this.$navList.addClass(this.classes.OPEN);
+		this.$navOverlay.addClass(this.classes.ACTIVE);
+
 	}
 
 	toggleOverlay() {
