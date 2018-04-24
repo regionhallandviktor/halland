@@ -373,38 +373,103 @@ Icons.prototype.getIcons = function getIcons (url) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {var Nav = function Nav() {
+	this.classes = {
+		NAV: '.site-nav',
+		NAV_LIST: '.site-nav__list',
+		NAV_ITEM: '.site-nav__item',
+		NAV_LINK: '.site-nav__link',
+		OVERLAY: '.site-nav-overlay',
+		NAV_DROPDOWN: '.dropdown',
+		NAV_TOGGLE_BTN: '.site-nav__menu-btn',
+		OPEN: 'open',
+		OPEN_SIBLING: 'open-sibling',
+		ACTIVE: 'active',
+	};
+
+	// Init
 	this.cache();
 	this.bind();
 };
 
 Nav.prototype.cache = function cache () {
-	this.$dropdown = $('.dropdown');
-	this.$toggleSublistButtons = this.$dropdown.find('.dropdown__toggle-btn');
-	this.$toggleNavButton = $('.site-nav__menu-btn');
+	this.$nav = $(this.classes.NAV);
+	this.$navList = this.$nav.find(this.classes.NAV_LIST);
+	this.$navItems = this.$nav.find(this.classes.NAV_ITEM);
+	this.$navLinks = this.$nav.find(this.classes.NAV_LINK);
+	this.$dropdowns = this.$nav.find(this.classes.NAV_DROPDOWN);
+	this.$toggleNavButton = $(this.classes.NAV_TOGGLE_BTN);
+	this.$navOverlay = $(this.classes.OVERLAY);
 };
 
 Nav.prototype.bind = function bind () {
 		var this$1 = this;
 
-	this.$toggleSublistButtons.each(function (i, el) {
-		el = $(el);
-		var sublist = $(el.siblings('.dropdown__sublist'));
-			
-		el.on('click', function () {
-			this$1.toggleSublist(sublist[0]);
-		});
+	this.$navLinks.each(function (i, el) {
+		$(el).on('click', function (event) { return this$1.toggleItem(event.target); });
 	});
-	this.$toggleNavButton.on('click', function () {
-		this$1.toggleNav();
-	})
+
+	this.$toggleNavButton.on('click', function () { return this$1.toggleNav(); });
+	this.$navOverlay.on('click', function () { return this$1.closeNav(); });
 };
 
-Nav.prototype.toggleSublist = function toggleSublist (el) {
-	$(el).toggleClass('is-open')
+Nav.prototype.toggleItem = function toggleItem (target) {
+		var this$1 = this;
+
+	for (var i = 0; i < this.$navLinks.length; i++) {
+		var $item = $(this$1.$navItems[i]);
+		var $link = $item.children(this$1.classes.NAV_LINK);
+		var $dropdown = $item.children(this$1.classes.DROPDOWN);
+
+		if ($item[0] === $(target).parent()[0]) {
+				
+			if ($item.hasClass(this$1.classes.OPEN)) {
+				$item.removeClass(this$1.classes.OPEN);
+				$link.removeClass(this$1.classes.OPEN);
+				$dropdown.removeClass(this$1.classes.OPEN);
+					
+				continue;
+			}
+				
+			$item.addClass(this$1.classes.OPEN);
+			$link.addClass(this$1.classes.OPEN);
+			$dropdown.addClass(this$1.classes.OPEN);
+				
+			continue;
+		}
+			
+		$item.removeClass(this$1.classes.OPEN);
+		$link.removeClass(this$1.classes.OPEN);
+		$dropdown.removeClass(this$1.classes.OPEN);
+	}
+
+	this.toggleOverlay();
+};
+
+Nav.prototype.isNavOpen = function isNavOpen () {
+	return this.$navItems.hasClass(this.classes.OPEN);
 };
 
 Nav.prototype.toggleNav = function toggleNav () {
-	this.$dropdown.toggleClass('is-open');
+	if (this.$navList.hasClass(this.classes.OPEN)) {
+		this.$navList.removeClass(this.classes.OPEN);
+		this.$navOverlay.removeClass(this.classes.ACTIVE);
+		return true;
+	}
+
+	this.$navList.addClass(this.classes.OPEN);
+	this.$navOverlay.addClass(this.classes.ACTIVE);
+
+};
+
+Nav.prototype.toggleOverlay = function toggleOverlay () {
+	this.isNavOpen() ?
+		this.$navOverlay.addClass(this.classes.ACTIVE) :
+		this.$navOverlay.removeClass(this.classes.ACTIVE)
+};
+
+Nav.prototype.closeNav = function closeNav () {
+	this.$navOverlay.removeClass(this.classes.ACTIVE);
+	this.$dropdowns.removeClass(this.classes.OPEN);
 };
 
 /* unused harmony default export */ var _unused_webpack_default_export = (new Nav());

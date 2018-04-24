@@ -165,12 +165,25 @@ p.light {
   background: #fff;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
+  position: relative;
+  z-index: 4;
 }
 
 .site-nav__top {
   width: 100%;
   border-bottom: 1px solid #e9e9e9;
   padding: 0.5rem;
+}
+
+.site-nav__menu-btn {
+  display: block;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 65em) {
+  .site-nav__menu-btn {
+    display: none;
+  }
 }
 
 .site-nav__bottom {
@@ -185,6 +198,11 @@ p.light {
 }
 
 .site-nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
@@ -197,17 +215,23 @@ p.light {
 }
 
 .site-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 @media screen and (min-width: 65em) {
   .site-nav__list {
-    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
+}
+
+.site-nav__list.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .site-nav__item {
@@ -230,14 +254,6 @@ p.light {
 
   .site-nav__item:last-of-type {
     padding-right: 0;
-  }
-
-  .site-nav__item .dropdown {
-    display: none;
-  }
-
-  .site-nav__item:hover .dropdown {
-    display: block !important;
   }
 }
 
@@ -284,6 +300,18 @@ p.light {
             transform: translateY(0);
   }
 
+  .site-nav__link.open {
+    color: black;
+  }
+
+  .site-nav__link.open-sibling {
+    color: rgba(0, 0, 0, 0.35);
+  }
+
+  .site-nav__link:hover {
+    color: black;
+  }
+
   .site-nav__link:hover::after {
     -webkit-transform: translateY(0);
          -o-transform: translateY(0);
@@ -292,9 +320,7 @@ p.light {
 }
 
 .dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 100%;
   background: #f6f6f6;
   border-left: 0.5rem solid #cee2f2;
@@ -303,7 +329,6 @@ p.light {
 
 @media screen and (min-width: 65em) {
   .dropdown {
-    display: block;
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
             box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);
     position: absolute;
@@ -313,6 +338,12 @@ p.light {
     padding: 2rem 1rem;
     border-left: none;
   }
+}
+
+.dropdown.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .dropdown__list {
@@ -408,6 +439,31 @@ p.light {
   .dropdown__see-all-btn {
     padding: 0;
   }
+}
+
+.site-nav-overlay {
+  display: none;
+  background-color: #000;
+  pointer-events: none;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  z-index: 3;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.site-nav-overlay:hover {
+  opacity: 0.9;
+}
+
+.site-nav-overlay.active {
+  display: block;
+  pointer-events: auto;
 }
 
 
