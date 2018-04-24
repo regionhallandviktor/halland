@@ -1,99 +1,108 @@
-class Nav {
-	constructor() {
-		this.classes = {
-			NAV: '.site-nav',
-			NAV_LIST: '.site-nav__list',
-			NAV_ITEM: '.site-nav__item',
-			NAV_LINK: '.site-nav__link',
-			OVERLAY: '.site-nav-overlay',
-			NAV_DROPDOWN: '.dropdown',
-			NAV_TOGGLE_BTN: '.site-nav__menu-btn',
-			OPEN: 'open',
-			OPEN_SIBLING: 'open-sibling',
-			ACTIVE: 'active',
-		};
+const Nav = (() => {
 
-		// Init
-		this.cache();
-		this.bind();
+	const Selectors = {
+		NAV: '.site-nav',
+		NAV_LIST: '.site-nav__list',
+		NAV_ITEM: '.site-nav__item',
+		NAV_LINK: '.site-nav__link',
+		OVERLAY: '.site-nav-overlay',
+		NAV_DROPDOWN: '.dropdown',
+		NAV_TOGGLE_BTN: '.site-nav__menu-btn',
 	}
-
-	cache() {
-		this.$nav = $(this.classes.NAV);
-		this.$navList = this.$nav.find(this.classes.NAV_LIST);
-		this.$navItems = this.$nav.find(this.classes.NAV_ITEM);
-		this.$navLinks = this.$nav.find(this.classes.NAV_LINK);
-		this.$dropdowns = this.$nav.find(this.classes.NAV_DROPDOWN);
-		this.$toggleNavButton = $(this.classes.NAV_TOGGLE_BTN);
-		this.$navOverlay = $(this.classes.OVERLAY);
+	
+	const Modifiers = {
+		OPEN: 'open',
+		OPEN_SIBLING: 'open-sibling',
+		ACTIVE: 'active',
 	}
+	
+	class Nav {
+		constructor() {
+			this.cache();
+			this.bind();
+		}
 
-	bind() {
-		this.$navLinks.each((i, el) => {
-			$(el).on('click', event => this.toggleItem(event.target));
-		});
+		cache() {
+			this.$nav = $(Selectors.NAV);
+			this.$navList = this.$nav.find(Selectors.NAV_LIST);
+			this.$navItems = this.$nav.find(Selectors.NAV_ITEM);
+			this.$navLinks = this.$nav.find(Selectors.NAV_LINK);
+			this.$dropdowns = this.$nav.find(Selectors.NAV_DROPDOWN);
+			this.$toggleNavButton = $(Selectors.NAV_TOGGLE_BTN);
+			this.$navOverlay = $(Selectors.OVERLAY);
+		}
 
-		this.$toggleNavButton.on('click', () => this.toggleNav());
-		this.$navOverlay.on('click', () => this.closeNav());
-	}
+		bind() {
+			this.$navLinks.each((i, el) => {
+				$(el).on('click', event => this.toggleItem(event.target));
+			});
 
-	toggleItem(target) {
-		for (let i = 0; i < this.$navLinks.length; i++) {
-			let $item = $(this.$navItems[i]);
-			let $link = $item.children(this.classes.NAV_LINK);
-			let $dropdown = $item.children(this.classes.DROPDOWN);
+			this.$toggleNavButton.on('click', () => this.toggleNav());
+			this.$navOverlay.on('click', () => this.closeNav());
+			this.$nav.on('keyup', () => this.keypad());
+		}
 
-			if ($item[0] === $(target).parent()[0]) {
-				
-				if ($item.hasClass(this.classes.OPEN)) {
-					$item.removeClass(this.classes.OPEN);
-					$link.removeClass(this.classes.OPEN);
-					$dropdown.removeClass(this.classes.OPEN);
+		toggleItem(target) {
+			for (let i = 0; i < this.$navLinks.length; i++) {
+				let $item = $(this.$navItems[i]);
+				let $link = $item.children(Selectors.NAV_LINK);
+				let $dropdown = $item.children(Selectors.DROPDOWN);
+
+				if ($item[0] === $(target).parent()[0]) {
+					
+					if ($item.hasClass(Modifiers.OPEN)) {
+						$item.removeClass(Modifiers.OPEN);
+						$link.removeClass(Modifiers.OPEN);
+						$dropdown.removeClass(Modifiers.OPEN);
+						
+						continue;
+					}
+					
+					$item.addClass(Modifiers.OPEN);
+					$link.addClass(Modifiers.OPEN);
+					$dropdown.addClass(Modifiers.OPEN);
 					
 					continue;
 				}
 				
-				$item.addClass(this.classes.OPEN);
-				$link.addClass(this.classes.OPEN);
-				$dropdown.addClass(this.classes.OPEN);
-				
-				continue;
+				$item.removeClass(Modifiers.OPEN);
+				$link.removeClass(Modifiers.OPEN);
+				$dropdown.removeClass(Modifiers.OPEN);
 			}
-			
-			$item.removeClass(this.classes.OPEN);
-			$link.removeClass(this.classes.OPEN);
-			$dropdown.removeClass(this.classes.OPEN);
+
+			this.toggleOverlay();
 		}
 
-		this.toggleOverlay();
-	}
-
-	isNavOpen() {
-		return this.$navItems.hasClass(this.classes.OPEN);
-	}
-
-	toggleNav() {
-		if (this.$navList.hasClass(this.classes.OPEN)) {
-			this.$navList.removeClass(this.classes.OPEN);
-			this.$navOverlay.removeClass(this.classes.ACTIVE);
-			return true;
+		isNavOpen() {
+			return this.$navItems.hasClass(Modifiers.OPEN);
 		}
 
-		this.$navList.addClass(this.classes.OPEN);
-		this.$navOverlay.addClass(this.classes.ACTIVE);
+		toggleNav() {
+			if (this.$navList.hasClass(Modifiers.OPEN)) {
+				this.$navList.removeClass(Modifiers.OPEN);
+				this.$navOverlay.removeClass(Modifiers.ACTIVE);
+				return;
+			}
 
+			this.$navList.addClass(Modifiers.OPEN);
+			this.$navOverlay.addClass(Modifiers.ACTIVE);
+
+		}
+
+		toggleOverlay() {
+			this.isNavOpen() ?
+				this.$navOverlay.addClass(Modifiers.ACTIVE) :
+				this.$navOverlay.removeClass(Modifiers.ACTIVE)
+		}
+
+		closeNav() {
+			this.$navOverlay.removeClass(Modifiers.ACTIVE);
+			this.$dropdowns.removeClass(Modifiers.OPEN);
+		}
 	}
 
-	toggleOverlay() {
-		this.isNavOpen() ?
-			this.$navOverlay.addClass(this.classes.ACTIVE) :
-			this.$navOverlay.removeClass(this.classes.ACTIVE)
-	}
+	return new Nav();
 
-	closeNav() {
-		this.$navOverlay.removeClass(this.classes.ACTIVE);
-		this.$dropdowns.removeClass(this.classes.OPEN);
-	}
-}
+})();
 
-export default new Nav();
+export default Nav;
