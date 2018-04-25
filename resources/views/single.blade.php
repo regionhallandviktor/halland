@@ -16,6 +16,8 @@
 				</header>
 			
 				@include('partials.content-single')
+				<hr>
+				@include('partials.updated-time')
 
 				@if (is_active_sidebar('sidebar-article-bottom'))
 				<div class="col col-12">
@@ -25,9 +27,14 @@
 			</main>
 
 			<div class="col col-12 md-col-3 px2">
-				<div class="col col-12 sm-col-3 px2 d-print-none">
-		 			<nav id="content-nav"></nav>
-				</div>
+			
+					
+					@if (is_active_sidebar('sidebar-right'))		
+						@include('partials.sidebar-right')
+					@endif
+
+		 			<nav id="content-nav" class="d-print-none"></nav>
+		
 			</div>
 		</div>
 	</div>

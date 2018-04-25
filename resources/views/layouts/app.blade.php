@@ -1,7 +1,7 @@
 <!doctype html>
 <html @php(language_attributes())>
 	@include('partials.head')
-	<body style="min-height: 40000px">
+	<body @php(body_class())>
 		@include('partials.cookie-notice')
 		@include('partials.site-notices')
 
