@@ -1,42 +1,6 @@
 @import '../../../../../../../../../styleguide/src/scss/settings/settings';
 @import '../../../../../../../../../styleguide/src/scss/mixins/palette';
 
-// Article
-p.light {
-	font-family: 'Lato';
-	color: #3e3e3e;
-	font-size: 0.9em;
-}
-
-.alignright {
-	float: right;
-	margin: 0 0 1em 1em;
-}
-
-.alignleft {
-	float: left;
-	margin: 0 1em 1em 0;
-}
-
-.comments {
-	li {
-		background: #fff;
-		border: 1px solid $darken-2;
-		margin-bottom: 2rem;
-
-		.comment-body {
-			padding: 1rem;
-		}
-
-		.children li {
-			border: none;
-			border-top: 1px solid $darken-2;
-			background: #f8fbfc;
-			margin-bottom: 0;
-		}
-	}
-}
-
 // Sidebar nav
 .sidebar-nav {
 	display: flex;

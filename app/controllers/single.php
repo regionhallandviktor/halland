@@ -4,13 +4,9 @@ namespace App;
 
 use Sober\Controller\Controller;
 
-class App extends Controller
+class Single extends Controller
 {
-	use Traits\CookieNotice;
-	use Traits\Notices;
-	use Traits\Breadcrumbs;
-	use Traits\NavSidebar;
-	use Traits\NavSite;
+	use Traits\Comments;
 
 	/**
 	 * Return the main nav
