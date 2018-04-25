@@ -40,8 +40,9 @@
 					</div>
 
 					<p>Nyheter och aktuellt för dig som är vårdgivare i Halland</p>
+					</article>
 					@include('partials.component-list-posts')
-				</article>
+				
 					@if (is_active_sidebar('sidebar-article-bottom'))
 					
 						@include('partials.sidebar-article-bottom')

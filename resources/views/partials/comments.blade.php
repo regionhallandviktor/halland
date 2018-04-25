@@ -1,4 +1,6 @@
-<div class="py4 px2">
+@if (comments_open() || get_comment_pages_count() > 0)
+
+<div class="container__outer container__outer--alt">
 	<div class="container mx-auto">
 		<div class="clearfix mxn2">
 			<div class="col col-12 px2">
@@ -30,18 +32,21 @@
 					  </nav>
 					@endif
 				  @endif
-
+					<div class="panel">
+						<div class="panel__body">
 				  @if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments'))
-					<div class="alert alert-warning">
+					
 					  {{ __('Kommentarerna är nu stängda.', 'sage') }}
-					</div>
-				  @endif
-				<div class="panel">
-					<div class="panel__body">
-						@php(comment_form(array('submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="btn btn--primary" value="%4$s" />')))
-					</div>
+					
+				  @else
+				
+							@php(comment_form(array('submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="btn btn--primary" value="%4$s" />')))
+						
+				@endif
 				</div>
+					</div>
 			</div>
 		</div>
 	</div>
 </div>
+@endif

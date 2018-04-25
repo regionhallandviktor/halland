@@ -33,7 +33,7 @@
 						@include('partials.sidebar-right')
 					@endif
 
-		 			<nav id="content-nav" class="d-print-none"></nav>
+		 			<nav id="content-nav" class="d-print-none d-none d-md-block"></nav>
 		
 			</div>
 		</div>
