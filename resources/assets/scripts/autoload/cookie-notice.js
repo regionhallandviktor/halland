@@ -1,40 +1,52 @@
 import cookies from 'js-cookie';
 
-class CookieNotice {
-	constructor() {
-		this.name = 'cookie_notice_accepted';
+const Cookies = ((cookies) => {
+	const COOKIE_NAME = 'cookie_notice_accepted'
+	
+	const Selectors = {
+		COOKIE_NOTICE: '#cookie-notice',
+		COOKIE_BTN: '#cookie-consent',
+	}
 
-		if (this.getCookie(this.name) !== undefined) {
-			return;
+	class CookieNotice {
+		constructor() {
+			this.name = COOKIE_NAME;
+
+			if (this.getCookie(this.name) !== undefined) {
+				return;
+			}
+
+			this.cache();
+			this.bind();
 		}
 
-		this.cache();
-		this.bind();
+		cache() {
+			this.container = $(Selectors.COOKIE_NOTICE);
+			this.consentBtn = this.container.find(Selectors.COOKIE_BTN);
+		}
+
+		bind() {
+			this.consentBtn.on('click', () => {
+				this.removeNotice();
+				this.setCookie(this.name);
+			})
+		}
+
+		removeNotice() {
+			this.container.remove();
+		}
+
+		getCookie(name) {
+			return cookies.get(name);
+		}
+
+		setCookie(name) {
+			return cookies.set(name, 'true', { expires: 100 });
+		}
 	}
 
-	cache() {
-		this.container = $('#cookie-notice');
-		this.consentBtn = this.container.find('#cookie-consent');
-	}
+	return new CookieNotice();
 
-	bind() {
-		this.consentBtn.on('click', () => {
-			this.removeNotice();
-			this.setCookie(this.name);
-		})
-	}
+})(cookies);
 
-	removeNotice() {
-		this.container.remove();
-	}
-
-	getCookie(name) {
-		return cookies.get(name);
-	}
-
-	setCookie(name) {
-		return cookies.set(name, 'true', { expires: 100 });
-	}
-}
-
-export default new CookieNotice();
+export default Cookies;

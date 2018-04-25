@@ -2381,44 +2381,56 @@ jQuery(document).ready(function () { return routes.loadEvents(); });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_js_cookie___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_js_cookie__);
 
 
-var CookieNotice = function CookieNotice() {
-	this.name = 'cookie_notice_accepted';
-
-	if (this.getCookie(this.name) !== undefined) {
-		return;
+var Cookies = (function (cookies) {
+	var COOKIE_NAME = 'cookie_notice_accepted'
+	
+	var Selectors = {
+		COOKIE_NOTICE: '#cookie-notice',
+		COOKIE_BTN: '#cookie-consent',
 	}
 
-	this.cache();
-	this.bind();
-};
+	var CookieNotice = function CookieNotice() {
+		this.name = COOKIE_NAME;
 
-CookieNotice.prototype.cache = function cache () {
-	this.container = $('#cookie-notice');
-	this.consentBtn = this.container.find('#cookie-consent');
-};
+		if (this.getCookie(this.name) !== undefined) {
+			return;
+		}
 
-CookieNotice.prototype.bind = function bind () {
-		var this$1 = this;
+		this.cache();
+		this.bind();
+	};
 
-	this.consentBtn.on('click', function () {
-		this$1.removeNotice();
-		this$1.setCookie(this$1.name);
-	})
-};
+	CookieNotice.prototype.cache = function cache () {
+		this.container = $(Selectors.COOKIE_NOTICE);
+		this.consentBtn = this.container.find(Selectors.COOKIE_BTN);
+	};
 
-CookieNotice.prototype.removeNotice = function removeNotice () {
-	this.container.remove();
-};
+	CookieNotice.prototype.bind = function bind () {
+			var this$1 = this;
 
-CookieNotice.prototype.getCookie = function getCookie (name) {
-	return __WEBPACK_IMPORTED_MODULE_0_js_cookie___default.a.get(name);
-};
+		this.consentBtn.on('click', function () {
+			this$1.removeNotice();
+			this$1.setCookie(this$1.name);
+		})
+	};
 
-CookieNotice.prototype.setCookie = function setCookie (name) {
-	return __WEBPACK_IMPORTED_MODULE_0_js_cookie___default.a.set(name, 'true', { expires: 100 });
-};
+	CookieNotice.prototype.removeNotice = function removeNotice () {
+		this.container.remove();
+	};
 
-/* unused harmony default export */ var _unused_webpack_default_export = (new CookieNotice());
+	CookieNotice.prototype.getCookie = function getCookie (name) {
+		return cookies.get(name);
+	};
+
+	CookieNotice.prototype.setCookie = function setCookie (name) {
+		return cookies.set(name, 'true', { expires: 100 });
+	};
+
+	return new CookieNotice();
+
+})(__WEBPACK_IMPORTED_MODULE_0_js_cookie___default.a);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (Cookies);
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
 
@@ -2611,23 +2623,155 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {var Icons = function Icons() {
-	this.spriteURL = 'https://regionhalland.github.io/styleguide/dist/icons/sprite.svg';
-	this.getIcons(this.spriteURL);
-};
+/* WEBPACK VAR INJECTION */(function($) {var Icons = (function () {
 
-Icons.prototype.getIcons = function getIcons (url) {
-	$.get(url).done(function (data) {
-		var div = document.createElement('div');
-		div.className = 'display-none';
-		div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
-		document.body.insertBefore(div, document.body.childNodes[0]);
-	})
-};
+	var Modifiers = {
+		DISPLAY_NONE: 'display-none',
+	}
 
-/* unused harmony default export */ var _unused_webpack_default_export = (new Icons());
+	var Icons = function Icons() {
+		this.spriteURL = 'https://regionhalland.github.io/styleguide/dist/icons/sprite.svg';
+		this.getIcons(this.spriteURL);
+	};
 
+	Icons.prototype.getIcons = function getIcons (url) {
+		$.get(url).done(function (data) {
+			var div = document.createElement('div');
+			div.className = Modifiers.DISPLAY_NONE;
+			div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+			document.body.insertBefore(div, document.body.childNodes[0]);
+		})
+	};
+
+	return new Icons();
+	
+})();
+
+/* unused harmony default export */ var _unused_webpack_default_export = (Icons);
+
+<<<<<<< HEAD
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
+=======
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {var Nav = (function () {
+
+	var Selectors = {
+		NAV: '.site-nav',
+		NAV_LIST: '.site-nav__list',
+		NAV_ITEM: '.site-nav__item',
+		NAV_LINK: '.site-nav__link',
+		OVERLAY: '.site-nav-overlay',
+		NAV_DROPDOWN: '.dropdown',
+		NAV_TOGGLE_BTN: '.site-nav__menu-btn',
+	}
+	
+	var Modifiers = {
+		OPEN: 'open',
+		OPEN_SIBLING: 'open-sibling',
+		ACTIVE: 'active',
+	}
+	
+	var Nav = function Nav() {
+		this.cache();
+		this.bind();
+	};
+
+	Nav.prototype.cache = function cache () {
+		this.$nav = $(Selectors.NAV);
+		this.$navList = this.$nav.find(Selectors.NAV_LIST);
+		this.$navItems = this.$nav.find(Selectors.NAV_ITEM);
+		this.$navLinks = this.$nav.find(Selectors.NAV_LINK);
+		this.$dropdowns = this.$nav.find(Selectors.NAV_DROPDOWN);
+		this.$toggleNavButton = $(Selectors.NAV_TOGGLE_BTN);
+		this.$navOverlay = $(Selectors.OVERLAY);
+	};
+
+	Nav.prototype.bind = function bind () {
+			var this$1 = this;
+
+		this.$navLinks.each(function (i, el) {
+			$(el).on('click', function (event) { return this$1.toggleItem(event.target); });
+		});
+
+		this.$toggleNavButton.on('click', function () { return this$1.toggleNav(); });
+		this.$navOverlay.on('click', function () { return this$1.closeNav(); });
+		this.$nav.on('keyup', function () { return this$1.keypad(); });
+	};
+
+	Nav.prototype.toggleItem = function toggleItem (target) {
+			var this$1 = this;
+
+		for (var i = 0; i < this.$navLinks.length; i++) {
+			var $item = $(this$1.$navItems[i]);
+			var $link = $item.children(Selectors.NAV_LINK);
+			var $dropdown = $item.children(Selectors.DROPDOWN);
+
+			if ($item[0] === $(target).parent()[0]) {
+					
+				if ($item.hasClass(Modifiers.OPEN)) {
+					$item.removeClass(Modifiers.OPEN);
+					$link.removeClass(Modifiers.OPEN);
+					$dropdown.removeClass(Modifiers.OPEN);
+						
+					continue;
+				}
+					
+				$item.addClass(Modifiers.OPEN);
+				$link.addClass(Modifiers.OPEN);
+				$dropdown.addClass(Modifiers.OPEN);
+					
+				continue;
+			}
+				
+			$item.removeClass(Modifiers.OPEN);
+			$link.removeClass(Modifiers.OPEN);
+			$dropdown.removeClass(Modifiers.OPEN);
+		}
+
+		this.toggleOverlay();
+	};
+
+	Nav.prototype.isNavOpen = function isNavOpen () {
+		return this.$navItems.hasClass(Modifiers.OPEN);
+	};
+
+	Nav.prototype.toggleNav = function toggleNav () {
+		if (this.$navList.hasClass(Modifiers.OPEN)) {
+			this.$navList.removeClass(Modifiers.OPEN);
+			this.$navOverlay.removeClass(Modifiers.ACTIVE);
+			return;
+		}
+
+		this.$navList.addClass(Modifiers.OPEN);
+		this.$navOverlay.addClass(Modifiers.ACTIVE);
+
+	};
+
+	Nav.prototype.toggleOverlay = function toggleOverlay () {
+		this.isNavOpen() ?
+			this.$navOverlay.addClass(Modifiers.ACTIVE) :
+			this.$navOverlay.removeClass(Modifiers.ACTIVE)
+	};
+
+	Nav.prototype.closeNav = function closeNav () {
+		this.$navOverlay.removeClass(Modifiers.ACTIVE);
+		this.$dropdowns.removeClass(Modifiers.OPEN);
+	};
+
+	return new Nav();
+
+})();
+
+/* unused harmony default export */ var _unused_webpack_default_export = (Nav);
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+>>>>>>> master
 
 /***/ }),
 /* 22 */
