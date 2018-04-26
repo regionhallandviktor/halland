@@ -20,10 +20,10 @@ class ContentNav {
 		this.currentPair			= null;
 
 		//Do stuff
-
-		this.createMenu();
-		this.init();
-
+		if(this.tags.length > 0) {
+			this.createMenu();
+			this.init();
+		}
 	}
 
 	/*
