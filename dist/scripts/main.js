@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "76531d586f5fb9d81c01"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "42a98a758feb6e0259e3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2804,7 +2804,6 @@ Router.prototype.loadEvents = function loadEvents () {
 
 /* harmony default export */ __webpack_exports__["a"] = ({
 	init: function init() {
-		console.log('msg')
 		this.nav = new __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__["a" /* default */]('.article', 'h1, h2, h3' );
 	},
 });
@@ -2844,10 +2843,10 @@ var ContentNav = function ContentNav(container, tags, menu) {
 	this.currentPair		= null;
 
 	//Do stuff
-
-	this.createMenu();
-	this.init();
-
+	if(this.tags.length > 0) {
+		this.createMenu();
+		this.init();
+	}
 };
 
 /*

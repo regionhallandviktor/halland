@@ -1,1 +1,1 @@
-Senast uppdaterad: den {{ get_the_modified_time('j F Y', $post) }} kl.{{ get_the_modified_date('G:i', $post) }}
+<span class="light small">{{ __('Senast uppdaterad', 'sage') }}: {{ __('den', 'sage') }} <time>{{ get_the_modified_time('j F Y', $post_id) }} {{ __('kl.', 'sage') }} {{ get_the_modified_date('G:i', $post_id) }}</time></span>
