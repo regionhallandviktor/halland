@@ -28,11 +28,11 @@
 						<h2 class="flex-auto p0 m0">Nyheter</h2>
 						<div class="mr1 flex-auto right-align">
 						
-						<a href="{{ get_bloginfo_rss() }}" >
-							<svg class="icon-badge icon-badge--md">
-						 		<use xlink:href="#rss"/>
-							</svg> Prenumerera på RSS
-						</a>
+							<a href="{{ get_bloginfo_rss() }}" >
+								<svg class="icon-badge icon-badge--md">
+							 		<use xlink:href="#rss"/>
+								</svg> Prenumerera på RSS
+							</a>
 
 						</div>
 						
@@ -41,7 +41,24 @@
 
 					<p>Nyheter och aktuellt för dig som är vårdgivare i Halland</p>
 					</article>
-					@include('partials.component-list-posts')
+					
+
+					<ul class="list list--none">
+						@foreach($news as $newsitem)
+							
+							<li class="li--border-bottom">
+								<h3><a href="@php( the_permalink($newsitem) )">{{ $newsitem->post_title }}</a></h3>
+								<p>
+									@include('partials.updated-time', ['post_id' => $newsitem->ID])
+								</p>
+								@if($newsitem->post_excerpt)
+								<p>{{ get_the_excerpt($newsitem) }}</p>
+								@endif
+							</li>
+
+						@endforeach
+					</ul>
+
 				
 					@if (is_active_sidebar('sidebar-article-bottom'))
 					

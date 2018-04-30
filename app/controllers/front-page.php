@@ -6,6 +6,10 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
-	use Traits\BlogPosts;
+	
+	public function news()
+	{
+		return get_posts();
+	}
 
 }
