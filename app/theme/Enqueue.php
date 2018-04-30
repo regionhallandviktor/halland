@@ -9,6 +9,7 @@ class Enqueue
 		add_action('wp_enqueue_scripts', array($this, 'styles'));
 		add_action('wp_enqueue_scripts', array($this, 'scripts'));
 		add_action('wp_enqueue_scripts', array($this, 'jquery'));
+		add_theme_support( 'title-tag' );
 	}
 
 	/**

@@ -1,4 +1,4 @@
-@if (comments_open() || get_comment_pages_count() > 0)
+@if ($comments_open || $comments)
 	<div class="container__outer container__outer--alt">
 		<div class="container mx-auto">
 			@include('partials.comments-list')

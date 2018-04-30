@@ -10,6 +10,10 @@ trait Comments
 	 */
 	private $comments;
 
+	public function comments_open() {
+		return comments_open();
+	}
+
 	public function comments()
 	{
 		global $post;

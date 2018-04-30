@@ -68,7 +68,6 @@ class ContentNav {
 
 		this.slider = $('.content-nav__slider', this.menu);
 		this.menuOffset = this.menu.position().top;
-		console.log(this.menuOffset, this.menu.position());
 		this.menuHeight = this.menu.height();
 
 	}

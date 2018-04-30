@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "42a98a758feb6e0259e3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d18632200138cf51e63a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2298,12 +2298,12 @@ module.exports = function(hash, moduleMap, options) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ 29)(true);
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ 30)(true);
 // imports
 
 
 // module
-exports.push([module.i, ".sidebar-nav {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.sidebar-nav__list {\n  display: block;\n  width: 100%;\n  border: 1px solid #e4e4e4;\n}\n\n.sidebar-nav__item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n.sidebar-nav__item:last-of-type {\n  border-bottom: none;\n}\n\n.sidebar-nav__item:not(.has-sublist) > .sidebar-nav__link {\n  font-weight: 400;\n}\n\n.sidebar-nav__item.active .sidebar-nav__label {\n  background: #0e5aa4;\n  color: #fff;\n}\n\n.sidebar-nav__link,\n.sidebar-nav__label {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  font-weight: bold;\n  color: #000;\n  padding: 0.5rem;\n}\n\n.sidebar-nav__sublist {\n  width: 100%;\n}\n\n.sidebar-nav__toggle-btn {\n  background: #aecfe9;\n  border-radius: 50%;\n  margin-right: 0.5rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 26px;\n  height: 26px;\n}\n\n.sidebar-nav__toggle-btn svg {\n  fill: #0e5aa4;\n}\n\n.content-nav__heading {\n  font-size: 0.75rem;\n  color: #a7a7a7;\n  font-family: \"Scala-Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  text-transform: uppercase;\n  display: block;\n  line-height: 2rem;\n  padding-bottom: 0.5rem;\n}\n\n.content-nav__container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: row wrap;\n      flex-wrap: row wrap;\n}\n\n.content-nav__slider {\n  width: 4px;\n  height: 0;\n  background: #0e5aa4;\n  -webkit-box-flex: 0;\n      -ms-flex: none;\n          flex: none;\n  -webkit-transition: top 1s, height 1s, width 1s;\n  -o-transition: top 1s, height 1s, width 1s;\n  transition: top 1s, height 1s, width 1s;\n}\n\n.content-nav__menu {\n  margin-left: 0.5rem;\n  -webkit-box-flex: 1;\n      -ms-flex: 1 auto;\n          flex: 1 auto;\n}\n\n.content-nav__item {\n  margin: 0;\n}\n\n.content-nav__item a {\n  padding: 0.25rem 0;\n  display: inline-block;\n}\n\n.site-nav {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: #fff;\n  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n  position: relative;\n  z-index: 4;\n}\n\n.site-nav__top {\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n  padding: 0.5rem;\n}\n\n.site-nav__menu-btn {\n  display: block;\n  margin-left: auto;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__menu-btn {\n    display: none;\n  }\n}\n\n.site-nav__bottom {\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__bottom {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n}\n\n.site-nav__container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__container {\n    max-width: 1320px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n}\n\n.site-nav__list {\n  display: none;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__list {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n  }\n}\n\n.site-nav__list.open {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.site-nav__item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__item {\n    display: block;\n    width: auto;\n    border-bottom: 0;\n    padding-right: 1rem;\n  }\n\n  .site-nav__item:last-of-type {\n    padding-right: 0;\n  }\n}\n\n.site-nav__link {\n  display: block;\n  width: 100%;\n  color: #000;\n  position: relative;\n  overflow: hidden;\n  font-weight: bold;\n  padding: 1rem 0.5rem;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__link {\n    padding: 1rem 0;\n    display: inherit;\n    font-size: 0.9375rem;\n  }\n\n  .site-nav__link::after {\n    content: '';\n    display: block;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    border-bottom: 5px solid #6ca2d5;\n    border-radius: 1px 1px 0 0;\n    -webkit-transform: translateY(100%);\n         -o-transform: translateY(100%);\n            transform: translateY(100%);\n    -webkit-transition: -webkit-transform 0.1s ease-in-out;\n    transition: -webkit-transform 0.1s ease-in-out;\n    -o-transition: -o-transform 0.1s ease-in-out;\n    transition: transform 0.1s ease-in-out;\n    transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out, -o-transform 0.1s ease-in-out;\n  }\n\n  .site-nav__link.active::after {\n    border-bottom: 5px solid #0e5aa4;\n    -webkit-transform: translateY(0);\n         -o-transform: translateY(0);\n            transform: translateY(0);\n  }\n\n  .site-nav__link.open {\n    color: black;\n  }\n\n  .site-nav__link.open-sibling {\n    color: rgba(0, 0, 0, 0.35);\n  }\n\n  .site-nav__link:hover {\n    color: black;\n  }\n\n  .site-nav__link:hover::after {\n    -webkit-transform: translateY(0);\n         -o-transform: translateY(0);\n            transform: translateY(0);\n  }\n}\n\n.dropdown {\n  display: none;\n  width: 100%;\n  background: #f6f6f6;\n  border-left: 0.5rem solid #cee2f2;\n  z-index: 4;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown {\n    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n    position: absolute;\n    left: 0;\n    width: 100vw;\n    background: #fff;\n    padding: 2rem 1rem;\n    border-left: none;\n  }\n}\n\n.dropdown.open {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.dropdown__list {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n  border-top: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__list {\n    border-top: 0;\n  }\n}\n\n.dropdown__item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__item {\n    border-bottom: 0;\n    width: calc(4 / 12 * 100%);\n    margin-bottom: 1rem;\n  }\n}\n\n.dropdown__link {\n  display: block;\n  width: 100%;\n  padding: 1rem;\n  color: #000;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link {\n    padding: 0;\n    font-weight: bold;\n    -webkit-transition: color 0.125s ease-in-out;\n    -o-transition: color 0.125s ease-in-out;\n    transition: color 0.125s ease-in-out;\n  }\n}\n\n.dropdown__link:hover,\n.dropdown__link:active,\n.dropdown__link:focus {\n  color: #0b457e;\n}\n\n.dropdown__link-description {\n  display: none;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link-description {\n    display: block;\n    font-size: 0.875rem;\n    font-style: italic;\n    color: #a7a7a7;\n  }\n}\n\n.dropdown__see-all {\n  display: block;\n  width: 100%;\n  clear: both;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all {\n    width: 100%;\n    float: none;\n  }\n}\n\n.dropdown__see-all-btn {\n  display: block;\n  padding: 1rem;\n  font-weight: bold;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all-btn {\n    padding: 0;\n  }\n}\n\n.site-nav-overlay {\n  display: none;\n  background-color: #000;\n  pointer-events: none;\n  opacity: 0.8;\n  -webkit-transition: opacity 0.1s ease-in-out;\n  -o-transition: opacity 0.1s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n  z-index: 3;\n  position: fixed;\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n}\n\n.site-nav-overlay:hover {\n  opacity: 0.9;\n}\n\n.site-nav-overlay.active {\n  display: block;\n  pointer-events: auto;\n}\n\n", "", {"version":3,"sources":["/Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/resources/assets/styles/resources/assets/styles/main.scss","/Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/main.scss"],"names":[],"mappings":"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","file":"main.scss","sourcesContent":["@import '../../../../../../../../../styleguide/src/scss/settings/settings';\n@import '../../../../../../../../../styleguide/src/scss/mixins/palette';\n\n// Sidebar nav\n.sidebar-nav {\n\tdisplay: flex;\n}\n\n.sidebar-nav__list {\n\tdisplay: block;\n\twidth: 100%;\n\tborder: 1px solid palette(grey, base);\n}\n\n.sidebar-nav__item {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\talign-items: center;\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\n\t&:last-of-type {\n\t\tborder-bottom: none;\n\t}\n\n\t&:not(.has-sublist) > .sidebar-nav__link {\n\t\tfont-weight: 400;\n\t}\n\n\t&.active {\n\t\t.sidebar-nav__label {\n\t\t\tbackground: palette(dark-blue, base);\n\t\t\tcolor: $white;\n\t\t}\n\t}\n}\n\n.sidebar-nav__link,\n.sidebar-nav__label {\n\tdisplay: flex;\n\tflex: 1;\n\tfont-weight: $bold-font-weight;\n\tcolor: $black;\n\tpadding: $space-2;\n}\n\n.sidebar-nav__sublist {\n\twidth: 100%;\n}\n\n.sidebar-nav__toggle-btn {\n\tbackground: palette(light-blue, dark);\n\tborder-radius: 50%;\n\tmargin-right: $space-2;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\twidth: 26px;\n\theight: 26px;\n\n\tsvg {\n\t\tfill: palette(dark-blue, base);\n\t}\n}\n\n.content-nav {\n\t&__heading {\n\t\tfont-size: 0.75rem;\n\t\tcolor: palette(grey, x-dark);\n\t\tfont-family: $sans-font-family;\n\t\ttext-transform: uppercase;\n\t\tdisplay: block;\n\t\tline-height: $space-4;\n\t\tpadding-bottom: $space-2;\n\t}\n\n\t&__container {\n\t\tdisplay: flex;\n\t\tflex-wrap: row wrap;\n\t}\n\n\t&__slider {\n\t\twidth: 4px;\n\t\theight: 0;\n\t\tbackground: palette(dark-blue);\n\t\tflex: none;\n\t\t-webkit-transition: top 1s, height 1s, width 1s;\n\t\ttransition: top 1s, height 1s, width 1s;\n\t}\n\n\t&__menu {\n\t\tmargin-left: 0.5rem;\n\t\tflex: 1 auto;\n\t}\n\n\t&__item {\n\t\tmargin: 0;\n\n\t\ta {\n\t\t\tpadding: $space-1 0;\n\t\t\tdisplay: inline-block;\n\t\t}\n\t}\n}\n\n// Site nav\n.site-nav {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\talign-items: center;\n\tbackground: $white;\n\tbox-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n\tposition: relative;\n\tz-index: $z4;\n}\n\n.site-nav__top {\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\tpadding: $space-2;\n}\n\n.site-nav__menu-btn {\n\tdisplay: block;\n\tmargin-left: auto;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: none;\n\t}\n}\n\n.site-nav__bottom {\n\twidth: 100%;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding-right: $space-2;\n\t\tpadding-left: $space-2;\n\t}\n}\n\n.site-nav__container {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tmax-width: $container-max-width;\n\t\tmargin-left: auto;\n\t\tmargin-right: auto;\n\t}\n}\n\n.site-nav__list {\n\tdisplay: none;\n\tflex-wrap: wrap;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: flex;\n\t}\n\n\t&.open {\n\t\tdisplay: flex;\n\t}\n}\n\n.site-nav__item {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: block;\n\t\twidth: auto;\n\t\tborder-bottom: 0;\n\t\tpadding-right: $space-3;\n\n\t\t&:last-of-type {\n\t\t\tpadding-right: 0;\n\t\t}\n\t}\n}\n\n.site-nav__link {\n\tdisplay: block;\n\twidth: 100%;\n\tcolor: palette(black, base);\n\tposition: relative;\n\toverflow: hidden;\n\tfont-weight: $bold-font-weight;\n\tpadding: $space-3 $space-2;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding: $space-3 0;\n\t\tdisplay: inherit;\n\t\tfont-size: 0.9375rem;\n\n\t\t&::after {\n\t\t\tcontent: '';\n\t\t\tdisplay: block;\n\t\t\tposition: absolute;\n\t\t\tbottom: 0;\n\t\t\tleft: 0;\n\t\t\twidth: 100%;\n\t\t\tborder-bottom: 5px solid palette(blue, base);\n\t\t\tborder-radius: 1px 1px 0 0;\n\t\t\ttransform: translateY(100%);\n\t\t\ttransition: transform 0.1s ease-in-out;\n\t\t}\n\n\t\t&.active {\n\t\t\t&::after {\n\t\t\t\tborder-bottom: 5px solid palette(dark-blue, base);\n\t\t\t\ttransform: translateY(0);\n\t\t\t}\n\t\t}\n\n\t\t&.open {\n\t\t\tcolor: rgba($black, 1);\n\t\t}\n\n\t\t&.open-sibling {\n\t\t\tcolor: rgba($black, 0.35);\n\t\t}\n\n\t\t&:hover {\n\t\t\tcolor: rgba($black, 1);\n\n\t\t\t&::after {\n\t\t\t\ttransform: translateY(0);\n\t\t\t}\n\t\t}\n\t}\n}\n\n.dropdown {\n\tdisplay: none;\n\twidth: 100%;\n\tbackground: palette(grey, xx-light);\n\tborder-left: $space-2 solid palette(light-blue, base);\n\tz-index: $z4;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tbox-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\twidth: 100vw;\n\t\tbackground: palette($white, base);\n\t\tpadding: $space-4 $space-3;\n\t\tborder-left: none;\n\t}\n\n\t&.open {\n\t\tdisplay: flex;\n\t}\n}\n\n.dropdown__list {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tborder-top: 1px solid palette(grey, light);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tborder-top: 0;\n\t}\n}\n\n.dropdown__item {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tborder-bottom: 0;\n\t\twidth: calc(4 / 12 * 100%);\n\t\tmargin-bottom: $space-3;\n\t}\n}\n\n.dropdown__link {\n\tdisplay: block;\n\twidth: 100%;\n\tpadding: $space-3;\n\tcolor: palette(black, base);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding: 0;\n\t\tfont-weight: $bold-font-weight;\n\t\ttransition: color 0.125s ease-in-out;\n\t}\n\n\t&:hover,\n\t&:active,\n\t&:focus {\n\t\tcolor: palette(dark-blue, dark);\n\t}\n}\n\n.dropdown__link-description {\n\tdisplay: none;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: block;\n\t\tfont-size: $h5;\n\t\tfont-style: italic;\n\t\tcolor: palette(grey, x-dark);\n\t}\n}\n\n.dropdown__see-all {\n\tdisplay: block;\n\twidth: 100%;\n\tclear: both;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\twidth: 100%;\n\t\tfloat: none;\n\t}\n}\n\n.dropdown__see-all-btn {\n\tdisplay: block;\n\tpadding: $space-3;\n\tfont-weight: $bold-font-weight;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding: 0;\n\t}\n}\n\n.site-nav-overlay {\n\tdisplay: none;\n\tbackground-color: palette($black, base);\n\tpointer-events: none;\n\topacity: 0.8;\n\ttransition: opacity 0.1s ease-in-out;\n\tz-index: $z3;\n\tposition: fixed;\n\twidth: 100vw;\n\theight: 100vh;\n\ttop: 0;\n\tleft: 0;\n\n\t&:hover {\n\t\topacity: 0.9;\n\t}\n\n\t&.active {\n\t\tdisplay: block;\n\t\tpointer-events: auto;\n\t}\n}\n\n",".sidebar-nav {\n  display: flex;\n}\n\n.sidebar-nav__list {\n  display: block;\n  width: 100%;\n  border: 1px solid #e4e4e4;\n}\n\n.sidebar-nav__item {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n.sidebar-nav__item:last-of-type {\n  border-bottom: none;\n}\n\n.sidebar-nav__item:not(.has-sublist) > .sidebar-nav__link {\n  font-weight: 400;\n}\n\n.sidebar-nav__item.active .sidebar-nav__label {\n  background: #0e5aa4;\n  color: #fff;\n}\n\n.sidebar-nav__link,\n.sidebar-nav__label {\n  display: flex;\n  flex: 1;\n  font-weight: bold;\n  color: #000;\n  padding: 0.5rem;\n}\n\n.sidebar-nav__sublist {\n  width: 100%;\n}\n\n.sidebar-nav__toggle-btn {\n  background: #aecfe9;\n  border-radius: 50%;\n  margin-right: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 26px;\n  height: 26px;\n}\n\n.sidebar-nav__toggle-btn svg {\n  fill: #0e5aa4;\n}\n\n.content-nav__heading {\n  font-size: 0.75rem;\n  color: #a7a7a7;\n  font-family: \"Scala-Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  text-transform: uppercase;\n  display: block;\n  line-height: 2rem;\n  padding-bottom: 0.5rem;\n}\n\n.content-nav__container {\n  display: flex;\n  flex-wrap: row wrap;\n}\n\n.content-nav__slider {\n  width: 4px;\n  height: 0;\n  background: #0e5aa4;\n  flex: none;\n  -webkit-transition: top 1s, height 1s, width 1s;\n  transition: top 1s, height 1s, width 1s;\n}\n\n.content-nav__menu {\n  margin-left: 0.5rem;\n  flex: 1 auto;\n}\n\n.content-nav__item {\n  margin: 0;\n}\n\n.content-nav__item a {\n  padding: 0.25rem 0;\n  display: inline-block;\n}\n\n.site-nav {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  background: #fff;\n  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n  position: relative;\n  z-index: 4;\n}\n\n.site-nav__top {\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n  padding: 0.5rem;\n}\n\n.site-nav__menu-btn {\n  display: block;\n  margin-left: auto;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__menu-btn {\n    display: none;\n  }\n}\n\n.site-nav__bottom {\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__bottom {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n}\n\n.site-nav__container {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__container {\n    max-width: 1320px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n}\n\n.site-nav__list {\n  display: none;\n  flex-wrap: wrap;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__list {\n    display: flex;\n  }\n}\n\n.site-nav__list.open {\n  display: flex;\n}\n\n.site-nav__item {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__item {\n    display: block;\n    width: auto;\n    border-bottom: 0;\n    padding-right: 1rem;\n  }\n\n  .site-nav__item:last-of-type {\n    padding-right: 0;\n  }\n}\n\n.site-nav__link {\n  display: block;\n  width: 100%;\n  color: #000;\n  position: relative;\n  overflow: hidden;\n  font-weight: bold;\n  padding: 1rem 0.5rem;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__link {\n    padding: 1rem 0;\n    display: inherit;\n    font-size: 0.9375rem;\n  }\n\n  .site-nav__link::after {\n    content: '';\n    display: block;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    border-bottom: 5px solid #6ca2d5;\n    border-radius: 1px 1px 0 0;\n    transform: translateY(100%);\n    transition: transform 0.1s ease-in-out;\n  }\n\n  .site-nav__link.active::after {\n    border-bottom: 5px solid #0e5aa4;\n    transform: translateY(0);\n  }\n\n  .site-nav__link.open {\n    color: black;\n  }\n\n  .site-nav__link.open-sibling {\n    color: rgba(0, 0, 0, 0.35);\n  }\n\n  .site-nav__link:hover {\n    color: black;\n  }\n\n  .site-nav__link:hover::after {\n    transform: translateY(0);\n  }\n}\n\n.dropdown {\n  display: none;\n  width: 100%;\n  background: #f6f6f6;\n  border-left: 0.5rem solid #cee2f2;\n  z-index: 4;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown {\n    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n    position: absolute;\n    left: 0;\n    width: 100vw;\n    background: #fff;\n    padding: 2rem 1rem;\n    border-left: none;\n  }\n}\n\n.dropdown.open {\n  display: flex;\n}\n\n.dropdown__list {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  border-top: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__list {\n    border-top: 0;\n  }\n}\n\n.dropdown__item {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__item {\n    border-bottom: 0;\n    width: calc(4 / 12 * 100%);\n    margin-bottom: 1rem;\n  }\n}\n\n.dropdown__link {\n  display: block;\n  width: 100%;\n  padding: 1rem;\n  color: #000;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link {\n    padding: 0;\n    font-weight: bold;\n    transition: color 0.125s ease-in-out;\n  }\n}\n\n.dropdown__link:hover,\n.dropdown__link:active,\n.dropdown__link:focus {\n  color: #0b457e;\n}\n\n.dropdown__link-description {\n  display: none;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link-description {\n    display: block;\n    font-size: 0.875rem;\n    font-style: italic;\n    color: #a7a7a7;\n  }\n}\n\n.dropdown__see-all {\n  display: block;\n  width: 100%;\n  clear: both;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all {\n    width: 100%;\n    float: none;\n  }\n}\n\n.dropdown__see-all-btn {\n  display: block;\n  padding: 1rem;\n  font-weight: bold;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all-btn {\n    padding: 0;\n  }\n}\n\n.site-nav-overlay {\n  display: none;\n  background-color: #000;\n  pointer-events: none;\n  opacity: 0.8;\n  transition: opacity 0.1s ease-in-out;\n  z-index: 3;\n  position: fixed;\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n}\n\n.site-nav-overlay:hover {\n  opacity: 0.9;\n}\n\n.site-nav-overlay.active {\n  display: block;\n  pointer-events: auto;\n}\n\n"],"sourceRoot":""}]);
+exports.push([module.i, ".sidebar-nav {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.sidebar-nav__list {\n  display: block;\n  width: 100%;\n  border: 1px solid #e4e4e4;\n}\n\n.sidebar-nav__item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n.sidebar-nav__item:last-of-type {\n  border-bottom: none;\n}\n\n.sidebar-nav__item:not(.has-sublist) > .sidebar-nav__link {\n  font-weight: 400;\n}\n\n.sidebar-nav__item.active .sidebar-nav__label {\n  background: #0e5aa4;\n  color: #fff;\n}\n\n.sidebar-nav__link,\n.sidebar-nav__label {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  font-weight: bold;\n  color: #000;\n  padding: 0.5rem;\n}\n\n.sidebar-nav__sublist {\n  width: 100%;\n}\n\n.sidebar-nav__toggle-btn {\n  background: #aecfe9;\n  border-radius: 50%;\n  margin-right: 0.5rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 26px;\n  height: 26px;\n}\n\n.sidebar-nav__toggle-btn svg {\n  fill: #0e5aa4;\n}\n\n.content-nav__container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: row wrap;\n      flex-wrap: row wrap;\n}\n\n.content-nav__slider {\n  width: 4px;\n  height: 0;\n  background: #0e5aa4;\n  -webkit-box-flex: 0;\n      -ms-flex: none;\n          flex: none;\n  -webkit-transition: top 1s, height 1s, width 1s;\n  -o-transition: top 1s, height 1s, width 1s;\n  transition: top 1s, height 1s, width 1s;\n}\n\n.content-nav__menu {\n  margin: 0 0 0 0.5rem !important;\n  padding: 0 !important;\n  -webkit-box-flex: 1;\n      -ms-flex: 1 auto;\n          flex: 1 auto;\n}\n\n.content-nav__item {\n  margin: 0;\n  list-style-type: none;\n  padding: 0;\n}\n\n.content-nav__item a {\n  padding: 0.25rem 0;\n  display: inline-block;\n}\n\n.site-nav {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: #fff;\n  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n  position: relative;\n  z-index: 4;\n}\n\n.site-nav__top {\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n  padding: 0.5rem;\n}\n\n.site-nav__menu-btn {\n  display: block;\n  margin-left: auto;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__menu-btn {\n    display: none;\n  }\n}\n\n.site-nav__bottom {\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__bottom {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n}\n\n.site-nav__container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__container {\n    max-width: 1320px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n}\n\n.site-nav__list {\n  display: none;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__list {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n  }\n}\n\n.site-nav__list.open {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.site-nav__item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__item {\n    display: block;\n    width: auto;\n    border-bottom: 0;\n    padding-right: 1rem;\n  }\n\n  .site-nav__item:last-of-type {\n    padding-right: 0;\n  }\n}\n\n.site-nav__link {\n  display: block;\n  width: 100%;\n  color: #000;\n  position: relative;\n  overflow: hidden;\n  font-weight: bold;\n  padding: 1rem 0.5rem;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__link {\n    padding: 1rem 0;\n    display: inherit;\n    font-size: 0.9375rem;\n  }\n\n  .site-nav__link::after {\n    content: '';\n    display: block;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    border-bottom: 5px solid #6ca2d5;\n    border-radius: 1px 1px 0 0;\n    -webkit-transform: translateY(100%);\n         -o-transform: translateY(100%);\n            transform: translateY(100%);\n    -webkit-transition: -webkit-transform 0.1s ease-in-out;\n    transition: -webkit-transform 0.1s ease-in-out;\n    -o-transition: -o-transform 0.1s ease-in-out;\n    transition: transform 0.1s ease-in-out;\n    transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out, -o-transform 0.1s ease-in-out;\n  }\n\n  .site-nav__link.active::after {\n    border-bottom: 5px solid #0e5aa4;\n    -webkit-transform: translateY(0);\n         -o-transform: translateY(0);\n            transform: translateY(0);\n  }\n\n  .site-nav__link.open {\n    color: black;\n  }\n\n  .site-nav__link.open-sibling {\n    color: rgba(0, 0, 0, 0.35);\n  }\n\n  .site-nav__link:hover {\n    color: black;\n  }\n\n  .site-nav__link:hover::after {\n    -webkit-transform: translateY(0);\n         -o-transform: translateY(0);\n            transform: translateY(0);\n  }\n}\n\n.dropdown {\n  display: none;\n  width: 100%;\n  background: #f6f6f6;\n  border-left: 0.5rem solid #cee2f2;\n  z-index: 4;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown {\n    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n    position: absolute;\n    left: 0;\n    width: 100vw;\n    background: #fff;\n    padding: 2rem 1rem;\n    border-left: none;\n  }\n}\n\n.dropdown.open {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.dropdown__list {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n  border-top: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__list {\n    border-top: 0;\n  }\n}\n\n.dropdown__item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__item {\n    border-bottom: 0;\n    width: calc(4 / 12 * 100%);\n    margin-bottom: 1rem;\n  }\n}\n\n.dropdown__link {\n  display: block;\n  width: 100%;\n  padding: 1rem;\n  color: #000;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link {\n    padding: 0;\n    font-weight: bold;\n    -webkit-transition: color 0.125s ease-in-out;\n    -o-transition: color 0.125s ease-in-out;\n    transition: color 0.125s ease-in-out;\n  }\n}\n\n.dropdown__link:hover,\n.dropdown__link:active,\n.dropdown__link:focus {\n  color: #0b457e;\n}\n\n.dropdown__link-description {\n  display: none;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link-description {\n    display: block;\n    font-size: 0.875rem;\n    font-style: italic;\n    color: #a7a7a7;\n  }\n}\n\n.dropdown__see-all {\n  display: block;\n  width: 100%;\n  clear: both;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all {\n    width: 100%;\n    float: none;\n  }\n}\n\n.dropdown__see-all-btn {\n  display: block;\n  padding: 1rem;\n  font-weight: bold;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all-btn {\n    padding: 0;\n  }\n}\n\n.site-nav-overlay {\n  display: none;\n  background-color: #000;\n  pointer-events: none;\n  opacity: 0.8;\n  -webkit-transition: opacity 0.1s ease-in-out;\n  -o-transition: opacity 0.1s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n  z-index: 3;\n  position: fixed;\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n}\n\n.site-nav-overlay:hover {\n  opacity: 0.9;\n}\n\n.site-nav-overlay.active {\n  display: block;\n  pointer-events: auto;\n}\n\n", "", {"version":3,"sources":["/Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/resources/assets/styles/resources/assets/styles/main.scss","/Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/main.scss"],"names":[],"mappings":"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","file":"main.scss","sourcesContent":["@import '../../../../../../../../../styleguide/src/scss/settings/settings';\n@import '../../../../../../../../../styleguide/src/scss/mixins/palette';\n\n// Sidebar nav\n.sidebar-nav {\n\tdisplay: flex;\n}\n\n.sidebar-nav__list {\n\tdisplay: block;\n\twidth: 100%;\n\tborder: 1px solid palette(grey, base);\n}\n\n.sidebar-nav__item {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\talign-items: center;\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\n\t&:last-of-type {\n\t\tborder-bottom: none;\n\t}\n\n\t&:not(.has-sublist) > .sidebar-nav__link {\n\t\tfont-weight: 400;\n\t}\n\n\t&.active {\n\t\t.sidebar-nav__label {\n\t\t\tbackground: palette(dark-blue, base);\n\t\t\tcolor: $white;\n\t\t}\n\t}\n}\n\n.sidebar-nav__link,\n.sidebar-nav__label {\n\tdisplay: flex;\n\tflex: 1;\n\tfont-weight: $bold-font-weight;\n\tcolor: $black;\n\tpadding: $space-2;\n}\n\n.sidebar-nav__sublist {\n\twidth: 100%;\n}\n\n.sidebar-nav__toggle-btn {\n\tbackground: palette(light-blue, dark);\n\tborder-radius: 50%;\n\tmargin-right: $space-2;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\twidth: 26px;\n\theight: 26px;\n\n\tsvg {\n\t\tfill: palette(dark-blue, base);\n\t}\n}\n\n.content-nav {\n\t&__container {\n\t\tdisplay: flex;\n\t\tflex-wrap: row wrap;\n\t}\n\n\t&__slider {\n\t\twidth: 4px;\n\t\theight: 0;\n\t\tbackground: palette(dark-blue);\n\t\tflex: none;\n\t\t-webkit-transition: top 1s, height 1s, width 1s;\n\t\ttransition: top 1s, height 1s, width 1s;\n\t}\n\n\t&__menu {\n\t\tmargin: 0 0 0 0.5rem !important;\n\t\tpadding: 0 !important;\n\t\tflex: 1 auto;\n\t}\n\n\t&__item {\n\t\tmargin: 0;\n\t\tlist-style-type: none;\n\t\tpadding: 0;\n\n\t\ta {\n\t\t\tpadding: $space-1 0;\n\t\t\tdisplay: inline-block;\n\t\t}\n\t}\n}\n\n// Site nav\n.site-nav {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\talign-items: center;\n\tbackground: $white;\n\tbox-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n\tposition: relative;\n\tz-index: $z4;\n}\n\n.site-nav__top {\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\tpadding: $space-2;\n}\n\n.site-nav__menu-btn {\n\tdisplay: block;\n\tmargin-left: auto;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: none;\n\t}\n}\n\n.site-nav__bottom {\n\twidth: 100%;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding-right: $space-2;\n\t\tpadding-left: $space-2;\n\t}\n}\n\n.site-nav__container {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tmax-width: $container-max-width;\n\t\tmargin-left: auto;\n\t\tmargin-right: auto;\n\t}\n}\n\n.site-nav__list {\n\tdisplay: none;\n\tflex-wrap: wrap;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: flex;\n\t}\n\n\t&.open {\n\t\tdisplay: flex;\n\t}\n}\n\n.site-nav__item {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: block;\n\t\twidth: auto;\n\t\tborder-bottom: 0;\n\t\tpadding-right: $space-3;\n\n\t\t&:last-of-type {\n\t\t\tpadding-right: 0;\n\t\t}\n\t}\n}\n\n.site-nav__link {\n\tdisplay: block;\n\twidth: 100%;\n\tcolor: palette(black, base);\n\tposition: relative;\n\toverflow: hidden;\n\tfont-weight: $bold-font-weight;\n\tpadding: $space-3 $space-2;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding: $space-3 0;\n\t\tdisplay: inherit;\n\t\tfont-size: 0.9375rem;\n\n\t\t&::after {\n\t\t\tcontent: '';\n\t\t\tdisplay: block;\n\t\t\tposition: absolute;\n\t\t\tbottom: 0;\n\t\t\tleft: 0;\n\t\t\twidth: 100%;\n\t\t\tborder-bottom: 5px solid palette(blue, base);\n\t\t\tborder-radius: 1px 1px 0 0;\n\t\t\ttransform: translateY(100%);\n\t\t\ttransition: transform 0.1s ease-in-out;\n\t\t}\n\n\t\t&.active {\n\t\t\t&::after {\n\t\t\t\tborder-bottom: 5px solid palette(dark-blue, base);\n\t\t\t\ttransform: translateY(0);\n\t\t\t}\n\t\t}\n\n\t\t&.open {\n\t\t\tcolor: rgba($black, 1);\n\t\t}\n\n\t\t&.open-sibling {\n\t\t\tcolor: rgba($black, 0.35);\n\t\t}\n\n\t\t&:hover {\n\t\t\tcolor: rgba($black, 1);\n\n\t\t\t&::after {\n\t\t\t\ttransform: translateY(0);\n\t\t\t}\n\t\t}\n\t}\n}\n\n.dropdown {\n\tdisplay: none;\n\twidth: 100%;\n\tbackground: palette(grey, xx-light);\n\tborder-left: $space-2 solid palette(light-blue, base);\n\tz-index: $z4;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tbox-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n\t\tposition: absolute;\n\t\tleft: 0;\n\t\twidth: 100vw;\n\t\tbackground: palette($white, base);\n\t\tpadding: $space-4 $space-3;\n\t\tborder-left: none;\n\t}\n\n\t&.open {\n\t\tdisplay: flex;\n\t}\n}\n\n.dropdown__list {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tborder-top: 1px solid palette(grey, light);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tborder-top: 0;\n\t}\n}\n\n.dropdown__item {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\twidth: 100%;\n\tborder-bottom: 1px solid palette(grey, light);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tborder-bottom: 0;\n\t\twidth: calc(4 / 12 * 100%);\n\t\tmargin-bottom: $space-3;\n\t}\n}\n\n.dropdown__link {\n\tdisplay: block;\n\twidth: 100%;\n\tpadding: $space-3;\n\tcolor: palette(black, base);\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding: 0;\n\t\tfont-weight: $bold-font-weight;\n\t\ttransition: color 0.125s ease-in-out;\n\t}\n\n\t&:hover,\n\t&:active,\n\t&:focus {\n\t\tcolor: palette(dark-blue, dark);\n\t}\n}\n\n.dropdown__link-description {\n\tdisplay: none;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tdisplay: block;\n\t\tfont-size: $h5;\n\t\tfont-style: italic;\n\t\tcolor: palette(grey, x-dark);\n\t}\n}\n\n.dropdown__see-all {\n\tdisplay: block;\n\twidth: 100%;\n\tclear: both;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\twidth: 100%;\n\t\tfloat: none;\n\t}\n}\n\n.dropdown__see-all-btn {\n\tdisplay: block;\n\tpadding: $space-3;\n\tfont-weight: $bold-font-weight;\n\n\t@media screen and (min-width: $breakpoint-md) {\n\t\tpadding: 0;\n\t}\n}\n\n.site-nav-overlay {\n\tdisplay: none;\n\tbackground-color: palette($black, base);\n\tpointer-events: none;\n\topacity: 0.8;\n\ttransition: opacity 0.1s ease-in-out;\n\tz-index: $z3;\n\tposition: fixed;\n\twidth: 100vw;\n\theight: 100vh;\n\ttop: 0;\n\tleft: 0;\n\n\t&:hover {\n\t\topacity: 0.9;\n\t}\n\n\t&.active {\n\t\tdisplay: block;\n\t\tpointer-events: auto;\n\t}\n}\n\n",".sidebar-nav {\n  display: flex;\n}\n\n.sidebar-nav__list {\n  display: block;\n  width: 100%;\n  border: 1px solid #e4e4e4;\n}\n\n.sidebar-nav__item {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n.sidebar-nav__item:last-of-type {\n  border-bottom: none;\n}\n\n.sidebar-nav__item:not(.has-sublist) > .sidebar-nav__link {\n  font-weight: 400;\n}\n\n.sidebar-nav__item.active .sidebar-nav__label {\n  background: #0e5aa4;\n  color: #fff;\n}\n\n.sidebar-nav__link,\n.sidebar-nav__label {\n  display: flex;\n  flex: 1;\n  font-weight: bold;\n  color: #000;\n  padding: 0.5rem;\n}\n\n.sidebar-nav__sublist {\n  width: 100%;\n}\n\n.sidebar-nav__toggle-btn {\n  background: #aecfe9;\n  border-radius: 50%;\n  margin-right: 0.5rem;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 26px;\n  height: 26px;\n}\n\n.sidebar-nav__toggle-btn svg {\n  fill: #0e5aa4;\n}\n\n.content-nav__container {\n  display: flex;\n  flex-wrap: row wrap;\n}\n\n.content-nav__slider {\n  width: 4px;\n  height: 0;\n  background: #0e5aa4;\n  flex: none;\n  -webkit-transition: top 1s, height 1s, width 1s;\n  transition: top 1s, height 1s, width 1s;\n}\n\n.content-nav__menu {\n  margin: 0 0 0 0.5rem !important;\n  padding: 0 !important;\n  flex: 1 auto;\n}\n\n.content-nav__item {\n  margin: 0;\n  list-style-type: none;\n  padding: 0;\n}\n\n.content-nav__item a {\n  padding: 0.25rem 0;\n  display: inline-block;\n}\n\n.site-nav {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  background: #fff;\n  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n  position: relative;\n  z-index: 4;\n}\n\n.site-nav__top {\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n  padding: 0.5rem;\n}\n\n.site-nav__menu-btn {\n  display: block;\n  margin-left: auto;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__menu-btn {\n    display: none;\n  }\n}\n\n.site-nav__bottom {\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__bottom {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n}\n\n.site-nav__container {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__container {\n    max-width: 1320px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n}\n\n.site-nav__list {\n  display: none;\n  flex-wrap: wrap;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__list {\n    display: flex;\n  }\n}\n\n.site-nav__list.open {\n  display: flex;\n}\n\n.site-nav__item {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__item {\n    display: block;\n    width: auto;\n    border-bottom: 0;\n    padding-right: 1rem;\n  }\n\n  .site-nav__item:last-of-type {\n    padding-right: 0;\n  }\n}\n\n.site-nav__link {\n  display: block;\n  width: 100%;\n  color: #000;\n  position: relative;\n  overflow: hidden;\n  font-weight: bold;\n  padding: 1rem 0.5rem;\n}\n\n@media screen and (min-width: 65em) {\n  .site-nav__link {\n    padding: 1rem 0;\n    display: inherit;\n    font-size: 0.9375rem;\n  }\n\n  .site-nav__link::after {\n    content: '';\n    display: block;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    border-bottom: 5px solid #6ca2d5;\n    border-radius: 1px 1px 0 0;\n    transform: translateY(100%);\n    transition: transform 0.1s ease-in-out;\n  }\n\n  .site-nav__link.active::after {\n    border-bottom: 5px solid #0e5aa4;\n    transform: translateY(0);\n  }\n\n  .site-nav__link.open {\n    color: black;\n  }\n\n  .site-nav__link.open-sibling {\n    color: rgba(0, 0, 0, 0.35);\n  }\n\n  .site-nav__link:hover {\n    color: black;\n  }\n\n  .site-nav__link:hover::after {\n    transform: translateY(0);\n  }\n}\n\n.dropdown {\n  display: none;\n  width: 100%;\n  background: #f6f6f6;\n  border-left: 0.5rem solid #cee2f2;\n  z-index: 4;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown {\n    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(231, 231, 231, 0.5);\n    position: absolute;\n    left: 0;\n    width: 100vw;\n    background: #fff;\n    padding: 2rem 1rem;\n    border-left: none;\n  }\n}\n\n.dropdown.open {\n  display: flex;\n}\n\n.dropdown__list {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  border-top: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__list {\n    border-top: 0;\n  }\n}\n\n.dropdown__item {\n  display: flex;\n  flex-wrap: wrap;\n  width: 100%;\n  border-bottom: 1px solid #e9e9e9;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__item {\n    border-bottom: 0;\n    width: calc(4 / 12 * 100%);\n    margin-bottom: 1rem;\n  }\n}\n\n.dropdown__link {\n  display: block;\n  width: 100%;\n  padding: 1rem;\n  color: #000;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link {\n    padding: 0;\n    font-weight: bold;\n    transition: color 0.125s ease-in-out;\n  }\n}\n\n.dropdown__link:hover,\n.dropdown__link:active,\n.dropdown__link:focus {\n  color: #0b457e;\n}\n\n.dropdown__link-description {\n  display: none;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__link-description {\n    display: block;\n    font-size: 0.875rem;\n    font-style: italic;\n    color: #a7a7a7;\n  }\n}\n\n.dropdown__see-all {\n  display: block;\n  width: 100%;\n  clear: both;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all {\n    width: 100%;\n    float: none;\n  }\n}\n\n.dropdown__see-all-btn {\n  display: block;\n  padding: 1rem;\n  font-weight: bold;\n}\n\n@media screen and (min-width: 65em) {\n  .dropdown__see-all-btn {\n    padding: 0;\n  }\n}\n\n.site-nav-overlay {\n  display: none;\n  background-color: #000;\n  pointer-events: none;\n  opacity: 0.8;\n  transition: opacity 0.1s ease-in-out;\n  z-index: 3;\n  position: fixed;\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n}\n\n.site-nav-overlay:hover {\n  opacity: 0.9;\n}\n\n.site-nav-overlay.active {\n  display: block;\n  pointer-events: auto;\n}\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -2319,7 +2319,7 @@ exports.push([module.i, ".sidebar-nav {\n  display: -webkit-box;\n  display: -ms
 
 __webpack_require__(/*! /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/resources/assets/build/util/../helpers/hmr-client.js */2);
 __webpack_require__(/*! ./scripts/main.js */18);
-module.exports = __webpack_require__(/*! ./styles/main.scss */28);
+module.exports = __webpack_require__(/*! ./styles/main.scss */29);
 
 
 /***/ }),
@@ -2337,15 +2337,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_cookie_notice_js__ = __webpack_require__(/*! ./autoload/cookie-notice.js */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__autoload_icons_js__ = __webpack_require__(/*! ./autoload/icons.js */ 21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_Router__ = __webpack_require__(/*! ./util/Router */ 22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_common__ = __webpack_require__(/*! ./routes/common */ 24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_home__ = __webpack_require__(/*! ./routes/home */ 25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_single__ = __webpack_require__(/*! ./routes/single */ 26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__autoload_nav_js__ = __webpack_require__(/*! ./autoload/nav.js */ 22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_Router__ = __webpack_require__(/*! ./util/Router */ 23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_common__ = __webpack_require__(/*! ./routes/common */ 25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_home__ = __webpack_require__(/*! ./routes/home */ 26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__routes_single__ = __webpack_require__(/*! ./routes/single */ 27);
 // import external dependencies
 
 
 // Import everything from autoload
- 
+  
 
 // import local dependencies
 
@@ -2354,13 +2355,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /** Populate Router instance with DOM routes */
-var routes = new __WEBPACK_IMPORTED_MODULE_3__util_Router__["a" /* default */]({
+var routes = new __WEBPACK_IMPORTED_MODULE_4__util_Router__["a" /* default */]({
 	// All pages
-	common: __WEBPACK_IMPORTED_MODULE_4__routes_common__["a" /* default */],
+	common: __WEBPACK_IMPORTED_MODULE_5__routes_common__["a" /* default */],
 	// Home page
-	home: __WEBPACK_IMPORTED_MODULE_5__routes_home__["a" /* default */],
+	home: __WEBPACK_IMPORTED_MODULE_6__routes_home__["a" /* default */],
 	// Single blogposts etc.
-	single: __WEBPACK_IMPORTED_MODULE_6__routes_single__["a" /* default */],
+	single: __WEBPACK_IMPORTED_MODULE_7__routes_single__["a" /* default */],
 });
 
 // Load Events
@@ -2653,6 +2654,128 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 /* 22 */
+/*!*********************************!*\
+  !*** ./scripts/autoload/nav.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {var Nav = (function () {
+
+	var Selectors = {
+		NAV: '.site-nav',
+		NAV_LIST: '.site-nav__list',
+		NAV_ITEM: '.site-nav__item',
+		NAV_LINK: '.site-nav__link',
+		OVERLAY: '.site-nav-overlay',
+		NAV_DROPDOWN: '.dropdown',
+		NAV_TOGGLE_BTN: '.site-nav__menu-btn',
+	}
+	
+	var Modifiers = {
+		OPEN: 'open',
+		OPEN_SIBLING: 'open-sibling',
+		ACTIVE: 'active',
+	}
+	
+	var Nav = function Nav() {
+		this.cache();
+		this.bind();
+	};
+
+	Nav.prototype.cache = function cache () {
+		this.$nav = $(Selectors.NAV);
+		this.$navList = this.$nav.find(Selectors.NAV_LIST);
+		this.$navItems = this.$nav.find(Selectors.NAV_ITEM);
+		this.$navLinks = this.$nav.find(Selectors.NAV_LINK);
+		this.$dropdowns = this.$nav.find(Selectors.NAV_DROPDOWN);
+		this.$toggleNavButton = $(Selectors.NAV_TOGGLE_BTN);
+		this.$navOverlay = $(Selectors.OVERLAY);
+	};
+
+	Nav.prototype.bind = function bind () {
+			var this$1 = this;
+
+		this.$navLinks.each(function (i, el) {
+			$(el).on('click', function (event) { return this$1.toggleItem(event.target); });
+		});
+
+		this.$toggleNavButton.on('click', function () { return this$1.toggleNav(); });
+		this.$navOverlay.on('click', function () { return this$1.closeNav(); });
+		this.$nav.on('keyup', function () { return this$1.keypad(); });
+	};
+
+	Nav.prototype.toggleItem = function toggleItem (target) {
+			var this$1 = this;
+
+		for (var i = 0; i < this.$navLinks.length; i++) {
+			var $item = $(this$1.$navItems[i]);
+			var $link = $item.children(Selectors.NAV_LINK);
+			var $dropdown = $item.children(Selectors.DROPDOWN);
+
+			if ($item[0] === $(target).parent()[0]) {
+					
+				if ($item.hasClass(Modifiers.OPEN)) {
+					$item.removeClass(Modifiers.OPEN);
+					$link.removeClass(Modifiers.OPEN);
+					$dropdown.removeClass(Modifiers.OPEN);
+						
+					continue;
+				}
+					
+				$item.addClass(Modifiers.OPEN);
+				$link.addClass(Modifiers.OPEN);
+				$dropdown.addClass(Modifiers.OPEN);
+					
+				continue;
+			}
+				
+			$item.removeClass(Modifiers.OPEN);
+			$link.removeClass(Modifiers.OPEN);
+			$dropdown.removeClass(Modifiers.OPEN);
+		}
+
+		this.toggleOverlay();
+	};
+
+	Nav.prototype.isNavOpen = function isNavOpen () {
+		return this.$navItems.hasClass(Modifiers.OPEN);
+	};
+
+	Nav.prototype.toggleNav = function toggleNav () {
+		if (this.$navList.hasClass(Modifiers.OPEN)) {
+			this.$navList.removeClass(Modifiers.OPEN);
+			this.$navOverlay.removeClass(Modifiers.ACTIVE);
+			return;
+		}
+
+		this.$navList.addClass(Modifiers.OPEN);
+		this.$navOverlay.addClass(Modifiers.ACTIVE);
+
+	};
+
+	Nav.prototype.toggleOverlay = function toggleOverlay () {
+		this.isNavOpen() ?
+			this.$navOverlay.addClass(Modifiers.ACTIVE) :
+			this.$navOverlay.removeClass(Modifiers.ACTIVE)
+	};
+
+	Nav.prototype.closeNav = function closeNav () {
+		this.$navOverlay.removeClass(Modifiers.ACTIVE);
+		this.$dropdowns.removeClass(Modifiers.OPEN);
+	};
+
+	return new Nav();
+
+})();
+
+/* unused harmony default export */ var _unused_webpack_default_export = (Nav);
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
+
+/***/ }),
+/* 23 */
 /*!********************************!*\
   !*** ./scripts/util/Router.js ***!
   \********************************/
@@ -2661,7 +2784,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(/*! ./camelCase */ 23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(/*! ./camelCase */ 24);
 
 
 /**
@@ -2725,7 +2848,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /*!***********************************!*\
   !*** ./scripts/util/camelCase.js ***!
   \***********************************/
@@ -2746,7 +2869,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /*!**********************************!*\
   !*** ./scripts/routes/common.js ***!
   \**********************************/
@@ -2766,7 +2889,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /*!********************************!*\
   !*** ./scripts/routes/home.js ***!
   \********************************/
@@ -2786,7 +2909,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /*!**********************************!*\
   !*** ./scripts/routes/single.js ***!
   \**********************************/
@@ -2797,20 +2920,20 @@ Router.prototype.loadEvents = function loadEvents () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__ = __webpack_require__(/*! ./../functions/content-nav */ 27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__ = __webpack_require__(/*! ./../functions/content-nav */ 28);
 // import external dependencies
 
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
 	init: function init() {
-		this.nav = new __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__["a" /* default */]('.article', 'h1, h2, h3' );
+		this.nav = new __WEBPACK_IMPORTED_MODULE_1__functions_content_nav__["a" /* default */]('main article.article.post', 'h1, h2, h3' );
 	},
 });
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /*!******************************************!*\
   !*** ./scripts/functions/content-nav.js ***!
   \******************************************/
@@ -2872,7 +2995,7 @@ ContentNav.prototype.createMenu = function createMenu () {
 	var idHash = 'content_nav_'+Date.now();
 
 	this.menu.addClass('content-nav');
-	this.menu.append('<span class="content-nav__heading" id="'+idHash+'">På denna sidan:</span>');
+	this.menu.append('<h3 class="content-nav__heading" id="'+idHash+'">På denna sidan</h3>');
 	this.menu.append('<div class="clearfix content-nav__container"><div class="content-nav__slider relative"></div><ul class="content-nav__menu" aria-labelledby="'+idHash+'"></ul></div>');
 		
 	ul = $('.content-nav__menu', this.menu);
@@ -3003,7 +3126,7 @@ ContentNav.prototype.init = function init () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! jquery */ 0)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /*!**************************!*\
   !*** ./styles/main.scss ***!
   \**************************/
@@ -3022,7 +3145,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ 30)(content, options);
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ 31)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(true) {
@@ -3039,7 +3162,7 @@ if(true) {
 }
 
 /***/ }),
-/* 29 */
+/* 30 */
 /*!****************************************************************************************************************************************************!*\
   !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/css-loader/lib/css-base.js ***!
   \****************************************************************************************************************************************************/
@@ -3126,7 +3249,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /*!*******************************************************************************************************************************************************!*\
   !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/style-loader/lib/addStyles.js ***!
   \*******************************************************************************************************************************************************/
@@ -3187,7 +3310,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(/*! ./urls */ 31);
+var	fixUrls = __webpack_require__(/*! ./urls */ 32);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -3503,7 +3626,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /*!**************************************************************************************************************************************************!*\
   !*** /Users/simpel/Documents/github/regionhalland/vardgivare.regionhalland.se/site/web/app/themes/halland/node_modules/style-loader/lib/urls.js ***!
   \**************************************************************************************************************************************************/
