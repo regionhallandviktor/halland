@@ -49,7 +49,7 @@
 							<li class="li--border-bottom">
 								<h3><a href="@php( the_permalink($newsitem) )">{{ $newsitem->post_title }}</a></h3>
 								<p>
-									@include('partials.updated-time', ['post_id' => $newsitem->ID])
+									@include('partials.updated-time', ['post' => $newsitem])
 								</p>
 								@if($newsitem->post_excerpt)
 								<p>{{ get_the_excerpt($newsitem) }}</p>
