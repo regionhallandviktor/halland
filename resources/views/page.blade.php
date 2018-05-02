@@ -33,10 +33,6 @@
 			</div>
 
 			<main class="col col-12 md-col-6 px2">
-				<header>
-					<h1>{!! get_the_title() !!}</h1>
-				</header>
-				
 				@include('partials.content-page')
 
 				@if (is_active_sidebar('sidebar-bottom'))
