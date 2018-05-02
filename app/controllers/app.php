@@ -9,7 +9,6 @@ class App extends Controller
 	use Traits\CookieNotice;
 	use Traits\Notices;
 	use Traits\Breadcrumbs;
-	use Traits\NavSidebar;
 	use Traits\NavSite;
 
 	/**
