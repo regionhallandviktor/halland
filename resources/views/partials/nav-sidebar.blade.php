@@ -1,6 +1,5 @@
-@if(isset($nav_sidebar))
-{{-- @php(var_dump($nav_sidebar)) --}}
-{{-- <nav class="sidebar-nav">
+@if(isset($nav_sidebar) && !empty($nav_sidebar['page_children']))
+<nav class="sidebar-nav">
 	<ul class="sidebar-nav__list">
 		<li class="sidebar-nav__item active">
 			<span class="sidebar-nav__label">{{ $nav_sidebar['current_page']->post_title }}</span>
@@ -15,5 +14,5 @@
 			@endif
 		</li>
 	</ul>
-</nav> --}}
+</nav>
 @endif

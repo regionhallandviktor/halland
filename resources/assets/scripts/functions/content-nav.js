@@ -20,10 +20,10 @@ class ContentNav {
 		this.currentPair			= null;
 
 		//Do stuff
-
-		this.createMenu();
-		this.init();
-
+		if(this.tags.length > 0) {
+			this.createMenu();
+			this.init();
+		}
 	}
 
 	/*
@@ -47,7 +47,7 @@ class ContentNav {
 		let idHash = 'content_nav_'+Date.now();
 
 		this.menu.addClass('content-nav');
-		this.menu.append('<span class="content-nav__heading" id="'+idHash+'">På denna sidan:</span>');
+		this.menu.append('<h3 class="content-nav__heading" id="'+idHash+'">På denna sidan</h3>');
 		this.menu.append('<div class="clearfix content-nav__container"><div class="content-nav__slider relative"></div><ul class="content-nav__menu" aria-labelledby="'+idHash+'"></ul></div>');
 		
 		ul = $('.content-nav__menu', this.menu);
